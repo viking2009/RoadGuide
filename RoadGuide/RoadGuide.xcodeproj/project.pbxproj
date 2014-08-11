@@ -15,12 +15,18 @@
 		900754281999629400AA6C74 /* RGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 900754271999629400AA6C74 /* RGAppDelegate.m */; };
 		9007542B1999629400AA6C74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 900754291999629400AA6C74 /* Main.storyboard */; };
 		9007542E1999629400AA6C74 /* RGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9007542D1999629400AA6C74 /* RGViewController.m */; };
-		900754301999629400AA6C74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9007542F1999629400AA6C74 /* Images.xcassets */; };
 		900754371999629400AA6C74 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900754361999629400AA6C74 /* XCTest.framework */; };
 		900754381999629400AA6C74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900754171999629400AA6C74 /* Foundation.framework */; };
 		900754391999629400AA6C74 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9007541B1999629400AA6C74 /* UIKit.framework */; };
 		900754411999629400AA6C74 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9007543F1999629400AA6C74 /* InfoPlist.strings */; };
 		900754431999629400AA6C74 /* RoadGuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 900754421999629400AA6C74 /* RoadGuideTests.m */; };
+		900754511999656A00AA6C74 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007544F1999656A00AA6C74 /* Default-568h@2x.png */; };
+		900754521999656A00AA6C74 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 900754501999656A00AA6C74 /* Default@2x.png */; };
+		90075456199966B200AA6C74 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90075453199966B200AA6C74 /* Icon-60@2x.png */; };
+		90075457199966B200AA6C74 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 90075454199966B200AA6C74 /* iTunesArtwork */; };
+		90075458199966B200AA6C74 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 90075455199966B200AA6C74 /* iTunesArtwork@2x */; };
+		9007545B1999677B00AA6C74 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 900754591999677A00AA6C74 /* Icon-40@2x.png */; };
+		9007545C1999677B00AA6C74 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007545A1999677B00AA6C74 /* Icon-Small@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,12 +53,18 @@
 		9007542A1999629400AA6C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9007542C1999629400AA6C74 /* RGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RGViewController.h; sourceTree = "<group>"; };
 		9007542D1999629400AA6C74 /* RGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RGViewController.m; sourceTree = "<group>"; };
-		9007542F1999629400AA6C74 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		900754351999629400AA6C74 /* RoadGuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoadGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		900754361999629400AA6C74 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9007543E1999629400AA6C74 /* RoadGuideTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RoadGuideTests-Info.plist"; sourceTree = "<group>"; };
 		900754401999629400AA6C74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		900754421999629400AA6C74 /* RoadGuideTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoadGuideTests.m; sourceTree = "<group>"; };
+		9007544F1999656A00AA6C74 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		900754501999656A00AA6C74 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		90075453199966B200AA6C74 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		90075454199966B200AA6C74 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		90075455199966B200AA6C74 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
+		900754591999677A00AA6C74 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		9007545A1999677B00AA6C74 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +129,7 @@
 				900754291999629400AA6C74 /* Main.storyboard */,
 				9007542C1999629400AA6C74 /* RGViewController.h */,
 				9007542D1999629400AA6C74 /* RGViewController.m */,
-				9007542F1999629400AA6C74 /* Images.xcassets */,
+				9007544C199964FF00AA6C74 /* Resources */,
 				9007541E1999629400AA6C74 /* Supporting Files */,
 			);
 			path = RoadGuide;
@@ -150,6 +162,36 @@
 				9007543F1999629400AA6C74 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9007544C199964FF00AA6C74 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9007544D199964FF00AA6C74 /* images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9007544D199964FF00AA6C74 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				9007544E199964FF00AA6C74 /* app */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		9007544E199964FF00AA6C74 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				9007544F1999656A00AA6C74 /* Default-568h@2x.png */,
+				900754501999656A00AA6C74 /* Default@2x.png */,
+				900754591999677A00AA6C74 /* Icon-40@2x.png */,
+				90075453199966B200AA6C74 /* Icon-60@2x.png */,
+				9007545A1999677B00AA6C74 /* Icon-Small@2x.png */,
+				90075454199966B200AA6C74 /* iTunesArtwork */,
+				90075455199966B200AA6C74 /* iTunesArtwork@2x */,
+			);
+			path = app;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +271,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				900754301999629400AA6C74 /* Images.xcassets in Resources */,
+				900754521999656A00AA6C74 /* Default@2x.png in Resources */,
+				90075457199966B200AA6C74 /* iTunesArtwork in Resources */,
+				90075458199966B200AA6C74 /* iTunesArtwork@2x in Resources */,
+				9007545C1999677B00AA6C74 /* Icon-Small@2x.png in Resources */,
 				900754221999629400AA6C74 /* InfoPlist.strings in Resources */,
 				9007542B1999629400AA6C74 /* Main.storyboard in Resources */,
+				9007545B1999677B00AA6C74 /* Icon-40@2x.png in Resources */,
+				900754511999656A00AA6C74 /* Default-568h@2x.png in Resources */,
+				90075456199966B200AA6C74 /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,8 +423,6 @@
 		900754471999629400AA6C74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RoadGuide/RoadGuide-Prefix.pch";
 				INFOPLIST_FILE = "RoadGuide/RoadGuide-Info.plist";
@@ -388,8 +434,6 @@
 		900754481999629400AA6C74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RoadGuide/RoadGuide-Prefix.pch";
 				INFOPLIST_FILE = "RoadGuide/RoadGuide-Info.plist";
