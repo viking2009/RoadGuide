@@ -46,6 +46,7 @@
 		90A2488C1999B82E0015D6BD /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A2487A1999B82E0015D6BD /* UIRefreshControl+AFNetworking.m */; };
 		90A2488D1999B82E0015D6BD /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A2487C1999B82E0015D6BD /* UIWebView+AFNetworking.m */; };
 		90A248911999B86B0015D6BD /* NSUserDefaults+GroundControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A248901999B86B0015D6BD /* NSUserDefaults+GroundControl.m */; };
+		90A248971999C1160015D6BD /* RGConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A248961999C1160015D6BD /* RGConfiguration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,8 @@
 		90A2487C1999B82E0015D6BD /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		90A2488F1999B86B0015D6BD /* NSUserDefaults+GroundControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+GroundControl.h"; sourceTree = "<group>"; };
 		90A248901999B86B0015D6BD /* NSUserDefaults+GroundControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+GroundControl.m"; sourceTree = "<group>"; };
+		90A248951999C1160015D6BD /* RGConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGConfiguration.h; sourceTree = "<group>"; };
+		90A248961999C1160015D6BD /* RGConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGConfiguration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,7 @@
 				900754291999629400AA6C74 /* Main.storyboard */,
 				9007542C1999629400AA6C74 /* RGViewController.h */,
 				9007542D1999629400AA6C74 /* RGViewController.m */,
+				90A248921999C0C50015D6BD /* Model */,
 				90A248551999B82E0015D6BD /* Vendor */,
 				9007544C199964FF00AA6C74 /* Resources */,
 				9007541E1999629400AA6C74 /* Supporting Files */,
@@ -331,6 +335,23 @@
 			path = GroundControl;
 			sourceTree = "<group>";
 		};
+		90A248921999C0C50015D6BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				90A248941999C0EC0015D6BD /* Configuration */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		90A248941999C0EC0015D6BD /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				90A248951999C1160015D6BD /* RGConfiguration.h */,
+				90A248961999C1160015D6BD /* RGConfiguration.m */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -377,7 +398,7 @@
 			attributes = {
 				CLASSPREFIX = RG;
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				ORGANIZATIONNAME = "Mykola Vyshynskyi";
 				TargetAttributes = {
 					900754341999629400AA6C74 = {
 						TestTargetID = 900754131999629400AA6C74;
@@ -441,6 +462,7 @@
 				900754241999629400AA6C74 /* main.m in Sources */,
 				90A2487E1999B82E0015D6BD /* AFHTTPRequestOperationManager.m in Sources */,
 				90A2488B1999B82E0015D6BD /* UIProgressView+AFNetworking.m in Sources */,
+				90A248971999C1160015D6BD /* RGConfiguration.m in Sources */,
 				90A248801999B82E0015D6BD /* AFNetworkReachabilityManager.m in Sources */,
 				90A248841999B82E0015D6BD /* AFURLResponseSerialization.m in Sources */,
 				90A248821999B82E0015D6BD /* AFURLConnectionOperation.m in Sources */,
