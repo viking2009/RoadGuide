@@ -27,6 +27,7 @@
 		90075458199966B200AA6C74 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 90075455199966B200AA6C74 /* iTunesArtwork@2x */; };
 		9007545B1999677B00AA6C74 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 900754591999677A00AA6C74 /* Icon-40@2x.png */; };
 		9007545C1999677B00AA6C74 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007545A1999677B00AA6C74 /* Icon-Small@2x.png */; };
+		90A248541999B4FF0015D6BD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90A248531999B4FF0015D6BD /* Config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		90075455199966B200AA6C74 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		900754591999677A00AA6C74 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		9007545A1999677B00AA6C74 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		90A248531999B4FF0015D6BD /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		9007544C199964FF00AA6C74 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				90A248531999B4FF0015D6BD /* Config.plist */,
 				9007544D199964FF00AA6C74 /* images */,
 			);
 			path = Resources;
@@ -279,6 +282,7 @@
 				9007542B1999629400AA6C74 /* Main.storyboard in Resources */,
 				9007545B1999677B00AA6C74 /* Icon-40@2x.png in Resources */,
 				900754511999656A00AA6C74 /* Default-568h@2x.png in Resources */,
+				90A248541999B4FF0015D6BD /* Config.plist in Resources */,
 				90075456199966B200AA6C74 /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +505,7 @@
 				900754481999629400AA6C74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		900754491999629400AA6C74 /* Build configuration list for PBXNativeTarget "RoadGuideTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +514,7 @@
 				9007544B1999629400AA6C74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
