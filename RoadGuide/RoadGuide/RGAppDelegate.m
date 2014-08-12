@@ -7,12 +7,28 @@
 //
 
 #import "RGAppDelegate.h"
+#import "NSUserDefaults+GroundControl.h"
+#import "AFURLResponseSerialization.h"
 
 @implementation RGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    AFPropertyListResponseSerializer *serializer = [AFPropertyListResponseSerializer serializer];
+    serializer.acceptableContentTypes = [NSSet setWithObjects:@"text/xml", nil];
+    
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    standardUserDefaults.responseSerializer = serializer;
+    
+    NSURL *configURL = [NSURL URLWithString:@"https://docs.google.com/uc?export=download&id=0Bx0hFmhr9oPRS3h2Z1d5Y3ZGVjQ"];
+    [standardUserDefaults registerDefaultsWithURL:configURL success:^(NSDictionary *defaults) {
+        NSLog(@"%@", defaults);
+        NSLog(@"%@", [standardUserDefaults dictionaryRepresentation]);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", [error localizedDescription]);
+    }];
+    
     return YES;
 }
 							
