@@ -7,12 +7,14 @@
 //
 
 #import "RGAppDelegate.h"
+#import "RGConfiguration.h"
 
 @implementation RGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[RGConfiguration sharedConfiguration] incrementLaunchCount];
 
     return YES;
 }

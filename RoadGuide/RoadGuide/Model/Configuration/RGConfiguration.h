@@ -43,6 +43,7 @@
 
 - (id)objectForKeyedSubscript:(id)key NS_AVAILABLE(10_8, 6_0);
 
+- (void)incrementLaunchCount;
 - (void)updateWithCompletion:(void (^)(NSDictionary *defaults, NSError *error))completion;
 
 @end

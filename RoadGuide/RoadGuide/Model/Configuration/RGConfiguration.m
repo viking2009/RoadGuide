@@ -15,6 +15,8 @@
 
 static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export=download&id=0Bx0hFmhr9oPRQVpmdjZfNEpHcUE";
 
+#define kLaunchCount @"LaunchCount"
+
 @interface RGConfiguration ()
 
 @property (nonatomic, readwrite) NSArray *routes;
@@ -259,6 +261,24 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
 
 - (id)objectForKeyedSubscript:(id)key {
     return [[NSUserDefaults standardUserDefaults] valueForKeyPath:key];
+}
+
+- (void)incrementLaunchCount {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSInteger launchCount = [userDefaults integerForKey:kLaunchCount];
+    if (!launchCount) {
+        NSURL *configURL = [[NSBundle mainBundle] URLForResource:@"Config" withExtension:@"plist"];
+        NSDictionary *config = [NSDictionary dictionaryWithContentsOfURL:configURL];
+        
+        [userDefaults setValuesForKeysWithDictionary:config];
+    }
+    
+    launchCount++;
+    
+    [userDefaults setInteger:launchCount forKey:kLaunchCount];
+    [userDefaults synchronize];
+    
+    DLog(@"%@: %i", kLaunchCount, launchCount);
 }
 
 - (void)updateWithCompletion:(void (^)(NSDictionary *defaults, NSError *error))completion {
