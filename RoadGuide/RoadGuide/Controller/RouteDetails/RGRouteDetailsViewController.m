@@ -15,19 +15,35 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
 @property (weak, nonatomic) IBOutlet UIImageView *routeView;
-@property (weak, nonatomic) IBOutlet UILabel *topLabel;
-@property (weak, nonatomic) IBOutlet UILabel *bottomLabel;
+@property (weak, nonatomic) IBOutlet UIButton *topHeader;
+@property (weak, nonatomic) IBOutlet UIButton *bottomHeader;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+- (IBAction)goBack:(id)sender;
 
 @end
 
 @implementation RGRouteDetailsViewController
 
+- (void)dealloc {
+    DLog();
+    
+    self.scrollView.delegate = nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     self.backgroundView.image = [UIImage imageNamed:@"routeDetails_background"];
-    self.scrollView.contentSize = self.backgroundView.image.size;
+    
+    // MARK: resize background view
+    CGRect backgroundViewFrame = self.backgroundView.frame;
+    backgroundViewFrame.size = self.backgroundView.image.size;
+    self.backgroundView.frame = backgroundViewFrame;
+    
+//    self.scrollView.contentSize = self.backgroundView.image.size;
 
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     self.activityIndicator.color = configuration.routeDetailsActivityIndicatorColor;
@@ -35,11 +51,14 @@
     UIColor *cityHeaderBackgroundColor = configuration.cityHeaderBackgroundColor;
     NSDictionary *cityHeaderAttributes = configuration.cityHeaderAttributes;
     
-    self.topLabel.backgroundColor = cityHeaderBackgroundColor;
-    self.topLabel.attributedText = [[NSAttributedString alloc] initWithString:self.routeInfo[@"from"] attributes:cityHeaderAttributes];
-    
-    self.bottomLabel.backgroundColor = cityHeaderBackgroundColor;
-    self.bottomLabel.attributedText = [[NSAttributedString alloc] initWithString:self.routeInfo[@"to"] attributes:cityHeaderAttributes];
+    NSAttributedString *topHeaderTitle = [[NSAttributedString alloc] initWithString:self.routeInfo[@"from"] attributes:cityHeaderAttributes];
+    NSAttributedString *bottomHeaderTitle = [[NSAttributedString alloc] initWithString:self.routeInfo[@"to"] attributes:cityHeaderAttributes];
+
+    self.topHeader.backgroundColor = cityHeaderBackgroundColor;
+    self.bottomHeader.backgroundColor = cityHeaderBackgroundColor;
+
+    [self.topHeader setAttributedTitle:topHeaderTitle forState:UIControlStateNormal];
+    [self.bottomHeader setAttributedTitle:bottomHeaderTitle forState:UIControlStateNormal];
     
     NSString *imageURL = self.routeInfo[@"imageURL"];
 
@@ -60,11 +79,16 @@
                                 animations:^{
                                     strongSelf.routeView.image = image;
                                 } completion:^(BOOL finished) {
+                                    // MARK: resize route view
                                     CGRect routeViewFrame = strongSelf.routeView.frame;
+                                    routeViewFrame.origin.y = strongSelf.scrollView.scrollIndicatorInsets.top;
                                     routeViewFrame.size = image.size;
                                     strongSelf.routeView.frame = routeViewFrame;
                                     
-                                    strongSelf.scrollView.contentSize = routeViewFrame.size;
+                                    // MARK: adjust content size
+                                    CGSize contentSize = routeViewFrame.size;
+                                    contentSize.height += strongSelf.scrollView.scrollIndicatorInsets.top + strongSelf.scrollView.scrollIndicatorInsets.bottom;
+                                    strongSelf.scrollView.contentSize = contentSize;
                                 }];
             }
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
@@ -79,6 +103,16 @@
     }
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+#pragma mark - IBActions
+
+- (IBAction)goBack:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -89,8 +123,8 @@
     
     // Add parallax
     CGFloat backgroundViewDiff = CGRectGetHeight(self.backgroundView.frame) - CGRectGetHeight(scrollView.frame);
-    CGFloat trassaViewDiff = CGRectGetHeight(self.routeView.frame) - CGRectGetHeight(scrollView.frame);
-    CGFloat scaleFactor = backgroundViewDiff / trassaViewDiff;
+    CGFloat routeViewDiff = CGRectGetHeight(self.routeView.frame) + scrollView.scrollIndicatorInsets.top + scrollView.scrollIndicatorInsets.bottom - CGRectGetHeight(scrollView.frame);
+    CGFloat scaleFactor = backgroundViewDiff / routeViewDiff;
     
     NSInteger increment = scrollView.contentOffset.y * scaleFactor;
     frame.origin.y -= MIN(MAX(increment, 0), backgroundViewDiff);

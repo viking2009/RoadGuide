@@ -24,6 +24,10 @@
 
 @implementation RGSplashScreenViewController
 
+- (void)dealloc {
+    DLog();
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
