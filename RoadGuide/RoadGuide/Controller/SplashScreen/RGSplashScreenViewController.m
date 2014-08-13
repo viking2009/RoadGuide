@@ -31,7 +31,7 @@
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     
     self.imageView.image = [UIImage imageNamed:@"Default"];
-    self.activityIndicator.color = configuration.activityIndicatorColor;
+    self.activityIndicator.color = configuration.splashScreenActivityIndicatorColor;
     
     __weak __typeof(self)weakSelf = self;
     // MARK: update configuration
