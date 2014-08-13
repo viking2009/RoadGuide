@@ -9,11 +9,13 @@
 #import "RGRouteListViewController.h"
 #import "RGConfiguration.h"
 #import "UIButton+AFNetworking.h"
+#import "RGRouteListCell.h"
 
-@interface RGRouteListViewController ()
+@interface RGRouteListViewController () <UICollectionViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
 @property (weak, nonatomic) IBOutlet UIButton *bannerView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 - (IBAction)openSmallBannerLinkURL:(id)sender;
 
@@ -63,8 +65,6 @@
     return YES;
 }
 
-#pragma mark - Private
-
 #pragma mark - IBActions
 
 - (IBAction)openSmallBannerLinkURL:(id)sender {
@@ -74,6 +74,24 @@
     if (configuration.smallBannerEnabled && linkURL) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkURL]];
     }
+}
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 10;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 2;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    RGRouteListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:RGRouteListCellIdentifier forIndexPath:indexPath];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"<%i, %i", indexPath.section + 1, indexPath.item + 1];
+    
+    return cell;
 }
 
 @end

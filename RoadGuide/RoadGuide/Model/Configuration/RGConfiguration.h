@@ -24,6 +24,9 @@
 @property (nonatomic, readonly) NSString *defaultLanguage;
 @property (nonatomic, readonly) NSString *currentLanguage;
 
+// MARK: Routes helpers
+@property (nonatomic, readonly) NSArray *routes;
+
 + (instancetype)sharedConfiguration;
 
 - (id)objectForKeyedSubscript:(id)key NS_AVAILABLE(10_8, 6_0);

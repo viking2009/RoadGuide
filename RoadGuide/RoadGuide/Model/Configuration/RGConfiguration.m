@@ -65,6 +65,10 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
     return self[RGSettingsLanguageKey];
 }
 
+- (NSArray *)routes {
+    return self[@"Routes"];
+}
+
 - (id)objectForKeyedSubscript:(id)key {
     return [[NSUserDefaults standardUserDefaults] valueForKeyPath:key];
 }
