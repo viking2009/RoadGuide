@@ -53,6 +53,20 @@
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     NSString *imageURL = configuration.smallBannerImageURL;
 
+    CGFloat bannerHeight = CGRectGetHeight(self.bannerView.frame);
+    CGFloat additionalHeight = CGRectGetMaxY(self.bannerView.frame) - CGRectGetMaxY(self.collectionView.frame);
+
+    // MARK: resize collection view while no banner image loaded
+    CGRect collectionViewFrame = self.collectionView.frame;
+    collectionViewFrame.size.height += additionalHeight;
+    self.collectionView.frame = collectionViewFrame;
+
+    // MARK: hide banner view while no banner image loaded
+    CGRect bannerViewFrame = self.bannerView.frame;
+    bannerViewFrame.origin.y = CGRectGetMaxY(bannerViewFrame);
+    bannerViewFrame.size.height = 0;
+    self.bannerView.frame = bannerViewFrame;
+    
     if (configuration.smallBannerEnabled && imageURL) {
         __weak __typeof(self)weakSelf = self;
 
@@ -66,13 +80,25 @@
                                        options:UIViewAnimationOptionTransitionCrossDissolve
                                     animations:^{
                                         [strongSelf.bannerView setBackgroundImage:image forState:UIControlStateNormal];
+
+                                        // MARK: resize collection view
+                                        CGRect collectionViewFrame = strongSelf.collectionView.frame;
+                                        collectionViewFrame.size.height -= additionalHeight;
+                                        strongSelf.collectionView.frame = collectionViewFrame;
+                                        
+                                        // MARK: resize banner view
+                                        CGRect bannerViewFrame = strongSelf.bannerView.frame;
+                                        bannerViewFrame.origin.y -= bannerHeight;
+                                        bannerViewFrame.size.height = bannerHeight;
+                                        strongSelf.bannerView.frame = bannerViewFrame;
+                                        
                                     } completion:^(BOOL finished) {
 
                                     }];
                 }
 
         } failure:^(NSError *error) {
-            // TODO: hide banner, resize collection view
+            DLog(@"ERROR: %@", [error localizedDescription]);
         }];
     }
 }

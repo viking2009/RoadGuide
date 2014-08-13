@@ -76,18 +76,8 @@
                                     <action selector="changeLanguage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5QF-6a-jFD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kVE-v5-Vzv">
-                                <rect key="frame" x="50" y="519" width="260" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="openSmallBannerLinkURL:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uvC-bs-S6l"/>
-                                </connections>
-                            </button>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="wb8-9c-BgL">
-                                <rect key="frame" x="0.0" y="36" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="38" width="320" height="478"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="fmI-0R-A2J">
@@ -142,6 +132,16 @@
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="VRf-ba-q99"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kVE-v5-Vzv">
+                                <rect key="frame" x="50" y="520" width="260" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openSmallBannerLinkURL:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uvC-bs-S6l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
