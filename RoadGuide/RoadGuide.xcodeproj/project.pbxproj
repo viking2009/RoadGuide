@@ -27,6 +27,7 @@
 		90075458199966B200AA6C74 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 90075455199966B200AA6C74 /* iTunesArtwork@2x */; };
 		9007545B1999677B00AA6C74 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 900754591999677A00AA6C74 /* Icon-40@2x.png */; };
 		9007545C1999677B00AA6C74 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007545A1999677B00AA6C74 /* Icon-Small@2x.png */; };
+		908CF6FF199B670500B2CD54 /* RGSplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF6FE199B670500B2CD54 /* RGSplashScreenViewController.m */; };
 		90A248541999B4FF0015D6BD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90A248531999B4FF0015D6BD /* Config.plist */; };
 		90A2487D1999B82E0015D6BD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A248591999B82E0015D6BD /* AFHTTPRequestOperation.m */; };
 		90A2487E1999B82E0015D6BD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A2485B1999B82E0015D6BD /* AFHTTPRequestOperationManager.m */; };
@@ -85,6 +86,8 @@
 		90075455199966B200AA6C74 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		900754591999677A00AA6C74 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		9007545A1999677B00AA6C74 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		908CF6FD199B670500B2CD54 /* RGSplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSplashScreenViewController.h; sourceTree = "<group>"; };
+		908CF6FE199B670500B2CD54 /* RGSplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSplashScreenViewController.m; sourceTree = "<group>"; };
 		90A248531999B4FF0015D6BD /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		90A248581999B82E0015D6BD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		90A248591999B82E0015D6BD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -191,6 +194,7 @@
 				9007542C1999629400AA6C74 /* RGViewController.h */,
 				9007542D1999629400AA6C74 /* RGViewController.m */,
 				90A248921999C0C50015D6BD /* Model */,
+				908CF6FB199B66CA00B2CD54 /* Controller */,
 				90A248551999B82E0015D6BD /* Vendor */,
 				9007544C199964FF00AA6C74 /* Resources */,
 				9007541E1999629400AA6C74 /* Supporting Files */,
@@ -256,6 +260,23 @@
 				90075455199966B200AA6C74 /* iTunesArtwork@2x */,
 			);
 			path = app;
+			sourceTree = "<group>";
+		};
+		908CF6FB199B66CA00B2CD54 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				908CF6FC199B66EE00B2CD54 /* SplashScreen */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		908CF6FC199B66EE00B2CD54 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				908CF6FD199B670500B2CD54 /* RGSplashScreenViewController.h */,
+				908CF6FE199B670500B2CD54 /* RGSplashScreenViewController.m */,
+			);
+			path = SplashScreen;
 			sourceTree = "<group>";
 		};
 		90A248551999B82E0015D6BD /* Vendor */ = {
@@ -462,6 +483,7 @@
 				900754241999629400AA6C74 /* main.m in Sources */,
 				90A2487E1999B82E0015D6BD /* AFHTTPRequestOperationManager.m in Sources */,
 				90A2488B1999B82E0015D6BD /* UIProgressView+AFNetworking.m in Sources */,
+				908CF6FF199B670500B2CD54 /* RGSplashScreenViewController.m in Sources */,
 				90A248971999C1160015D6BD /* RGConfiguration.m in Sources */,
 				90A248801999B82E0015D6BD /* AFNetworkReachabilityManager.m in Sources */,
 				90A248841999B82E0015D6BD /* AFURLResponseSerialization.m in Sources */,
