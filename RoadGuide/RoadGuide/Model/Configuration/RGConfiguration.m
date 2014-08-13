@@ -260,6 +260,22 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
     return [UIColor colorWithString:self[@"Design.RouteDetails.activityIndicatorColor"]] ? : [UIColor whiteColor];
 }
 
+- (UIColor *)cityHeaderBackgroundColor {
+    return [UIColor colorWithString:self[@"Design.RouteDetails.CityHeader.backgroundColor"]];
+}
+
+- (NSDictionary *)cityHeaderAttributes {
+    NSDictionary *cityLabel = self[@"Design.RouteDetails.CityHeader.cityLabel"];
+    
+    NSString *fontName = cityLabel[@"fontName"];
+    CGFloat fontSize = [cityLabel[@"fontSize"] floatValue];
+    UIFont *cityFont = [UIFont fontWithName:fontName size:fontSize] ? : [UIFont boldSystemFontOfSize:fontSize];
+    
+    UIColor *textColor = [UIColor colorWithString:cityLabel[@"textColor"]];
+    
+    return @{NSFontAttributeName: cityFont, NSForegroundColorAttributeName : textColor};
+}
+
 #pragma mark - Public
 
 - (id)objectForKeyedSubscript:(id)key {

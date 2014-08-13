@@ -39,6 +39,8 @@
 @property (nonatomic, readonly) NSDictionary *lengthAttributes;
 @property (nonatomic, readonly) NSDictionary *transitAttributes;
 @property (nonatomic, readonly) UIColor *routeDetailsActivityIndicatorColor;
+@property (nonatomic, readonly) UIColor *cityHeaderBackgroundColor;
+@property (nonatomic, readonly) NSDictionary *cityHeaderAttributes;
 
 + (instancetype)sharedConfiguration;
 
