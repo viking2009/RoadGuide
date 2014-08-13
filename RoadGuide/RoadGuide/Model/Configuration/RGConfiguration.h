@@ -33,11 +33,12 @@
 @property (nonatomic, readonly) NSString *currentLanguage;
 
 // MARK: Design helpers
-@property (nonatomic, readonly) UIColor *activityIndicatorColor;
+@property (nonatomic, readonly) UIColor *splashScreenActivityIndicatorColor;
 @property (nonatomic, readonly) UIColor *routeCellBackgroundColor;
 @property (nonatomic, readonly) NSDictionary *routeAttributes;
 @property (nonatomic, readonly) NSDictionary *lengthAttributes;
 @property (nonatomic, readonly) NSDictionary *transitAttributes;
+@property (nonatomic, readonly) UIColor *routeDetailsActivityIndicatorColor;
 
 + (instancetype)sharedConfiguration;
 

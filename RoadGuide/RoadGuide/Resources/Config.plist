@@ -300,8 +300,11 @@
 	</dict>
 	<key>Design</key>
 	<dict>
-		<key>activityIndicatorColor</key>
-		<string>000000</string>
+		<key>SplashScreen</key>
+		<dict>
+			<key>activityIndicatorColor</key>
+			<string>000000</string>
+		</dict>
 		<key>RouteList</key>
 		<dict>
 			<key>RouteCell</key>
@@ -339,6 +342,8 @@
 		</dict>
 		<key>RouteDetails</key>
 		<dict>
+			<key>activityIndicatorColor</key>
+			<string>ffffff</string>
 			<key>CityHeader</key>
 			<dict>
 				<key>backgroundColor</key>

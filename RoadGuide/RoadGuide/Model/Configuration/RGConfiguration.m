@@ -212,8 +212,8 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
 
 #pragma mark - Design helpers
 
-- (UIColor *)activityIndicatorColor {
-    return [UIColor colorWithString:self[@"Design.activityIndicatorColor"]] ? : [UIColor blackColor];
+- (UIColor *)splashScreenActivityIndicatorColor {
+    return [UIColor colorWithString:self[@"Design.SplashScreen.activityIndicatorColor"]] ? : [UIColor blackColor];
 }
 
 - (UIColor *)routeCellBackgroundColor {
@@ -256,6 +256,9 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
     return @{NSFontAttributeName: transitFont, NSForegroundColorAttributeName : textColor};
 }
 
+- (UIColor *)routeDetailsActivityIndicatorColor {
+    return [UIColor colorWithString:self[@"Design.RouteDetails.activityIndicatorColor"]] ? : [UIColor whiteColor];
+}
 
 #pragma mark - Public
 
