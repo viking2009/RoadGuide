@@ -296,5 +296,60 @@
 		<key>default</key>
 		<string>ru</string>
 	</dict>
+	<key>Design</key>
+	<dict>
+		<key>RouteList</key>
+		<dict>
+			<key>RouteCell</key>
+			<dict>
+				<key>backgroundColor</key>
+				<string>525151</string>
+				<key>routeLabel</key>
+				<dict>
+					<key>fontName</key>
+					<string>Arial-BoldMT</string>
+					<key>fontSize</key>
+					<string>14</string>
+					<key>textColor</key>
+					<string>ffe400</string>
+				</dict>
+				<key>lengthLabel</key>
+				<dict>
+					<key>fontName</key>
+					<string>Arial-ItalicMT</string>
+					<key>fontSize</key>
+					<string>14</string>
+					<key>textColor</key>
+					<string>ffffff</string>
+				</dict>
+				<key>transitLabel</key>
+				<dict>
+					<key>fontName</key>
+					<string>ArialMT</string>
+					<key>fontSize</key>
+					<string>9</string>
+					<key>textColor</key>
+					<string>ffffff</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>RouteDetails</key>
+		<dict>
+			<key>CityHeader</key>
+			<dict>
+				<key>backgroundColor</key>
+				<string>1d1d1b</string>
+				<key>cityLabel</key>
+				<dict>
+					<key>fontName</key>
+					<string>Arial-BoldMT</string>
+					<key>fontSize</key>
+					<string>22</string>
+					<key>textColor</key>
+					<string>ffe400</string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>
