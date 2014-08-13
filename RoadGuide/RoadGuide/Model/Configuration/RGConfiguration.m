@@ -50,12 +50,10 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
 }
 
 - (NSString *)smallBannerImageURL {
-    return @"http://docs.google.com/uc?export=download&id=0B4pWLbcPaUi6T2ttU0xfWUVLbEU";
     return self[@"Ads.smallBanner.imageURL"];
 }
 
 - (NSString *)smallBannerLinkURL {
-    return @"http://google.com/";
     return self[@"Ads.smallBanner.linkURL"];
 }
 
