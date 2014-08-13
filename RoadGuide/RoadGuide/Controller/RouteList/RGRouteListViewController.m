@@ -10,24 +10,45 @@
 #import "RGConfiguration.h"
 #import "UIButton+AFNetworking.h"
 #import "RGRouteListCell.h"
+#import "RGLanguage.h"
 
 @interface RGRouteListViewController () <UICollectionViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
-@property (weak, nonatomic) IBOutlet UIButton *bannerView;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *languageButtons;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIButton *bannerView;
 
+- (IBAction)changeLanguage:(id)sender;
 - (IBAction)openSmallBannerLinkURL:(id)sender;
+
+- (void)updateLanguageButtonsStates;
+- (void)languageChanged:(NSNotification *)notification;
 
 @end
 
 @implementation RGRouteListViewController
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(languageChanged:) name:RGLanguageDidChangeNotification object:nil];
+    }
+    
+    return self;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     self.backgroundView.image = [UIImage imageNamed:@"routeList_background"];
+    
+    [self updateLanguageButtonsStates];
     
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     NSString *imageURL = configuration.smallBannerImageURL;
@@ -56,17 +77,31 @@
     }
 }
 
-//-(UIStatusBarStyle)preferredStatusBarStyle {
-//    return UIStatusBarStyleLightContent;
-//}
-
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
 
 #pragma mark - Private
 
+- (void)updateLanguageButtonsStates {
+    NSUInteger languageIndex = [[RGLanguage supportedLanguages] indexOfObject:[RGLanguage currentLanguage]];
+    
+    for (UIButton *button in self.languageButtons) {
+        button.selected = (button.tag == languageIndex);
+    }
+}
+
 #pragma mark - IBActions
+
+- (IBAction)changeLanguage:(id)sender {
+    UIButton *button = sender;
+    
+    NSArray *supportedLanguages = [RGLanguage supportedLanguages];
+    if (button.tag < [supportedLanguages count]) {
+        NSString *selectedLanguage = supportedLanguages[button.tag];
+        [RGLanguage setCurrentLanguage:selectedLanguage];
+    }
+}
 
 - (IBAction)openSmallBannerLinkURL:(id)sender {
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
@@ -94,12 +129,20 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     RGRouteListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:RGRouteListCellIdentifier forIndexPath:indexPath];
     
-    RGConfiguration *configutation = [RGConfiguration sharedConfiguration];
+    RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     
-    cell.contentView.backgroundColor = configutation.routeCellBackgroundColor;
-    cell.textLabel.attributedText = configutation.routesStrings[indexPath.section][indexPath.item];
+    cell.contentView.backgroundColor = configuration.routeCellBackgroundColor;
+    cell.textLabel.attributedText = configuration.routesStrings[indexPath.section][indexPath.item];
     
     return cell;
+}
+
+#pragma mark - Notifications
+
+- (void)languageChanged:(NSNotification *)notification {
+    [self updateLanguageButtonsStates];
+    
+    [self.collectionView performSelector:@selector(reloadData) withObject:nil afterDelay:0.1];
 }
 
 @end

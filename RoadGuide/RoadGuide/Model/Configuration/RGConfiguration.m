@@ -110,7 +110,6 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
         }
         
         _routes = routes;
-        DLog(@"%@", _routes);
     }
     
     return _routes;
@@ -179,7 +178,7 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
         
         for (NSDictionary *city in self[@"Cities"]) {
             NSString *cityTitle = [city localizedObjectForKey:@"title"];
-            DLog(@"%@", cityTitle);
+
             if (cityTitle) {
                 [cities addObject:cityTitle];
             }

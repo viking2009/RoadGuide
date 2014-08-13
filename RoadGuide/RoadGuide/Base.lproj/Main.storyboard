@@ -41,26 +41,35 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="W6A-6G-qnO">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="W6A-6G-qnO" customClass="RGButton">
                                 <rect key="frame" x="240" y="10" width="30" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="routeList_flag_en.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeLanguage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vsq-EG-jWR"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3ho-Xo-4ok">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3ho-Xo-4ok" customClass="RGButton">
                                 <rect key="frame" x="280" y="10" width="30" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="routeList_flag_ru.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="k52-X7-LWG">
-                                <rect key="frame" x="200" y="10" width="30" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="routeList_flag_ua.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeLanguage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eKq-1n-lWx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="k52-X7-LWG" customClass="RGButton">
+                                <rect key="frame" x="200" y="10" width="30" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="routeList_flag_ru.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeLanguage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5QF-6a-jFD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kVE-v5-Vzv">
                                 <rect key="frame" x="50" y="519" width="260" height="44"/>
@@ -118,6 +127,9 @@
                         <outlet property="backgroundView" destination="zUK-G4-czy" id="NU5-JQ-i3a"/>
                         <outlet property="bannerView" destination="kVE-v5-Vzv" id="CzH-ht-5aI"/>
                         <outlet property="collectionView" destination="wb8-9c-BgL" id="omB-fP-huD"/>
+                        <outletCollection property="languageButtons" destination="k52-X7-LWG" id="3MT-sM-qoa"/>
+                        <outletCollection property="languageButtons" destination="3ho-Xo-4ok" id="yYH-7K-vEz"/>
+                        <outletCollection property="languageButtons" destination="W6A-6G-qnO" id="GDn-Io-Rk7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

@@ -40,6 +40,7 @@
 		908CF721199BAA7300B2CD54 /* RGRouteListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF720199BAA7300B2CD54 /* RGRouteListCell.m */; };
 		908CF725199BC25E00B2CD54 /* ColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF724199BC25E00B2CD54 /* ColorUtils.m */; };
 		908CF728199BC5BE00B2CD54 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 908CF72A199BC5BE00B2CD54 /* Localizable.strings */; };
+		908CF735199BD66300B2CD54 /* RGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF734199BD66300B2CD54 /* RGButton.m */; };
 		90A248541999B4FF0015D6BD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90A248531999B4FF0015D6BD /* Config.plist */; };
 		90A2487D1999B82E0015D6BD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A248591999B82E0015D6BD /* AFHTTPRequestOperation.m */; };
 		90A2487E1999B82E0015D6BD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A2485B1999B82E0015D6BD /* AFHTTPRequestOperationManager.m */; };
@@ -124,6 +125,8 @@
 		908CF730199BC5E900B2CD54 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		908CF731199BC5E900B2CD54 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		908CF732199BC5E900B2CD54 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		908CF733199BD66300B2CD54 /* RGButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGButton.h; sourceTree = "<group>"; };
+		908CF734199BD66300B2CD54 /* RGButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGButton.m; sourceTree = "<group>"; };
 		90A248531999B4FF0015D6BD /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		90A248581999B82E0015D6BD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		90A248591999B82E0015D6BD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -372,6 +375,8 @@
 			children = (
 				908CF71F199BAA7300B2CD54 /* RGRouteListCell.h */,
 				908CF720199BAA7300B2CD54 /* RGRouteListCell.m */,
+				908CF733199BD66300B2CD54 /* RGButton.h */,
+				908CF734199BD66300B2CD54 /* RGButton.m */,
 			);
 			path = RouteList;
 			sourceTree = "<group>";
@@ -602,6 +607,7 @@
 				900754241999629400AA6C74 /* main.m in Sources */,
 				90A2487E1999B82E0015D6BD /* AFHTTPRequestOperationManager.m in Sources */,
 				90A2488B1999B82E0015D6BD /* UIProgressView+AFNetworking.m in Sources */,
+				908CF735199BD66300B2CD54 /* RGButton.m in Sources */,
 				908CF6FF199B670500B2CD54 /* RGSplashScreenViewController.m in Sources */,
 				90A248971999C1160015D6BD /* RGConfiguration.m in Sources */,
 				90A248801999B82E0015D6BD /* AFNetworkReachabilityManager.m in Sources */,
