@@ -83,14 +83,18 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGRect frame = self.backgroundView.frame;
+    
     // Avoid scroll
     frame.origin.y = scrollView.contentOffset.y;
+    
     // Add parallax
     CGFloat backgroundViewDiff = CGRectGetHeight(self.backgroundView.frame) - CGRectGetHeight(scrollView.frame);
     CGFloat trassaViewDiff = CGRectGetHeight(self.routeView.frame) - CGRectGetHeight(scrollView.frame);
     CGFloat scaleFactor = backgroundViewDiff / trassaViewDiff;
+    
     NSInteger increment = scrollView.contentOffset.y * scaleFactor;
     frame.origin.y -= MIN(MAX(increment, 0), backgroundViewDiff);
+    
     self.backgroundView.frame = frame;
 }
 
