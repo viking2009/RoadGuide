@@ -15,8 +15,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
-- (UIImage *)launchImage;
-
 - (void)showFullscreenBannerIfNeeded;
 - (void)showRouteList;
 - (void)showRouteListDelayed;
@@ -29,7 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.imageView.image = [self launchImage];
+    self.imageView.image = [UIImage imageNamed:@"Default"];
     
     __weak __typeof(self)weakSelf = self;
     // MARK: update configuration
@@ -53,16 +51,6 @@
 }
 
 #pragma mark - Private
-
-- (UIImage *)launchImage {
-    if ([UIScreen mainScreen].bounds.size.height == 568.0) {
-        // Use Retina 4 launch image
-        return [UIImage imageNamed:@"Default-568h@2x.png"];
-    } else {
-        // Use Retina 3.5 launch image
-        return [UIImage imageNamed:@"Default.png"];
-    }
-}
 
 - (void)showFullscreenBannerIfNeeded {
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];

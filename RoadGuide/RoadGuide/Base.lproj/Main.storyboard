@@ -7,7 +7,7 @@
         <!--Splash Screen View Controller-->
         <scene sceneID="zpk-0X-KaB">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="32w-5M-n9a" customClass="RGSplashScreenViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashScreen" modalTransitionStyle="crossDissolve" id="32w-5M-n9a" customClass="RGSplashScreenViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6h3-cg-PyF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -27,22 +27,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijS-hy-Ky7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86" y="219"/>
+            <point key="canvasLocation" x="-22" y="219"/>
         </scene>
-        <!--View Controller-->
+        <!--Route List View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="RouteList" id="vXZ-lx-hvc" customClass="RGViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RouteList" id="vXZ-lx-hvc" customClass="RGRouteListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="zUK-G4-czy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="W6A-6G-qnO">
+                                <rect key="frame" x="240" y="10" width="30" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="routeList_flag_en.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3ho-Xo-4ok">
+                                <rect key="frame" x="280" y="10" width="30" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="routeList_flag_ru.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="k52-X7-LWG">
+                                <rect key="frame" x="200" y="10" width="30" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="routeList_flag_ua.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kVE-v5-Vzv">
+                                <rect key="frame" x="50" y="519" width="260" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openSmallBannerLinkURL:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uvC-bs-S6l"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ILI-1P-gDI"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="zUK-G4-czy" id="NU5-JQ-i3a"/>
+                        <outlet property="bannerView" destination="kVE-v5-Vzv" id="CzH-ht-5aI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="514" y="219"/>
+            <point key="canvasLocation" x="382" y="219"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TPT-nl-9qw">
@@ -63,6 +104,11 @@
             <point key="canvasLocation" x="-440" y="219"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="routeList_flag_en.png" width="62" height="39"/>
+        <image name="routeList_flag_ru.png" width="62" height="39"/>
+        <image name="routeList_flag_ua.png" width="62" height="39"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
