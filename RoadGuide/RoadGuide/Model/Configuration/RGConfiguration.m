@@ -30,12 +30,10 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
 }
 
 - (NSString *)fullscreenBannerImageURL {
-    RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
-    
     if ([UIScreen mainScreen].bounds.size.height == 568.0) {
-        return configuration[@"Ads.fullscreenBanner.tallImageURL"];
+        return self[@"Ads.fullscreenBanner.tallImageURL"];
     } else {
-        return configuration[@"Ads.fullscreenBanner.imageURL"];
+        return self[@"Ads.fullscreenBanner.imageURL"];
     }
 }
 
@@ -45,6 +43,20 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
 
 - (NSTimeInterval)fullscreenBannerShowTime {
     return [self[@"Ads.fullscreenBanner.showTime"] doubleValue];
+}
+
+- (BOOL)smallBannerEnabled {
+    return [self[@"Ads.smallBanner.enabled"] boolValue];
+}
+
+- (NSString *)smallBannerImageURL {
+    return @"http://docs.google.com/uc?export=download&id=0B4pWLbcPaUi6T2ttU0xfWUVLbEU";
+    return self[@"Ads.smallBanner.imageURL"];
+}
+
+- (NSString *)smallBannerLinkURL {
+    return @"http://google.com/";
+    return self[@"Ads.smallBanner.linkURL"];
 }
 
 - (NSString *)defaultLanguage {

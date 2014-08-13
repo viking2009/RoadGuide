@@ -16,6 +16,10 @@
 @property (nonatomic, readonly) NSTimeInterval fullscreenBannerFadeDuration;
 @property (nonatomic, readonly) NSTimeInterval fullscreenBannerShowTime;
 
+@property (nonatomic, readonly) BOOL smallBannerEnabled;
+@property (nonatomic, readonly) NSString *smallBannerImageURL;
+@property (nonatomic, readonly) NSString *smallBannerLinkURL;
+
 // MARK: Language helpers
 @property (nonatomic, readonly) NSString *defaultLanguage;
 @property (nonatomic, readonly) NSString *currentLanguage;
