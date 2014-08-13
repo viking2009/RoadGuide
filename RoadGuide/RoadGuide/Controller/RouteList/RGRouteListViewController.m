@@ -11,6 +11,7 @@
 #import "UIButton+AFNetworking.h"
 #import "RGRouteListCell.h"
 #import "RGLanguage.h"
+#import "RGRouteDetailsViewController.h"
 
 @interface RGRouteListViewController () <UICollectionViewDataSource>
 
@@ -100,6 +101,50 @@
         } failure:^(NSError *error) {
             DLog(@"ERROR: %@", [error localizedDescription]);
         }];
+    }
+}
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([identifier isEqualToString:@"showRouteDetails"]) {
+        NSIndexPath *indexPath = self.collectionView.indexPathsForSelectedItems.firstObject;
+        if (indexPath) {
+            RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
+            NSDictionary *route = configuration.routes[indexPath.section];
+
+            if (indexPath.item == 0) {
+                return ([route[@"fromImageURL"] length] > 0);
+            } else {
+                return ([route[@"toImageURL"] length] > 0);
+            }
+        }
+    }
+    
+    return NO;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showRouteDetails"]) {
+        NSIndexPath *indexPath = self.collectionView.indexPathsForSelectedItems.firstObject;
+        if (indexPath) {
+            RGRouteDetailsViewController *routeDetails = segue.destinationViewController;
+
+            RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
+            NSDictionary *route = configuration.routes[indexPath.section];
+
+            NSMutableDictionary *routeInfo = [[NSMutableDictionary alloc] init];
+            
+            if (indexPath.item == 0) {
+                routeInfo[@"from"] = [route[@"from"] uppercaseString];
+                routeInfo[@"to"] = [route[@"to"] uppercaseString];
+                routeInfo[@"imageURL"] = route[@"fromImageURL"];
+            } else {
+                routeInfo[@"from"] = [route[@"to"] uppercaseString];
+                routeInfo[@"to"] = [route[@"from"] uppercaseString];
+                routeInfo[@"imageURL"] = route[@"toImageURL"];
+            }
+            
+            routeDetails.routeInfo = routeInfo;
+        }
     }
 }
 

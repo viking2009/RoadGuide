@@ -42,6 +42,8 @@
 		908CF728199BC5BE00B2CD54 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 908CF72A199BC5BE00B2CD54 /* Localizable.strings */; };
 		908CF735199BD66300B2CD54 /* RGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF734199BD66300B2CD54 /* RGButton.m */; };
 		908CF739199BEDF600B2CD54 /* AFNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF738199BEDF600B2CD54 /* AFNetworkActivityLogger.m */; };
+		908CF73D199C04A300B2CD54 /* RGRouteDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF73C199C04A300B2CD54 /* RGRouteDetailsViewController.m */; };
+		908CF740199C074300B2CD54 /* routeDetails_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 908CF73F199C074300B2CD54 /* routeDetails_background@2x.png */; };
 		90A248541999B4FF0015D6BD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90A248531999B4FF0015D6BD /* Config.plist */; };
 		90A2487D1999B82E0015D6BD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A248591999B82E0015D6BD /* AFHTTPRequestOperation.m */; };
 		90A2487E1999B82E0015D6BD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A2485B1999B82E0015D6BD /* AFHTTPRequestOperationManager.m */; };
@@ -130,6 +132,9 @@
 		908CF734199BD66300B2CD54 /* RGButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGButton.m; sourceTree = "<group>"; };
 		908CF737199BEDF600B2CD54 /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityLogger.h; sourceTree = "<group>"; };
 		908CF738199BEDF600B2CD54 /* AFNetworkActivityLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityLogger.m; sourceTree = "<group>"; };
+		908CF73B199C04A300B2CD54 /* RGRouteDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGRouteDetailsViewController.h; sourceTree = "<group>"; };
+		908CF73C199C04A300B2CD54 /* RGRouteDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGRouteDetailsViewController.m; sourceTree = "<group>"; };
+		908CF73F199C074300B2CD54 /* routeDetails_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "routeDetails_background@2x.png"; sourceTree = "<group>"; };
 		90A248531999B4FF0015D6BD /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		90A248581999B82E0015D6BD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		90A248591999B82E0015D6BD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -287,7 +292,8 @@
 			isa = PBXGroup;
 			children = (
 				9007544E199964FF00AA6C74 /* app */,
-				908CF712199B971000B2CD54 /* routeList */,
+				908CF712199B971000B2CD54 /* RouteList */,
+				908CF73E199C071D00B2CD54 /* RouteDetails */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -311,6 +317,7 @@
 			children = (
 				908CF6FC199B66EE00B2CD54 /* SplashScreen */,
 				908CF70A199B91CA00B2CD54 /* RouteList */,
+				908CF73A199C045900B2CD54 /* RouteDetails */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -353,7 +360,7 @@
 			path = StandardPaths;
 			sourceTree = "<group>";
 		};
-		908CF712199B971000B2CD54 /* routeList */ = {
+		908CF712199B971000B2CD54 /* RouteList */ = {
 			isa = PBXGroup;
 			children = (
 				908CF713199B971000B2CD54 /* routeList_background-568h@2x.png */,
@@ -362,6 +369,7 @@
 				908CF718199B98A600B2CD54 /* routeList_flag_ru@2x.png */,
 				908CF719199B98A600B2CD54 /* routeList_flag_ua@2x.png */,
 			);
+			name = RouteList;
 			path = routeList;
 			sourceTree = "<group>";
 		};
@@ -400,6 +408,23 @@
 				908CF738199BEDF600B2CD54 /* AFNetworkActivityLogger.m */,
 			);
 			path = AFNetworkActivityLogger;
+			sourceTree = "<group>";
+		};
+		908CF73A199C045900B2CD54 /* RouteDetails */ = {
+			isa = PBXGroup;
+			children = (
+				908CF73B199C04A300B2CD54 /* RGRouteDetailsViewController.h */,
+				908CF73C199C04A300B2CD54 /* RGRouteDetailsViewController.m */,
+			);
+			path = RouteDetails;
+			sourceTree = "<group>";
+		};
+		908CF73E199C071D00B2CD54 /* RouteDetails */ = {
+			isa = PBXGroup;
+			children = (
+				908CF73F199C074300B2CD54 /* routeDetails_background@2x.png */,
+			);
+			path = RouteDetails;
 			sourceTree = "<group>";
 		};
 		90A248551999B82E0015D6BD /* Vendor */ = {
@@ -595,6 +620,7 @@
 				900754511999656A00AA6C74 /* Default-568h@2x.png in Resources */,
 				908CF728199BC5BE00B2CD54 /* Localizable.strings in Resources */,
 				90A248541999B4FF0015D6BD /* Config.plist in Resources */,
+				908CF740199C074300B2CD54 /* routeDetails_background@2x.png in Resources */,
 				90075456199966B200AA6C74 /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,6 +646,7 @@
 				900754241999629400AA6C74 /* main.m in Sources */,
 				90A2487E1999B82E0015D6BD /* AFHTTPRequestOperationManager.m in Sources */,
 				90A2488B1999B82E0015D6BD /* UIProgressView+AFNetworking.m in Sources */,
+				908CF73D199C04A300B2CD54 /* RGRouteDetailsViewController.m in Sources */,
 				908CF739199BEDF600B2CD54 /* AFNetworkActivityLogger.m in Sources */,
 				908CF735199BD66300B2CD54 /* RGButton.m in Sources */,
 				908CF6FF199B670500B2CD54 /* RGSplashScreenViewController.m in Sources */,

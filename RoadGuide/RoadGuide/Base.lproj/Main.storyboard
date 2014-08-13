@@ -159,16 +159,63 @@
             </objects>
             <point key="canvasLocation" x="382" y="219"/>
         </scene>
-        <!--View Controller-->
+        <!--Route Details View Controller-->
         <scene sceneID="0MY-WE-Z8X">
             <objects>
-                <viewController id="Try-us-9lL" sceneMemberID="viewController">
+                <viewController id="Try-us-9lL" customClass="RGRouteDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dca-QW-tDh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="UoR-ii-0IG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="sHl-hN-xun">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="75J-O3-SBf">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                </subviews>
+                                <inset key="contentInset" minX="0.0" minY="34" maxX="0.0" maxY="34"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="34" maxX="0.0" maxY="34"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Try-us-9lL" id="1p9-zR-KPR"/>
+                                </connections>
+                            </scrollView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ghs-Oh-uxY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZXc-ja-XKJ">
+                                <rect key="frame" x="0.0" y="534" width="320" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" id="QzQ-3M-g05">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zrq-36-cfo"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="QzQ-3M-g05" id="NTx-HY-RWt"/>
+                        <outlet property="backgroundView" destination="sHl-hN-xun" id="ZP4-dm-R3B"/>
+                        <outlet property="bottomLabel" destination="ZXc-ja-XKJ" id="Isy-gF-dBd"/>
+                        <outlet property="routeView" destination="75J-O3-SBf" id="xEc-Zq-uGy"/>
+                        <outlet property="scrollView" destination="UoR-ii-0IG" id="jco-6w-Pfi"/>
+                        <outlet property="topLabel" destination="Ghs-Oh-uxY" id="FNj-s6-KzI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAQ-c7-JMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

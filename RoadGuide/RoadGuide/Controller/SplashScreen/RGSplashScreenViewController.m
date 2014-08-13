@@ -87,6 +87,8 @@
             __strong __typeof(weakSelf)strongSelf = weakSelf;
             
             if (strongSelf) {
+                DLog(@"ERROR: %@", [error localizedDescription]);
+
                 [strongSelf.activityIndicator stopAnimating];
                 [strongSelf showRouteList];
             }
