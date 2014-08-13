@@ -10,7 +10,15 @@
 
 @interface RGConfiguration : NSObject
 
+// MARK: helpers
+@property (nonatomic, readonly) BOOL fullscreenBannerEnabled;
+@property (nonatomic, readonly) NSString *fullscreenBannerImageURL;
+@property (nonatomic, readonly) NSTimeInterval fullscreenBannerFadeDuration;
+@property (nonatomic, readonly) NSTimeInterval fullscreenBannerShowTime;
+
 + (instancetype)sharedConfiguration;
+
+- (id)objectForKeyedSubscript:(id)key NS_AVAILABLE(10_8, 6_0);
 
 - (void)updateWithCompletion:(void (^)(NSDictionary *defaults, NSError *error))completion;
 

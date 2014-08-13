@@ -8,12 +8,14 @@
 		<dict>
 			<key>enabled</key>
 			<true/>
+			<key>fadeDuration</key>
+			<integer>1</integer>
 			<key>showTime</key>
 			<integer>2</integer>
 			<key>imageURL</key>
-			<string></string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6ZElYelpWRzVCWDg</string>
 			<key>tallImageURL</key>
-			<string></string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6Z2t6TXJKQUt2WGc</string>
 		</dict>
 		<key>smallBanner</key>
 		<dict>

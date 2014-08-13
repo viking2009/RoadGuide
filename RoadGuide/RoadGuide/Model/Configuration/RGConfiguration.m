@@ -24,13 +24,41 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
     return _sharedConfiguration;
 }
 
+- (BOOL)fullscreenBannerEnabled {
+    return [self[@"Ads.fullscreenBanner.enabled"] boolValue];
+}
+
+- (NSString *)fullscreenBannerImageURL {
+    RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
+    
+    if ([UIScreen mainScreen].bounds.size.height == 568.0) {
+        return configuration[@"Ads.fullscreenBanner.tallImageURL"];
+    } else {
+        return configuration[@"Ads.fullscreenBanner.imageURL"];
+    }
+}
+
+- (NSTimeInterval)fullscreenBannerFadeDuration {
+    return [self[@"Ads.fullscreenBanner.fadeDuration"] doubleValue];
+}
+
+- (NSTimeInterval)fullscreenBannerShowTime {
+    return [self[@"Ads.fullscreenBanner.showTime"] doubleValue];
+}
+
+- (id)objectForKeyedSubscript:(id)key {
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    
+    return [standardUserDefaults valueForKeyPath:key];
+}
+
 - (void)updateWithCompletion:(void (^)(NSDictionary *defaults, NSError *error))completion {
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
 
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         AFPropertyListResponseSerializer *serializer = [AFPropertyListResponseSerializer serializer];
-        serializer.acceptableContentTypes = [NSSet setWithObjects:@"text/xml", nil];
+        serializer.acceptableContentTypes = [NSSet setWithObjects:@"text/xml", @"text/plain", nil];
         
         standardUserDefaults.responseSerializer = serializer;
     });

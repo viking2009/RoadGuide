@@ -8,12 +8,18 @@
 
 #import "RGSplashScreenViewController.h"
 #import "RGConfiguration.h"
+#import "UIImageView+AFNetworking.h"
+#import "RGAppDelegate.h"
 
 @interface RGSplashScreenViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 - (UIImage *)launchImage;
+
+- (void)showFullscreenBannerIfNeeded;
+- (void)showRouteList;
+- (void)showRouteListDelayed;
 
 @end
 
@@ -25,12 +31,19 @@
     
     self.imageView.image = [self launchImage];
     
+    __weak __typeof(self)weakSelf = self;
     // MARK: update configuration
     [[RGConfiguration sharedConfiguration] updateWithCompletion:^(NSDictionary *defaults, NSError *error) {
         if (error) {
             DLog(@"ERROR: %@", [error localizedDescription]);
         } else {
             DLog(@"defaults: %@", defaults);
+        }
+        
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        
+        if (strongSelf) {
+            [strongSelf showFullscreenBannerIfNeeded];
         }
     }];
 }
@@ -41,7 +54,7 @@
 
 #pragma mark - Private
 
-- (UIImage*)launchImage {
+- (UIImage *)launchImage {
     if ([UIScreen mainScreen].bounds.size.height == 568.0) {
         // Use Retina 4 launch image
         return [UIImage imageNamed:@"Default-568h@2x.png"];
@@ -49,6 +62,49 @@
         // Use Retina 3.5 launch image
         return [UIImage imageNamed:@"Default.png"];
     }
+}
+
+- (void)showFullscreenBannerIfNeeded {
+    RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
+    NSString *imageURL = configuration.fullscreenBannerImageURL;
+    
+    if (configuration.fullscreenBannerEnabled && imageURL) {
+        __weak __typeof(self)weakSelf = self;
+
+        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:imageURL]];
+        [self.imageView setImageWithURLRequest:urlRequest placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+            __strong __typeof(weakSelf)strongSelf = weakSelf;
+            
+            if (strongSelf) {
+                [UIView transitionWithView:strongSelf.imageView
+                                  duration:configuration.fullscreenBannerFadeDuration
+                                   options:UIViewAnimationOptionTransitionCrossDissolve
+                                animations:^{
+                                    strongSelf.imageView.image = image;
+                                } completion:^(BOOL finished) {
+                                    [strongSelf showRouteListDelayed];
+                                }];
+             }
+
+        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+            __strong __typeof(weakSelf)strongSelf = weakSelf;
+            
+            if (strongSelf) {
+                [strongSelf showRouteList];
+            }
+        }];
+    } else {
+        [self showRouteList];
+    }
+}
+
+- (void)showRouteList {
+    [self performSegueWithIdentifier:@"showRouteList" sender:self];
+}
+
+- (void)showRouteListDelayed {
+    RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
+    [self performSelector:@selector(showRouteList) withObject:nil afterDelay:configuration.fullscreenBannerShowTime];
 }
 
 @end

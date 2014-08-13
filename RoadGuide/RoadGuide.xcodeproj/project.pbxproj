@@ -28,6 +28,7 @@
 		9007545B1999677B00AA6C74 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 900754591999677A00AA6C74 /* Icon-40@2x.png */; };
 		9007545C1999677B00AA6C74 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007545A1999677B00AA6C74 /* Icon-Small@2x.png */; };
 		908CF6FF199B670500B2CD54 /* RGSplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF6FE199B670500B2CD54 /* RGSplashScreenViewController.m */; };
+		908CF702199B7ACC00B2CD54 /* RGFadeReplaceSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF701199B7ACC00B2CD54 /* RGFadeReplaceSegue.m */; };
 		90A248541999B4FF0015D6BD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90A248531999B4FF0015D6BD /* Config.plist */; };
 		90A2487D1999B82E0015D6BD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A248591999B82E0015D6BD /* AFHTTPRequestOperation.m */; };
 		90A2487E1999B82E0015D6BD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A2485B1999B82E0015D6BD /* AFHTTPRequestOperationManager.m */; };
@@ -88,6 +89,8 @@
 		9007545A1999677B00AA6C74 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		908CF6FD199B670500B2CD54 /* RGSplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSplashScreenViewController.h; sourceTree = "<group>"; };
 		908CF6FE199B670500B2CD54 /* RGSplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSplashScreenViewController.m; sourceTree = "<group>"; };
+		908CF700199B7ACC00B2CD54 /* RGFadeReplaceSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGFadeReplaceSegue.h; sourceTree = "<group>"; };
+		908CF701199B7ACC00B2CD54 /* RGFadeReplaceSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGFadeReplaceSegue.m; sourceTree = "<group>"; };
 		90A248531999B4FF0015D6BD /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		90A248581999B82E0015D6BD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		90A248591999B82E0015D6BD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 			children = (
 				908CF6FD199B670500B2CD54 /* RGSplashScreenViewController.h */,
 				908CF6FE199B670500B2CD54 /* RGSplashScreenViewController.m */,
+				908CF700199B7ACC00B2CD54 /* RGFadeReplaceSegue.h */,
+				908CF701199B7ACC00B2CD54 /* RGFadeReplaceSegue.m */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
@@ -491,6 +496,7 @@
 				90A248891999B82E0015D6BD /* UIButton+AFNetworking.m in Sources */,
 				90A248871999B82E0015D6BD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				90A248811999B82E0015D6BD /* AFSecurityPolicy.m in Sources */,
+				908CF702199B7ACC00B2CD54 /* RGFadeReplaceSegue.m in Sources */,
 				90A2488C1999B82E0015D6BD /* UIRefreshControl+AFNetworking.m in Sources */,
 				90A2488D1999B82E0015D6BD /* UIWebView+AFNetworking.m in Sources */,
 				90A2487F1999B82E0015D6BD /* AFHTTPSessionManager.m in Sources */,
