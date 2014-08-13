@@ -13,16 +13,16 @@
 			<key>showTime</key>
 			<integer>2</integer>
 			<key>imageURL</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6ZElYelpWRzVCWDg</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRRF9rampWaUtqWHM</string>
 			<key>tallImageURL</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6Z2t6TXJKQUt2WGc</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRQ0FnYlhQZUZ1U00</string>
 		</dict>
 		<key>smallBanner</key>
 		<dict>
 			<key>enabled</key>
 			<true/>
 			<key>imageURL</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6T2ttU0xfWUVLbEU</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRS2pQYWFrSFQ5MHc</string>
 			<key>linkURL</key>
 			<string>http://google.com/</string>
 		</dict>
