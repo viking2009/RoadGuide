@@ -10,7 +10,7 @@
 #import "NSUserDefaults+GroundControl.h"
 #import "AFURLResponseSerialization.h"
 
-static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export=download&id=0Bx0hFmhr9oPRS3h2Z1d5Y3ZGVjQ";
+static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export=download&id=0Bx0hFmhr9oPRQVpmdjZfNEpHcUE";
 
 @implementation RGConfiguration
 
