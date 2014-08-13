@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="DfN-c3-qwI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="32w-5M-n9a">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -27,7 +27,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="edp-eb-S64" id="xBS-BO-zVx"/>
                         <outlet property="imageView" destination="9oW-kA-er5" id="QpX-w3-0fv"/>
-                        <segue destination="vXZ-lx-hvc" kind="custom" identifier="showRouteList" customClass="RGFadeReplaceSegue" id="JQC-wa-D7I"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="showRouteList" customClass="RGFadeReplaceSegue" modalTransitionStyle="crossDissolve" id="JQC-wa-D7I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijS-hy-Ky7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -124,7 +124,7 @@
                                             <outlet property="routeEuLabel" destination="6FX-fe-xwp" id="Yhg-99-JNu"/>
                                             <outlet property="routeUaLabel" destination="Vs8-wO-tEX" id="wv8-4e-I6V"/>
                                             <outlet property="textLabel" destination="PCn-Ak-bc0" id="mci-iD-dYT"/>
-                                            <segue destination="Try-us-9lL" kind="push" identifier="showRouteDetails" id="hHF-ce-bp1"/>
+                                            <segue destination="Try-us-9lL" kind="modal" identifier="showRouteDetails" modalTransitionStyle="crossDissolve" id="hHF-ce-bp1"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -227,24 +227,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAQ-c7-JMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="800" y="219"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="TPT-nl-9qw">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="DfN-c3-qwI" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZKH-mn-5lX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="32w-5M-n9a" kind="relationship" relationship="rootViewController" id="RMJ-Yn-YrA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="18B-QI-53k" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-440" y="219"/>
         </scene>
     </scenes>
     <resources>

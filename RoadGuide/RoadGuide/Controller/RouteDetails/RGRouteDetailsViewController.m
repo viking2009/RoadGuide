@@ -110,7 +110,7 @@
 #pragma mark - IBActions
 
 - (IBAction)goBack:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 #pragma mark - UIScrollViewDelegate

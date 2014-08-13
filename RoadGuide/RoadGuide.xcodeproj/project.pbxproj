@@ -27,7 +27,6 @@
 		9007545B1999677B00AA6C74 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 900754591999677A00AA6C74 /* Icon-40@2x.png */; };
 		9007545C1999677B00AA6C74 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007545A1999677B00AA6C74 /* Icon-Small@2x.png */; };
 		908CF6FF199B670500B2CD54 /* RGSplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF6FE199B670500B2CD54 /* RGSplashScreenViewController.m */; };
-		908CF702199B7ACC00B2CD54 /* RGFadeReplaceSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF701199B7ACC00B2CD54 /* RGFadeReplaceSegue.m */; };
 		908CF705199B851200B2CD54 /* RGLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF704199B851200B2CD54 /* RGLanguage.m */; };
 		908CF709199B8B9600B2CD54 /* NSDictionary+Localized.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF708199B8B9600B2CD54 /* NSDictionary+Localized.m */; };
 		908CF70D199B91F900B2CD54 /* RGRouteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF70C199B91F900B2CD54 /* RGRouteListViewController.m */; };
@@ -102,8 +101,6 @@
 		9007545A1999677B00AA6C74 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		908CF6FD199B670500B2CD54 /* RGSplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSplashScreenViewController.h; sourceTree = "<group>"; };
 		908CF6FE199B670500B2CD54 /* RGSplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSplashScreenViewController.m; sourceTree = "<group>"; };
-		908CF700199B7ACC00B2CD54 /* RGFadeReplaceSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGFadeReplaceSegue.h; sourceTree = "<group>"; };
-		908CF701199B7ACC00B2CD54 /* RGFadeReplaceSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGFadeReplaceSegue.m; sourceTree = "<group>"; };
 		908CF703199B851200B2CD54 /* RGLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGLanguage.h; sourceTree = "<group>"; };
 		908CF704199B851200B2CD54 /* RGLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGLanguage.m; sourceTree = "<group>"; };
 		908CF707199B8B9600B2CD54 /* NSDictionary+Localized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Localized.h"; sourceTree = "<group>"; };
@@ -327,8 +324,6 @@
 			children = (
 				908CF6FD199B670500B2CD54 /* RGSplashScreenViewController.h */,
 				908CF6FE199B670500B2CD54 /* RGSplashScreenViewController.m */,
-				908CF700199B7ACC00B2CD54 /* RGFadeReplaceSegue.h */,
-				908CF701199B7ACC00B2CD54 /* RGFadeReplaceSegue.m */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
@@ -661,7 +656,6 @@
 				90A248811999B82E0015D6BD /* AFSecurityPolicy.m in Sources */,
 				908CF709199B8B9600B2CD54 /* NSDictionary+Localized.m in Sources */,
 				908CF725199BC25E00B2CD54 /* ColorUtils.m in Sources */,
-				908CF702199B7ACC00B2CD54 /* RGFadeReplaceSegue.m in Sources */,
 				90A2488C1999B82E0015D6BD /* UIRefreshControl+AFNetworking.m in Sources */,
 				90A2488D1999B82E0015D6BD /* UIWebView+AFNetworking.m in Sources */,
 				90A2487F1999B82E0015D6BD /* AFHTTPSessionManager.m in Sources */,
@@ -702,6 +696,7 @@
 				908CF731199BC5E900B2CD54 /* uk */,
 			);
 			name = InfoPlist.strings;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		900754291999629400AA6C74 /* Main.storyboard */ = {
@@ -710,6 +705,7 @@
 				9007542A1999629400AA6C74 /* Base */,
 			);
 			name = Main.storyboard;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9007543F1999629400AA6C74 /* InfoPlist.strings */ = {

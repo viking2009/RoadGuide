@@ -33,7 +33,6 @@
     
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     
-    self.imageView.image = [UIImage imageNamed:@"Default"];
     self.activityIndicator.color = configuration.splashScreenActivityIndicatorColor;
     
     __weak __typeof(self)weakSelf = self;
@@ -53,6 +52,12 @@
             [strongSelf showFullscreenBannerIfNeeded];
         }
     }];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.imageView.image = [UIImage imageNamed:@"Default"];
 }
 
 - (BOOL)prefersStatusBarHidden {
