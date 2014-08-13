@@ -130,10 +130,24 @@
     RGRouteListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:RGRouteListCellIdentifier forIndexPath:indexPath];
     
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
-    
-    cell.contentView.backgroundColor = configuration.routeCellBackgroundColor;
+    NSDictionary *route = configuration.routes[indexPath.section];
+
     cell.textLabel.attributedText = configuration.routesStrings[indexPath.section][indexPath.item];
     
+    if ([route[@"route_eu"] length]) {
+        cell.routeEuLabel.text = route[@"route_eu"];
+        cell.routeEuLabel.hidden = NO;
+    } else {
+        cell.routeEuLabel.hidden = YES;
+    }
+    
+    if ([route[@"route_ua"] length]) {
+        cell.routeUaLabel.text = route[@"route_ua"];
+        cell.routeUaLabel.hidden = NO;
+    } else {
+        cell.routeUaLabel.hidden = YES;
+    }
+
     return cell;
 }
 

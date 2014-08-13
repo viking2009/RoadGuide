@@ -8,6 +8,9 @@
 
 #import "RGAppDelegate.h"
 #import "RGConfiguration.h"
+#ifdef DEBUG
+    #import "AFNetworkActivityLogger.h"
+#endif
 
 @implementation RGAppDelegate
 
@@ -15,6 +18,11 @@
 {
     // Override point for customization after application launch.
     [[RGConfiguration sharedConfiguration] incrementLaunchCount];
+    
+#ifdef DEBUG
+    [[AFNetworkActivityLogger sharedLogger] setLevel:AFLoggerLevelDebug];
+    [[AFNetworkActivityLogger sharedLogger] startLogging];
+#endif
 
     return YES;
 }
@@ -44,6 +52,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+#ifdef DEBUG
+    [[AFNetworkActivityLogger sharedLogger] stopLogging];
+#endif
 }
 
 @end
