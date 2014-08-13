@@ -152,145 +152,145 @@
 			<key>title_ru</key>
 			<string>Киев</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Kyiv</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Київ</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Харьков</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Kharkiv</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Харків</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Львов</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Lviv</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Львів</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Одесса</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Odesa</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Одеса</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Варшава</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Warsaw</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Варшава</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Чоп</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Chop</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Чоп</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Пирятин</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Pyriatyn</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Пирятин</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Полтава</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Poltava</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Полтава</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Житомир</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Zhytomyr</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Житомир</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Ровно</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Rivne</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Рівне</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Белая Церковь</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Bila Tserkva</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Біла Церква</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Умань</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Uman</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Умань</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Коростень</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Korosten</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Коростень</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Сарны</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Sarny</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Сарни</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Ковель</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Kovel</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Ковель</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Стрый</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Stryi</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Стрий</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Мукачево</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Mukacheve</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Мукачеве</string>
 		</dict>
 		<dict>
 			<key>title_ru</key>
 			<string>Ужгород</string>
 			<key>title_en</key>
-			<string></string>
+			<string>Uzhhorod</string>
 			<key>title_uk</key>
-			<string></string>
+			<string>Ужгород</string>
 		</dict>
 	</array>
 	<key>Language</key>
