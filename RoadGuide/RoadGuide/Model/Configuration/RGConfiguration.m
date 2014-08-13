@@ -273,7 +273,7 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
     
     UIColor *textColor = [UIColor colorWithString:cityLabel[@"textColor"]];
     
-    return @{NSFontAttributeName: cityFont, NSForegroundColorAttributeName : textColor};
+    return @{NSFontAttributeName: cityFont, NSForegroundColorAttributeName : textColor, NSUnderlineStyleAttributeName : @(NSUnderlineStyleSingle)};
 }
 
 #pragma mark - Public

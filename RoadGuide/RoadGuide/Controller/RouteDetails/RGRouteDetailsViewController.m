@@ -25,15 +25,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    
     
     self.backgroundView.image = [UIImage imageNamed:@"routeDetails_background"];
     self.scrollView.contentSize = self.backgroundView.image.size;
 
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     self.activityIndicator.color = configuration.routeDetailsActivityIndicatorColor;
+    
+    UIColor *cityHeaderBackgroundColor = configuration.cityHeaderBackgroundColor;
+    NSDictionary *cityHeaderAttributes = configuration.cityHeaderAttributes;
+    
+    self.topLabel.backgroundColor = cityHeaderBackgroundColor;
+    self.topLabel.attributedText = [[NSAttributedString alloc] initWithString:self.routeInfo[@"from"] attributes:cityHeaderAttributes];
+    
+    self.bottomLabel.backgroundColor = cityHeaderBackgroundColor;
+    self.bottomLabel.attributedText = [[NSAttributedString alloc] initWithString:self.routeInfo[@"to"] attributes:cityHeaderAttributes];
     
     NSString *imageURL = self.routeInfo[@"imageURL"];
 

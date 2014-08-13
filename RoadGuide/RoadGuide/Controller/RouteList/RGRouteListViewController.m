@@ -45,7 +45,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     self.backgroundView.image = [UIImage imageNamed:@"routeList_background"];
     
