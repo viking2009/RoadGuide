@@ -300,6 +300,8 @@
 	</dict>
 	<key>Design</key>
 	<dict>
+		<key>activityIndicatorColor</key>
+		<string>000000</string>
 		<key>RouteList</key>
 		<dict>
 			<key>RouteCell</key>

@@ -210,6 +210,10 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
 
 #pragma mark - Design helpers
 
+- (UIColor *)activityIndicatorColor {
+    return [UIColor colorWithString:self[@"Design.activityIndicatorColor"]] ? : [UIColor blackColor];
+}
+
 - (UIColor *)routeCellBackgroundColor {
     return [UIColor colorWithString:self[@"Design.RouteList.RouteCell.backgroundColor"]];
 }

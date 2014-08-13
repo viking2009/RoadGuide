@@ -33,6 +33,7 @@
 @property (nonatomic, readonly) NSString *currentLanguage;
 
 // MARK: Design helpers
+@property (nonatomic, readonly) UIColor *activityIndicatorColor;
 @property (nonatomic, readonly) UIColor *routeCellBackgroundColor;
 @property (nonatomic, readonly) NSDictionary *routeAttributes;
 @property (nonatomic, readonly) NSDictionary *lengthAttributes;

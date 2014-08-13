@@ -16,11 +16,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" id="edp-eb-S64">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="tkb-La-g2c"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="edp-eb-S64" id="xBS-BO-zVx"/>
                         <outlet property="imageView" destination="9oW-kA-er5" id="QpX-w3-0fv"/>
                         <segue destination="vXZ-lx-hvc" kind="custom" identifier="showRouteList" customClass="RGFadeReplaceSegue" id="JQC-wa-D7I"/>
                     </connections>

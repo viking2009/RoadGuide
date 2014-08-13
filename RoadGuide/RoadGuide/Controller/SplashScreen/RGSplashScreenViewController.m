@@ -14,6 +14,7 @@
 @interface RGSplashScreenViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (void)showFullscreenBannerIfNeeded;
 - (void)showRouteList;
@@ -27,11 +28,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
+    
     self.imageView.image = [UIImage imageNamed:@"Default"];
+    self.activityIndicator.color = configuration.activityIndicatorColor;
     
     __weak __typeof(self)weakSelf = self;
     // MARK: update configuration
-    [[RGConfiguration sharedConfiguration] updateWithCompletion:^(NSDictionary *defaults, NSError *error) {
+    [self.activityIndicator startAnimating];
+    [configuration updateWithCompletion:^(NSDictionary *defaults, NSError *error) {
         if (error) {
             DLog(@"ERROR: %@", [error localizedDescription]);
         } else {
@@ -41,6 +46,7 @@
         __strong __typeof(weakSelf)strongSelf = weakSelf;
         
         if (strongSelf) {
+            [strongSelf.activityIndicator stopAnimating];
             [strongSelf showFullscreenBannerIfNeeded];
         }
     }];
@@ -59,11 +65,14 @@
     if (configuration.fullscreenBannerEnabled && imageURL) {
         __weak __typeof(self)weakSelf = self;
 
+        [self.activityIndicator startAnimating];
         NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:imageURL]];
         [self.imageView setImageWithURLRequest:urlRequest placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
             __strong __typeof(weakSelf)strongSelf = weakSelf;
             
             if (strongSelf) {
+                [strongSelf.activityIndicator stopAnimating];
+                
                 [UIView transitionWithView:strongSelf.imageView
                                   duration:configuration.fullscreenBannerFadeDuration
                                    options:UIViewAnimationOptionTransitionCrossDissolve
@@ -78,6 +87,7 @@
             __strong __typeof(weakSelf)strongSelf = weakSelf;
             
             if (strongSelf) {
+                [strongSelf.activityIndicator stopAnimating];
                 [strongSelf showRouteList];
             }
         }];
