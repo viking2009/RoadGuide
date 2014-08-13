@@ -20,12 +20,23 @@
 @property (nonatomic, readonly) NSString *smallBannerImageURL;
 @property (nonatomic, readonly) NSString *smallBannerLinkURL;
 
+// MARK: Routes helpers
+@property (nonatomic, readonly) NSArray *routes;
+@property (nonatomic, readonly) NSArray *routesStrings;
+
+// MARK: Cities helpers
+@property (nonatomic, readonly) NSArray *cities;
+- (NSString *)cityTitleAtIndex:(NSUInteger)index;
+
 // MARK: Language helpers
 @property (nonatomic, readonly) NSString *defaultLanguage;
 @property (nonatomic, readonly) NSString *currentLanguage;
 
-// MARK: Routes helpers
-@property (nonatomic, readonly) NSArray *routes;
+// MARK: Design helpers
+@property (nonatomic, readonly) NSString *routeCellBackgroundColor;
+@property (nonatomic, readonly) NSDictionary *routeAttributes;
+@property (nonatomic, readonly) NSDictionary *lengthAttributes;
+@property (nonatomic, readonly) NSDictionary *transitAttributes;
 
 + (instancetype)sharedConfiguration;
 

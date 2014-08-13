@@ -23,8 +23,7 @@
 
 @implementation RGRouteListViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
@@ -65,6 +64,8 @@
     return YES;
 }
 
+#pragma mark - Private
+
 #pragma mark - IBActions
 
 - (IBAction)openSmallBannerLinkURL:(id)sender {
@@ -79,17 +80,24 @@
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 10;
+    RGConfiguration *configutation = [RGConfiguration sharedConfiguration];
+
+    return [configutation.routesStrings count];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 2;
+    RGConfiguration *configutation = [RGConfiguration sharedConfiguration];
+
+    return [configutation.routesStrings[section] count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     RGRouteListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:RGRouteListCellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"<%i, %i", indexPath.section + 1, indexPath.item + 1];
+    RGConfiguration *configutation = [RGConfiguration sharedConfiguration];
+    
+    cell.contentView.backgroundColor = configutation.routeCellBackgroundColor;
+    cell.textLabel.attributedText = configutation.routesStrings[indexPath.section][indexPath.item];
     
     return cell;
 }

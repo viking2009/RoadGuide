@@ -28,8 +28,11 @@ NSString *const RGSettingsLanguageKey = @"Language.userDefined";
 
 + (void)setCurrentLanguage:(NSString *)aLanguage {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     
-    [userDefaults setValue:aLanguage forKeyPath:RGSettingsLanguageKey];
+    NSMutableDictionary *language = [configuration[@"Language"] mutableCopy];
+    [language setValue:aLanguage forKey:@"userDefined"];
+    [userDefaults setValue:language forKey:@"Language"];
     if ([userDefaults synchronize]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:RGLanguageDidChangeNotification object:aLanguage];
     }

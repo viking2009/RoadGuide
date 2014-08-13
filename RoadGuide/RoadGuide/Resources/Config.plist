@@ -305,7 +305,7 @@
 			<key>RouteCell</key>
 			<dict>
 				<key>backgroundColor</key>
-				<string>525151</string>
+				<string>52515180</string>
 				<key>routeLabel</key>
 				<dict>
 					<key>fontName</key>
@@ -340,7 +340,7 @@
 			<key>CityHeader</key>
 			<dict>
 				<key>backgroundColor</key>
-				<string>1d1d1b</string>
+				<string>1d1d1b80</string>
 				<key>cityLabel</key>
 				<dict>
 					<key>fontName</key>

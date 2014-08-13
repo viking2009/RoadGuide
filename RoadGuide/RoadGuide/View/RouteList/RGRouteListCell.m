@@ -10,4 +10,10 @@
 
 @implementation RGRouteListCell
 
+- (void)setHighlighted:(BOOL)highlighted {
+    [super setHighlighted:highlighted];
+    
+    self.contentView.alpha = highlighted ? 0.8 : 1;
+}
+
 @end

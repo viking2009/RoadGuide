@@ -38,6 +38,8 @@
 		908CF71B199B98A600B2CD54 /* routeList_flag_ru@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 908CF718199B98A600B2CD54 /* routeList_flag_ru@2x.png */; };
 		908CF71C199B98A600B2CD54 /* routeList_flag_ua@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 908CF719199B98A600B2CD54 /* routeList_flag_ua@2x.png */; };
 		908CF721199BAA7300B2CD54 /* RGRouteListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF720199BAA7300B2CD54 /* RGRouteListCell.m */; };
+		908CF725199BC25E00B2CD54 /* ColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF724199BC25E00B2CD54 /* ColorUtils.m */; };
+		908CF728199BC5BE00B2CD54 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 908CF72A199BC5BE00B2CD54 /* Localizable.strings */; };
 		90A248541999B4FF0015D6BD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90A248531999B4FF0015D6BD /* Config.plist */; };
 		90A2487D1999B82E0015D6BD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A248591999B82E0015D6BD /* AFHTTPRequestOperation.m */; };
 		90A2487E1999B82E0015D6BD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A2485B1999B82E0015D6BD /* AFHTTPRequestOperationManager.m */; };
@@ -113,6 +115,15 @@
 		908CF719199B98A600B2CD54 /* routeList_flag_ua@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "routeList_flag_ua@2x.png"; sourceTree = "<group>"; };
 		908CF71F199BAA7300B2CD54 /* RGRouteListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGRouteListCell.h; sourceTree = "<group>"; };
 		908CF720199BAA7300B2CD54 /* RGRouteListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGRouteListCell.m; sourceTree = "<group>"; };
+		908CF723199BC25E00B2CD54 /* ColorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUtils.h; sourceTree = "<group>"; };
+		908CF724199BC25E00B2CD54 /* ColorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUtils.m; sourceTree = "<group>"; };
+		908CF729199BC5BE00B2CD54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		908CF72B199BC5E200B2CD54 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		908CF72D199BC5E200B2CD54 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		908CF72E199BC5E200B2CD54 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		908CF730199BC5E900B2CD54 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		908CF731199BC5E900B2CD54 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		908CF732199BC5E900B2CD54 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		90A248531999B4FF0015D6BD /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		90A248581999B82E0015D6BD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		90A248591999B82E0015D6BD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -260,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				90A248531999B4FF0015D6BD /* Config.plist */,
+				908CF72A199BC5BE00B2CD54 /* Localizable.strings */,
 				9007544D199964FF00AA6C74 /* images */,
 			);
 			path = Resources;
@@ -364,12 +376,22 @@
 			path = RouteList;
 			sourceTree = "<group>";
 		};
+		908CF722199BC25E00B2CD54 /* ColorUtils */ = {
+			isa = PBXGroup;
+			children = (
+				908CF723199BC25E00B2CD54 /* ColorUtils.h */,
+				908CF724199BC25E00B2CD54 /* ColorUtils.m */,
+			);
+			path = ColorUtils;
+			sourceTree = "<group>";
+		};
 		90A248551999B82E0015D6BD /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
 				90A248561999B82E0015D6BD /* AFNetworking */,
 				90A2488E1999B86B0015D6BD /* GroundControl */,
 				908CF70E199B958900B2CD54 /* StandardPaths */,
+				908CF722199BC25E00B2CD54 /* ColorUtils */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -521,6 +543,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				uk,
 			);
 			mainGroup = 9007540B1999629400AA6C74;
 			productRefGroup = 900754151999629400AA6C74 /* Products */;
@@ -551,6 +575,7 @@
 				9007545B1999677B00AA6C74 /* Icon-40@2x.png in Resources */,
 				908CF71C199B98A600B2CD54 /* routeList_flag_ua@2x.png in Resources */,
 				900754511999656A00AA6C74 /* Default-568h@2x.png in Resources */,
+				908CF728199BC5BE00B2CD54 /* Localizable.strings in Resources */,
 				90A248541999B4FF0015D6BD /* Config.plist in Resources */,
 				90075456199966B200AA6C74 /* Icon-60@2x.png in Resources */,
 			);
@@ -588,6 +613,7 @@
 				90A248871999B82E0015D6BD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				90A248811999B82E0015D6BD /* AFSecurityPolicy.m in Sources */,
 				908CF709199B8B9600B2CD54 /* NSDictionary+Localized.m in Sources */,
+				908CF725199BC25E00B2CD54 /* ColorUtils.m in Sources */,
 				908CF702199B7ACC00B2CD54 /* RGFadeReplaceSegue.m in Sources */,
 				90A2488C1999B82E0015D6BD /* UIRefreshControl+AFNetworking.m in Sources */,
 				90A2488D1999B82E0015D6BD /* UIWebView+AFNetworking.m in Sources */,
@@ -625,6 +651,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				900754211999629400AA6C74 /* en */,
+				908CF72B199BC5E200B2CD54 /* ru */,
+				908CF731199BC5E900B2CD54 /* uk */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -641,8 +669,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				900754401999629400AA6C74 /* en */,
+				908CF72E199BC5E200B2CD54 /* ru */,
+				908CF732199BC5E900B2CD54 /* uk */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		908CF72A199BC5BE00B2CD54 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				908CF729199BC5BE00B2CD54 /* en */,
+				908CF72D199BC5E200B2CD54 /* ru */,
+				908CF730199BC5E900B2CD54 /* uk */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
