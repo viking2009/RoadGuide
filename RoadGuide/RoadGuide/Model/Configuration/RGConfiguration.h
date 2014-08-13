@@ -10,11 +10,15 @@
 
 @interface RGConfiguration : NSObject
 
-// MARK: helpers
+// MARK: Ads helpers
 @property (nonatomic, readonly) BOOL fullscreenBannerEnabled;
 @property (nonatomic, readonly) NSString *fullscreenBannerImageURL;
 @property (nonatomic, readonly) NSTimeInterval fullscreenBannerFadeDuration;
 @property (nonatomic, readonly) NSTimeInterval fullscreenBannerShowTime;
+
+// MARK: Language helpers
+@property (nonatomic, readonly) NSString *defaultLanguage;
+@property (nonatomic, readonly) NSString *currentLanguage;
 
 + (instancetype)sharedConfiguration;
 

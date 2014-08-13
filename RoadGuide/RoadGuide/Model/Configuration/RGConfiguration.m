@@ -9,6 +9,7 @@
 #import "RGConfiguration.h"
 #import "NSUserDefaults+GroundControl.h"
 #import "AFURLResponseSerialization.h"
+#import "RGLanguage.h"
 
 static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export=download&id=0Bx0hFmhr9oPRQVpmdjZfNEpHcUE";
 
@@ -46,25 +47,31 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
     return [self[@"Ads.fullscreenBanner.showTime"] doubleValue];
 }
 
+- (NSString *)defaultLanguage {
+    return self[@"Language.default"];
+}
+
+- (NSString *)currentLanguage {
+    return self[RGSettingsLanguageKey];
+}
+
 - (id)objectForKeyedSubscript:(id)key {
-    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    
-    return [standardUserDefaults valueForKeyPath:key];
+    return [[NSUserDefaults standardUserDefaults] valueForKeyPath:key];
 }
 
 - (void)updateWithCompletion:(void (^)(NSDictionary *defaults, NSError *error))completion {
-    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
 
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         AFPropertyListResponseSerializer *serializer = [AFPropertyListResponseSerializer serializer];
         serializer.acceptableContentTypes = [NSSet setWithObjects:@"text/xml", @"text/plain", nil];
         
-        standardUserDefaults.responseSerializer = serializer;
+        userDefaults.responseSerializer = serializer;
     });
     
     NSURL *configURL = [NSURL URLWithString:RGConfigurationURL];
-    [standardUserDefaults registerDefaultsWithURL:configURL success:^(NSDictionary *dDefaults) {
+    [userDefaults registerDefaultsWithURL:configURL success:^(NSDictionary *dDefaults) {
         if (completion) {
             completion(dDefaults, nil);
         }

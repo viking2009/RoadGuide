@@ -29,6 +29,8 @@
 		9007545C1999677B00AA6C74 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007545A1999677B00AA6C74 /* Icon-Small@2x.png */; };
 		908CF6FF199B670500B2CD54 /* RGSplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF6FE199B670500B2CD54 /* RGSplashScreenViewController.m */; };
 		908CF702199B7ACC00B2CD54 /* RGFadeReplaceSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF701199B7ACC00B2CD54 /* RGFadeReplaceSegue.m */; };
+		908CF705199B851200B2CD54 /* RGLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF704199B851200B2CD54 /* RGLanguage.m */; };
+		908CF709199B8B9600B2CD54 /* NSDictionary+Localized.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF708199B8B9600B2CD54 /* NSDictionary+Localized.m */; };
 		90A248541999B4FF0015D6BD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90A248531999B4FF0015D6BD /* Config.plist */; };
 		90A2487D1999B82E0015D6BD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A248591999B82E0015D6BD /* AFHTTPRequestOperation.m */; };
 		90A2487E1999B82E0015D6BD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A2485B1999B82E0015D6BD /* AFHTTPRequestOperationManager.m */; };
@@ -91,6 +93,10 @@
 		908CF6FE199B670500B2CD54 /* RGSplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSplashScreenViewController.m; sourceTree = "<group>"; };
 		908CF700199B7ACC00B2CD54 /* RGFadeReplaceSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGFadeReplaceSegue.h; sourceTree = "<group>"; };
 		908CF701199B7ACC00B2CD54 /* RGFadeReplaceSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGFadeReplaceSegue.m; sourceTree = "<group>"; };
+		908CF703199B851200B2CD54 /* RGLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGLanguage.h; sourceTree = "<group>"; };
+		908CF704199B851200B2CD54 /* RGLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGLanguage.m; sourceTree = "<group>"; };
+		908CF707199B8B9600B2CD54 /* NSDictionary+Localized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Localized.h"; sourceTree = "<group>"; };
+		908CF708199B8B9600B2CD54 /* NSDictionary+Localized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Localized.m"; sourceTree = "<group>"; };
 		90A248531999B4FF0015D6BD /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		90A248581999B82E0015D6BD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		90A248591999B82E0015D6BD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -196,6 +202,7 @@
 				900754291999629400AA6C74 /* Main.storyboard */,
 				9007542C1999629400AA6C74 /* RGViewController.h */,
 				9007542D1999629400AA6C74 /* RGViewController.m */,
+				908CF706199B8B2E00B2CD54 /* Additions */,
 				90A248921999C0C50015D6BD /* Model */,
 				908CF6FB199B66CA00B2CD54 /* Controller */,
 				90A248551999B82E0015D6BD /* Vendor */,
@@ -282,6 +289,15 @@
 				908CF701199B7ACC00B2CD54 /* RGFadeReplaceSegue.m */,
 			);
 			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		908CF706199B8B2E00B2CD54 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				908CF707199B8B9600B2CD54 /* NSDictionary+Localized.h */,
+				908CF708199B8B9600B2CD54 /* NSDictionary+Localized.m */,
+			);
+			path = Additions;
 			sourceTree = "<group>";
 		};
 		90A248551999B82E0015D6BD /* Vendor */ = {
@@ -374,6 +390,8 @@
 			children = (
 				90A248951999C1160015D6BD /* RGConfiguration.h */,
 				90A248961999C1160015D6BD /* RGConfiguration.m */,
+				908CF703199B851200B2CD54 /* RGLanguage.h */,
+				908CF704199B851200B2CD54 /* RGLanguage.m */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -483,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				908CF705199B851200B2CD54 /* RGLanguage.m in Sources */,
 				90A2487D1999B82E0015D6BD /* AFHTTPRequestOperation.m in Sources */,
 				90A2488A1999B82E0015D6BD /* UIImageView+AFNetworking.m in Sources */,
 				900754241999629400AA6C74 /* main.m in Sources */,
@@ -496,6 +515,7 @@
 				90A248891999B82E0015D6BD /* UIButton+AFNetworking.m in Sources */,
 				90A248871999B82E0015D6BD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				90A248811999B82E0015D6BD /* AFSecurityPolicy.m in Sources */,
+				908CF709199B8B9600B2CD54 /* NSDictionary+Localized.m in Sources */,
 				908CF702199B7ACC00B2CD54 /* RGFadeReplaceSegue.m in Sources */,
 				90A2488C1999B82E0015D6BD /* UIRefreshControl+AFNetworking.m in Sources */,
 				90A2488D1999B82E0015D6BD /* UIWebView+AFNetworking.m in Sources */,
