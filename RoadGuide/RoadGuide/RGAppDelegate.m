@@ -8,6 +8,8 @@
 
 #import "RGAppDelegate.h"
 #import "RGConfiguration.h"
+#import "RGImageCache.h"
+
 #ifdef DEBUG
     #import "AFNetworkActivityLogger.h"
 #endif
@@ -18,6 +20,9 @@
 {
     // Override point for customization after application launch.
     [[RGConfiguration sharedConfiguration] incrementLaunchCount];
+    
+    RGImageCache *sharedImageCache = [[RGImageCache alloc] init];
+    [UIImageView setSharedImageCache:sharedImageCache];
     
 #ifdef DEBUG
     [[AFNetworkActivityLogger sharedLogger] setLevel:AFLoggerLevelDebug];

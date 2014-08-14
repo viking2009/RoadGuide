@@ -43,6 +43,8 @@
 		908CF739199BEDF600B2CD54 /* AFNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF738199BEDF600B2CD54 /* AFNetworkActivityLogger.m */; };
 		908CF73D199C04A300B2CD54 /* RGRouteDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF73C199C04A300B2CD54 /* RGRouteDetailsViewController.m */; };
 		908CF740199C074300B2CD54 /* routeDetails_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 908CF73F199C074300B2CD54 /* routeDetails_background@2x.png */; };
+		908CF747199C3B4C00B2CD54 /* RGImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF746199C3B4C00B2CD54 /* RGImageCache.m */; };
+		908CF74A199C3E1400B2CD54 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF749199C3E1400B2CD54 /* NSString+MD5.m */; };
 		90A248541999B4FF0015D6BD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90A248531999B4FF0015D6BD /* Config.plist */; };
 		90A2487D1999B82E0015D6BD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A248591999B82E0015D6BD /* AFHTTPRequestOperation.m */; };
 		90A2487E1999B82E0015D6BD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A2485B1999B82E0015D6BD /* AFHTTPRequestOperationManager.m */; };
@@ -132,6 +134,10 @@
 		908CF73B199C04A300B2CD54 /* RGRouteDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGRouteDetailsViewController.h; sourceTree = "<group>"; };
 		908CF73C199C04A300B2CD54 /* RGRouteDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGRouteDetailsViewController.m; sourceTree = "<group>"; };
 		908CF73F199C074300B2CD54 /* routeDetails_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "routeDetails_background@2x.png"; sourceTree = "<group>"; };
+		908CF745199C3B4C00B2CD54 /* RGImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGImageCache.h; sourceTree = "<group>"; };
+		908CF746199C3B4C00B2CD54 /* RGImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGImageCache.m; sourceTree = "<group>"; };
+		908CF748199C3E1400B2CD54 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		908CF749199C3E1400B2CD54 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		90A248531999B4FF0015D6BD /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		90A248581999B82E0015D6BD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		90A248591999B82E0015D6BD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -333,6 +339,8 @@
 			children = (
 				908CF707199B8B9600B2CD54 /* NSDictionary+Localized.h */,
 				908CF708199B8B9600B2CD54 /* NSDictionary+Localized.m */,
+				908CF748199C3E1400B2CD54 /* NSString+MD5.h */,
+				908CF749199C3E1400B2CD54 /* NSString+MD5.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -422,6 +430,15 @@
 			path = RouteDetails;
 			sourceTree = "<group>";
 		};
+		908CF744199C3B2B00B2CD54 /* ImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				908CF745199C3B4C00B2CD54 /* RGImageCache.h */,
+				908CF746199C3B4C00B2CD54 /* RGImageCache.m */,
+			);
+			path = ImageCache;
+			sourceTree = "<group>";
+		};
 		90A248551999B82E0015D6BD /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +523,7 @@
 			isa = PBXGroup;
 			children = (
 				90A248941999C0EC0015D6BD /* Configuration */,
+				908CF744199C3B2B00B2CD54 /* ImageCache */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -650,6 +668,7 @@
 				908CF721199BAA7300B2CD54 /* RGRouteListCell.m in Sources */,
 				90A248841999B82E0015D6BD /* AFURLResponseSerialization.m in Sources */,
 				90A248821999B82E0015D6BD /* AFURLConnectionOperation.m in Sources */,
+				908CF74A199C3E1400B2CD54 /* NSString+MD5.m in Sources */,
 				908CF711199B958900B2CD54 /* StandardPaths.m in Sources */,
 				90A248891999B82E0015D6BD /* UIButton+AFNetworking.m in Sources */,
 				90A248871999B82E0015D6BD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -660,6 +679,7 @@
 				90A2488D1999B82E0015D6BD /* UIWebView+AFNetworking.m in Sources */,
 				90A2487F1999B82E0015D6BD /* AFHTTPSessionManager.m in Sources */,
 				90A248881999B82E0015D6BD /* UIAlertView+AFNetworking.m in Sources */,
+				908CF747199C3B4C00B2CD54 /* RGImageCache.m in Sources */,
 				90A248911999B86B0015D6BD /* NSUserDefaults+GroundControl.m in Sources */,
 				90A248831999B82E0015D6BD /* AFURLRequestSerialization.m in Sources */,
 				908CF70D199B91F900B2CD54 /* RGRouteListViewController.m in Sources */,
