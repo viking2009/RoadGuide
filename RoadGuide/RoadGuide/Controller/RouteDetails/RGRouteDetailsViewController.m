@@ -51,8 +51,8 @@
     UIColor *cityHeaderBackgroundColor = configuration.cityHeaderBackgroundColor;
     NSDictionary *cityHeaderAttributes = configuration.cityHeaderAttributes;
     
-    NSAttributedString *topHeaderTitle = [[NSAttributedString alloc] initWithString:self.routeInfo[@"from"] attributes:cityHeaderAttributes];
-    NSAttributedString *bottomHeaderTitle = [[NSAttributedString alloc] initWithString:self.routeInfo[@"to"] attributes:cityHeaderAttributes];
+    NSAttributedString *topHeaderTitle = [[NSAttributedString alloc] initWithString:self.routeInfo[@"to"] attributes:cityHeaderAttributes];
+    NSAttributedString *bottomHeaderTitle = [[NSAttributedString alloc] initWithString:self.routeInfo[@"from"] attributes:cityHeaderAttributes];
 
     self.topHeader.backgroundColor = cityHeaderBackgroundColor;
     self.bottomHeader.backgroundColor = cityHeaderBackgroundColor;
