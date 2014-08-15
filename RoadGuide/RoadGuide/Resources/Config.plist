@@ -360,5 +360,13 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>Stats</key>
+	<dict>
+		<key>Flurry</key>
+		<dict>
+			<key>apiKey</key>
+			<string>6K9KZYZYV4559XMZM4D2</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

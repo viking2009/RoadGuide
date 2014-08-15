@@ -8,6 +8,7 @@
 
 #import "RGLanguage.h"
 #import "RGConfiguration.h"
+#import "Flurry.h"
 
 NSString *const RGLanguageDidChangeNotification = @"RGLanguageDidChangeNotification";
 NSString *const RGSettingsLanguageKey = @"userDefinedLanguage";
@@ -34,6 +35,8 @@ NSString *const RGSettingsLanguageKey = @"userDefinedLanguage";
         [userDefaults setValue:aLanguage forKey:RGSettingsLanguageKey];
         if ([userDefaults synchronize]) {
             [[NSNotificationCenter defaultCenter] postNotificationName:RGLanguageDidChangeNotification object:aLanguage];
+            
+            [Flurry logEvent:@"LanguageChanged" withParameters:@{RGSettingsLanguageKey: aLanguage}];
         }
     }
 }

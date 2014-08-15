@@ -12,6 +12,7 @@
 #import "RGRouteListCell.h"
 #import "RGLanguage.h"
 #import "RGRouteDetailsViewController.h"
+#import "Flurry.h"
 
 @interface RGRouteListViewController () <UICollectionViewDataSource>
 
@@ -93,9 +94,8 @@
                                         bannerViewFrame.origin.y -= bannerHeight;
                                         bannerViewFrame.size.height = bannerHeight;
                                         strongSelf.bannerView.frame = bannerViewFrame;
-                                        
                                     } completion:^(BOOL finished) {
-
+                                        [Flurry logEvent:@"SmallBannerShown" withParameters:@{@"imageURL": configuration.smallBannerImageURL}];
                                     }];
                 }
 
@@ -145,6 +145,8 @@
             }
             
             routeDetails.routeInfo = routeInfo;
+            
+            [Flurry logEvent:@"RouteSelected" withParameters:routeInfo];
         }
     }
 }
@@ -180,6 +182,8 @@
     NSString *linkURL = configuration.smallBannerLinkURL;
 
     if (configuration.smallBannerEnabled && linkURL) {
+        [Flurry logEvent:@"SmallBannerClicked" withParameters:@{@"linkURL": linkURL}];
+
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkURL]];
     }
 }

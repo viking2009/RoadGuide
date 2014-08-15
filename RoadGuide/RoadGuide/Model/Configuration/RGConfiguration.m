@@ -276,6 +276,10 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
     return @{NSFontAttributeName: cityFont, NSForegroundColorAttributeName : textColor, NSUnderlineStyleAttributeName : @(NSUnderlineStyleSingle)};
 }
 
+- (NSString *)flurryApiKey {
+    return self[@"Stats.Flurry.apiKey"];
+}
+
 #pragma mark - Public
 
 - (id)objectForKeyedSubscript:(id)key {

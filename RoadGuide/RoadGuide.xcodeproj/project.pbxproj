@@ -65,6 +65,7 @@
 		90A2488D1999B82E0015D6BD /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A2487C1999B82E0015D6BD /* UIWebView+AFNetworking.m */; };
 		90A248911999B86B0015D6BD /* NSUserDefaults+GroundControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A248901999B86B0015D6BD /* NSUserDefaults+GroundControl.m */; };
 		90A248971999C1160015D6BD /* RGConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A248961999C1160015D6BD /* RGConfiguration.m */; };
+		90C7E35A199E9DD30005D063 /* libFlurry_5.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C7E359199E9DD30005D063 /* libFlurry_5.2.0.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +180,8 @@
 		90A248901999B86B0015D6BD /* NSUserDefaults+GroundControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+GroundControl.m"; sourceTree = "<group>"; };
 		90A248951999C1160015D6BD /* RGConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGConfiguration.h; sourceTree = "<group>"; };
 		90A248961999C1160015D6BD /* RGConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGConfiguration.m; sourceTree = "<group>"; };
+		90C7E358199E9DD30005D063 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		90C7E359199E9DD30005D063 /* libFlurry_5.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.2.0.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9007541A1999629400AA6C74 /* CoreGraphics.framework in Frameworks */,
+				90C7E35A199E9DD30005D063 /* libFlurry_5.2.0.a in Frameworks */,
 				9007541C1999629400AA6C74 /* UIKit.framework in Frameworks */,
 				900754181999629400AA6C74 /* Foundation.framework in Frameworks */,
 			);
@@ -446,6 +450,7 @@
 				90A2488E1999B86B0015D6BD /* GroundControl */,
 				908CF70E199B958900B2CD54 /* StandardPaths */,
 				908CF722199BC25E00B2CD54 /* ColorUtils */,
+				90C7E357199E9DD30005D063 /* Flurry */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -537,6 +542,15 @@
 				908CF704199B851200B2CD54 /* RGLanguage.m */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		90C7E357199E9DD30005D063 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				90C7E358199E9DD30005D063 /* Flurry.h */,
+				90C7E359199E9DD30005D063 /* libFlurry_5.2.0.a */,
+			);
+			path = Flurry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -827,6 +841,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RoadGuide/RoadGuide-Prefix.pch";
 				INFOPLIST_FILE = "RoadGuide/RoadGuide-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RoadGuide/Vendor/Flurry",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -838,6 +856,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RoadGuide/RoadGuide-Prefix.pch";
 				INFOPLIST_FILE = "RoadGuide/RoadGuide-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RoadGuide/Vendor/Flurry",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

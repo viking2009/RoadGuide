@@ -10,6 +10,7 @@
 #import "RGConfiguration.h"
 #import "UIImageView+AFNetworking.h"
 #import "RGAppDelegate.h"
+#import "Flurry.h"
 
 @interface RGSplashScreenViewController ()
 
@@ -43,6 +44,12 @@
             DLog(@"ERROR: %@", [error localizedDescription]);
         } else {
             DLog(@"defaults: %@", defaults);
+            
+            if (configuration.flurryApiKey) {
+                [Flurry setCrashReportingEnabled:YES];
+                [Flurry setDebugLogEnabled:YES];
+                [Flurry startSession:configuration.flurryApiKey];
+            }
         }
         
         __strong __typeof(weakSelf)strongSelf = weakSelf;
@@ -88,6 +95,8 @@
                                     strongSelf.imageView.image = image;
                                 } completion:^(BOOL finished) {
                                     [strongSelf showRouteListDelayed];
+                                    
+                                    [Flurry logEvent:@"FullscreenBannerShown" withParameters:@{@"imageURL": configuration.fullscreenBannerImageURL, @"showTime": @(configuration.fullscreenBannerShowTime)}];
                                 }];
              }
 
@@ -112,6 +121,7 @@
 
 - (void)showRouteListDelayed {
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
+
     [self performSelector:@selector(showRouteList) withObject:nil afterDelay:configuration.fullscreenBannerShowTime];
 }
 

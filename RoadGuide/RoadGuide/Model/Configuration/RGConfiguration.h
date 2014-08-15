@@ -42,6 +42,9 @@
 @property (nonatomic, readonly) UIColor *cityHeaderBackgroundColor;
 @property (nonatomic, readonly) NSDictionary *cityHeaderAttributes;
 
+// MARK: Stats
+@property (nonatomic, readonly) NSString *flurryApiKey;
+
 + (instancetype)sharedConfiguration;
 
 - (id)objectForKeyedSubscript:(id)key NS_AVAILABLE(10_8, 6_0);
