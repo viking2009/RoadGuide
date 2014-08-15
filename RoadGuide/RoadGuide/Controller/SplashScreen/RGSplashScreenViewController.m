@@ -47,7 +47,6 @@
             
             if (configuration.flurryApiKey) {
                 [Flurry setCrashReportingEnabled:YES];
-                [Flurry setDebugLogEnabled:YES];
                 [Flurry startSession:configuration.flurryApiKey];
             }
         }
