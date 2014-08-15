@@ -10,7 +10,7 @@
 #import "RGConfiguration.h"
 
 NSString *const RGLanguageDidChangeNotification = @"RGLanguageDidChangeNotification";
-NSString *const RGSettingsLanguageKey = @"Language.userDefined";
+NSString *const RGSettingsLanguageKey = @"userDefinedLanguage";
 
 @implementation RGLanguage
 
@@ -30,11 +30,8 @@ NSString *const RGSettingsLanguageKey = @"Language.userDefined";
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     if (![configuration.currentLanguage isEqualToString:aLanguage]) {
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
         
-        NSMutableDictionary *language = [configuration[@"Language"] mutableCopy];
-        [language setValue:aLanguage forKey:@"userDefined"];
-        [userDefaults setValue:language forKey:@"Language"];
+        [userDefaults setValue:aLanguage forKey:RGSettingsLanguageKey];
         if ([userDefaults synchronize]) {
             [[NSNotificationCenter defaultCenter] postNotificationName:RGLanguageDidChangeNotification object:aLanguage];
         }

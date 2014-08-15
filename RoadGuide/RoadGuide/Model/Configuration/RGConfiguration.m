@@ -297,7 +297,7 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
     [userDefaults setInteger:launchCount forKey:kLaunchCount];
     [userDefaults synchronize];
     
-    DLog(@"%@: %i", kLaunchCount, launchCount);
+    DLog(@"%@: %li", kLaunchCount, (long)launchCount);
 }
 
 - (void)updateWithCompletion:(void (^)(NSDictionary *defaults, NSError *error))completion {
