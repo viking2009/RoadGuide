@@ -89,6 +89,9 @@
                                     CGSize contentSize = routeViewFrame.size;
                                     contentSize.height += strongSelf.scrollView.scrollIndicatorInsets.top + strongSelf.scrollView.scrollIndicatorInsets.bottom;
                                     strongSelf.scrollView.contentSize = contentSize;
+                                    
+                                    // Bug #95 End of route displayed
+                                    strongSelf.scrollView.contentOffset = CGPointMake(0, strongSelf.scrollView.contentSize.height - strongSelf.scrollView.frame.size.height);
                                 }];
             }
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
