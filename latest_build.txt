@@ -1,0 +1,20 @@
+h2. 20140814
+
+h3. Note:
+
+* Initial build
+* only KYIV-LVIV route available (as demo)
+
+h3. New:
+
+Task #83: Create iOS project
+Task #85: Config file
+Task #86: Ads support
+Task #87: Localization
+Task #88: Slash screen
+Task #89: Route selector
+Task #90: Route display
+Task #92: Offline support
+Task #93: Flurry
+Bug #94: Language settings not saved
+Bug #95: End of route displayed
