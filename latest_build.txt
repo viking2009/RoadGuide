@@ -1,9 +1,10 @@
-h2. 20140814
+h2. 20140821
 
 h3. Note:
 
 * Initial build
 * only KYIV-LVIV route available (as demo)
+* tap on top or bottom city in route details to return to route list
 
 h3. New:
 
@@ -18,3 +19,4 @@ Task #92: Offline support
 Task #93: Flurry
 Bug #94: Language settings not saved
 Bug #95: End of route displayed
+Feature #97: Support for iOS6

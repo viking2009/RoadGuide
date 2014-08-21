@@ -33,9 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    
+        
     self.backgroundView.image = [UIImage imageNamed:@"routeDetails_background"];
     
     // MARK: resize background view

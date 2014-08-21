@@ -65,6 +65,10 @@
 		90A2488D1999B82E0015D6BD /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A2487C1999B82E0015D6BD /* UIWebView+AFNetworking.m */; };
 		90A248911999B86B0015D6BD /* NSUserDefaults+GroundControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A248901999B86B0015D6BD /* NSUserDefaults+GroundControl.m */; };
 		90A248971999C1160015D6BD /* RGConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A248961999C1160015D6BD /* RGConfiguration.m */; };
+		90BA71B119A67FC000379EBB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 90BA71B019A67FC000379EBB /* Default.png */; };
+		90BA71B419A6805C00379EBB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 90BA71B219A6805C00379EBB /* Icon.png */; };
+		90BA71B519A6805C00379EBB /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90BA71B319A6805C00379EBB /* Icon@2x.png */; };
+		90BA71B719A6809B00379EBB /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 90BA71B619A6809B00379EBB /* Icon-Small.png */; };
 		90C7E35A199E9DD30005D063 /* libFlurry_5.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C7E359199E9DD30005D063 /* libFlurry_5.2.0.a */; };
 /* End PBXBuildFile section */
 
@@ -180,6 +184,10 @@
 		90A248901999B86B0015D6BD /* NSUserDefaults+GroundControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+GroundControl.m"; sourceTree = "<group>"; };
 		90A248951999C1160015D6BD /* RGConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGConfiguration.h; sourceTree = "<group>"; };
 		90A248961999C1160015D6BD /* RGConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGConfiguration.m; sourceTree = "<group>"; };
+		90BA71B019A67FC000379EBB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		90BA71B219A6805C00379EBB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		90BA71B319A6805C00379EBB /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		90BA71B619A6809B00379EBB /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		90C7E358199E9DD30005D063 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
 		90C7E359199E9DD30005D063 /* libFlurry_5.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.2.0.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -309,9 +317,13 @@
 			isa = PBXGroup;
 			children = (
 				9007544F1999656A00AA6C74 /* Default-568h@2x.png */,
+				90BA71B019A67FC000379EBB /* Default.png */,
 				900754501999656A00AA6C74 /* Default@2x.png */,
+				90BA71B219A6805C00379EBB /* Icon.png */,
+				90BA71B319A6805C00379EBB /* Icon@2x.png */,
 				900754591999677A00AA6C74 /* Icon-40@2x.png */,
 				90075453199966B200AA6C74 /* Icon-60@2x.png */,
+				90BA71B619A6809B00379EBB /* Icon-Small.png */,
 				9007545A1999677B00AA6C74 /* Icon-Small@2x.png */,
 				90075454199966B200AA6C74 /* iTunesArtwork */,
 				90075455199966B200AA6C74 /* iTunesArtwork@2x */,
@@ -633,14 +645,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				900754521999656A00AA6C74 /* Default@2x.png in Resources */,
+				90BA71B119A67FC000379EBB /* Default.png in Resources */,
 				90075457199966B200AA6C74 /* iTunesArtwork in Resources */,
 				908CF71B199B98A600B2CD54 /* routeList_flag_ru@2x.png in Resources */,
 				908CF716199B971000B2CD54 /* routeList_background@2x.png in Resources */,
 				908CF71A199B98A600B2CD54 /* routeList_flag_en@2x.png in Resources */,
 				908CF715199B971000B2CD54 /* routeList_background-568h@2x.png in Resources */,
 				90075458199966B200AA6C74 /* iTunesArtwork@2x in Resources */,
+				90BA71B719A6809B00379EBB /* Icon-Small.png in Resources */,
 				9007545C1999677B00AA6C74 /* Icon-Small@2x.png in Resources */,
+				90BA71B519A6805C00379EBB /* Icon@2x.png in Resources */,
 				900754221999629400AA6C74 /* InfoPlist.strings in Resources */,
+				90BA71B419A6805C00379EBB /* Icon.png in Resources */,
 				9007542B1999629400AA6C74 /* Main.storyboard in Resources */,
 				9007545B1999677B00AA6C74 /* Icon-40@2x.png in Resources */,
 				908CF71C199B98A600B2CD54 /* routeList_flag_ua@2x.png in Resources */,
@@ -797,7 +813,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -829,7 +845,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
