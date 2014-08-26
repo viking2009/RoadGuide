@@ -13,6 +13,7 @@
 #import "RGLanguage.h"
 #import "RGRouteDetailsViewController.h"
 #import "Flurry.h"
+#import "NSDictionary+Localized.h"
 
 @interface RGRouteListViewController () <UICollectionViewDataSource>
 
@@ -111,12 +112,9 @@
         if (indexPath) {
             RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
             NSDictionary *route = configuration.routes[indexPath.section];
-
-            if (indexPath.item == 0) {
-                return ([route[@"fromImageURL"] length] > 0);
-            } else {
-                return ([route[@"toImageURL"] length] > 0);
-            }
+            NSString *imageURLKey = indexPath.item == 0 ? @"fromImageURL" : @"toImageURL";
+            
+            return ([[route localizedObjectForKey:imageURLKey] length] > 0);
         }
     }
     
@@ -137,11 +135,11 @@
             if (indexPath.item == 0) {
                 routeInfo[@"from"] = [route[@"from"] uppercaseString];
                 routeInfo[@"to"] = [route[@"to"] uppercaseString];
-                routeInfo[@"imageURL"] = route[@"fromImageURL"];
+                routeInfo[@"imageURL"] = [route localizedObjectForKey:@"fromImageURL"];
             } else {
                 routeInfo[@"from"] = [route[@"to"] uppercaseString];
                 routeInfo[@"to"] = [route[@"from"] uppercaseString];
-                routeInfo[@"imageURL"] = route[@"toImageURL"];
+                routeInfo[@"imageURL"] = [route localizedObjectForKey:@"toImageURL"];
             }
             
             routeDetails.routeInfo = routeInfo;

@@ -70,10 +70,18 @@
 			<string>M06</string>
 			<key>route_eu</key>
 			<string>E40</string>
-			<key>fromImageURL</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRTTV1SWFxM1NFcW8</string>
-			<key>toImageURL</key>
-			<string></string>
+			<key>fromImageURL_ru</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6YTNZbHB4WFBXUkU</string>
+			<key>fromImageURL_en</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6SGMybXoxWUFZYUk</string>
+			<key>fromImageURL_uk</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6eTNKWGprd3dsX3c</string>
+			<key>toImageURL_ru</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRVXFXZTZTenZSSTQ</string>
+			<key>toImageURL_en</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRWU9ZQmJoX0tXSlU</string>
+			<key>toImageURL_uk</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRbTBmX280N1JBdkU</string>
 		</dict>
 		<dict>
 			<key>from</key>

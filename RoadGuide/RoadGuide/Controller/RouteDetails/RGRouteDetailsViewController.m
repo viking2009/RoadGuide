@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *bottomHeader;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
+- (void)loadMap;
+
 - (IBAction)goBack:(id)sender;
 
 @end
@@ -58,8 +60,20 @@
     [self.topHeader setAttributedTitle:topHeaderTitle forState:UIControlStateNormal];
     [self.bottomHeader setAttributedTitle:bottomHeaderTitle forState:UIControlStateNormal];
     
-    NSString *imageURL = self.routeInfo[@"imageURL"];
+    [self loadMap];
+}
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+#pragma mark - Private
+
+- (void)loadMap {
+    RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
+
+    NSString *imageURL = self.routeInfo[@"imageURL"];
+    
     if (imageURL) {
         __weak __typeof(self)weakSelf = self;
         
@@ -102,10 +116,6 @@
             }
         }];
     }
-}
-
-- (BOOL)prefersStatusBarHidden {
-    return YES;
 }
 
 #pragma mark - IBActions
