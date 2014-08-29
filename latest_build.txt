@@ -1,10 +1,5 @@
-h2. 20140826
+h2. 20140828
 
 h3. Note:
 
-* KYIV-LVIV and LVIV-KYIV routes for all supported languages available
-
-h3. New:
-
-Feature #99 Localize route display
-* use localised version of route map
+* added new device: iPod Touch 5th Gen (Ivan Terentyev)
