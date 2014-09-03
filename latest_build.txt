@@ -8,6 +8,9 @@ h3. Improvements:
 
 Task #88: Slash screen
 * launch images updated
+Task #90: Route display
+* default language set to Ukrainian
+* changed languages order
 
 h4. Fixes:
 

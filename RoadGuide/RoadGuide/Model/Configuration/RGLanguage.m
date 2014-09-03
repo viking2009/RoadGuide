@@ -42,7 +42,7 @@ NSString *const RGSettingsLanguageKey = @"userDefinedLanguage";
 }
 
 + (NSArray *)supportedLanguages {
-    return @[@"ru", @"en", @"uk"];
+    return @[@"uk", @"en", @"ru"];
 }
 
 + (NSString *)localizedStringForKey:(NSString *)key {
