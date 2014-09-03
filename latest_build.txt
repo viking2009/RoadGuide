@@ -1,5 +1,14 @@
-h2. 20140828
+h2. 20140904
 
-h3. Note:
+h3. New:
 
-* added new device: iPod Touch 5th Gen (Ivan Terentyev)
+* 
+
+h3. Improvements:
+
+Task #88: Slash screen
+* launch images updated
+
+h4. Fixes:
+
+*
