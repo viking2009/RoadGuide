@@ -26,6 +26,7 @@
 		90075458199966B200AA6C74 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 90075455199966B200AA6C74 /* iTunesArtwork@2x */; };
 		9007545B1999677B00AA6C74 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 900754591999677A00AA6C74 /* Icon-40@2x.png */; };
 		9007545C1999677B00AA6C74 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007545A1999677B00AA6C74 /* Icon-Small@2x.png */; };
+		906C9F8919B7BC6E006D0C8B /* libFlurry_5.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 906C9F8819B7BC6E006D0C8B /* libFlurry_5.3.0.a */; };
 		908CF6FF199B670500B2CD54 /* RGSplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF6FE199B670500B2CD54 /* RGSplashScreenViewController.m */; };
 		908CF705199B851200B2CD54 /* RGLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF704199B851200B2CD54 /* RGLanguage.m */; };
 		908CF709199B8B9600B2CD54 /* NSDictionary+Localized.m in Sources */ = {isa = PBXBuildFile; fileRef = 908CF708199B8B9600B2CD54 /* NSDictionary+Localized.m */; };
@@ -69,7 +70,6 @@
 		90BA71B419A6805C00379EBB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 90BA71B219A6805C00379EBB /* Icon.png */; };
 		90BA71B519A6805C00379EBB /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90BA71B319A6805C00379EBB /* Icon@2x.png */; };
 		90BA71B719A6809B00379EBB /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 90BA71B619A6809B00379EBB /* Icon-Small.png */; };
-		90C7E35A199E9DD30005D063 /* libFlurry_5.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C7E359199E9DD30005D063 /* libFlurry_5.2.0.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +106,7 @@
 		90075455199966B200AA6C74 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		900754591999677A00AA6C74 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		9007545A1999677B00AA6C74 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		906C9F8819B7BC6E006D0C8B /* libFlurry_5.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.3.0.a; sourceTree = "<group>"; };
 		908CF6FD199B670500B2CD54 /* RGSplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSplashScreenViewController.h; sourceTree = "<group>"; };
 		908CF6FE199B670500B2CD54 /* RGSplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSplashScreenViewController.m; sourceTree = "<group>"; };
 		908CF703199B851200B2CD54 /* RGLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGLanguage.h; sourceTree = "<group>"; };
@@ -189,7 +190,6 @@
 		90BA71B319A6805C00379EBB /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		90BA71B619A6809B00379EBB /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		90C7E358199E9DD30005D063 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		90C7E359199E9DD30005D063 /* libFlurry_5.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.2.0.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,7 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9007541A1999629400AA6C74 /* CoreGraphics.framework in Frameworks */,
-				90C7E35A199E9DD30005D063 /* libFlurry_5.2.0.a in Frameworks */,
+				906C9F8919B7BC6E006D0C8B /* libFlurry_5.3.0.a in Frameworks */,
 				9007541C1999629400AA6C74 /* UIKit.framework in Frameworks */,
 				900754181999629400AA6C74 /* Foundation.framework in Frameworks */,
 			);
@@ -560,7 +560,7 @@
 			isa = PBXGroup;
 			children = (
 				90C7E358199E9DD30005D063 /* Flurry.h */,
-				90C7E359199E9DD30005D063 /* libFlurry_5.2.0.a */,
+				906C9F8819B7BC6E006D0C8B /* libFlurry_5.3.0.a */,
 			);
 			path = Flurry;
 			sourceTree = "<group>";

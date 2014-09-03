@@ -46,6 +46,9 @@
             DLog(@"defaults: %@", defaults);
             
             if (configuration.flurryApiKey) {
+#ifdef DEBUG
+                [Flurry setDebugLogEnabled:YES];
+#endif
                 [Flurry setCrashReportingEnabled:YES];
                 [Flurry startSession:configuration.flurryApiKey];
             }
