@@ -154,11 +154,40 @@
                         <outletCollection property="languageButtons" destination="k52-X7-LWG" id="3MT-sM-qoa"/>
                         <outletCollection property="languageButtons" destination="3ho-Xo-4ok" id="yYH-7K-vEz"/>
                         <outletCollection property="languageButtons" destination="W6A-6G-qnO" id="GDn-Io-Rk7"/>
+                        <segue destination="NdL-2U-7Oc" kind="modal" identifier="showAbout" modalTransitionStyle="crossDissolve" id="B15-jH-85d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="382" y="219"/>
+            <point key="canvasLocation" x="391" y="219"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="hfh-36-D1X">
+            <objects>
+                <viewController storyboardIdentifier="About" id="NdL-2U-7Oc" customClass="RGAboutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ttX-yp-f0f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Vaf-j2-7fP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8uh-40-5GX">
+                                <rect key="frame" x="46" y="40" width="264" height="426"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="Vaf-j2-7fP" id="g9B-Pi-mrk"/>
+                        <outlet property="infoView" destination="8uh-40-5GX" id="whQ-Bj-Baq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VPH-T1-1Sg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="899"/>
         </scene>
         <!--Route Details View Controller-->
         <scene sceneID="0MY-WE-Z8X">

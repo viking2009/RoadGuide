@@ -2,7 +2,7 @@ h2. 20140904
 
 h3. New:
 
-* 
+Task #100: About program
 
 h3. Improvements:
 
