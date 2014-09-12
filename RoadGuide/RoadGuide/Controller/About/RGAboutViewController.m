@@ -22,12 +22,7 @@
     [super viewDidLoad];
 
     self.backgroundView.image = [UIImage imageNamed:@"routeList_background"];
-    
-    UIImage *infoImage = [UIImage localizedImageNamed:@"about_background"];
-    CGRect infoViewFrame = self.infoView.frame;
-    infoViewFrame.size.height = infoImage.size.height;
-    self.infoView.frame = infoViewFrame;
-    self.infoView.image = infoImage;
+    self.infoView.image = [UIImage localizedImageNamed:@"about_background"];
 }
 
 - (BOOL)prefersStatusBarHidden {
