@@ -97,11 +97,8 @@
                                         strongSelf.bannerView.frame = bannerViewFrame;
                                     } completion:^(BOOL finished) {
                                         [Flurry logEvent:@"SmallBannerShown" withParameters:@{@"imageURL": configuration.smallBannerImageURL}];
-                                        [self performSegueWithIdentifier:@"showAbout" sender:self];
-
                                     }];
                 }
-
         } failure:^(NSError *error) {
             DLog(@"ERROR: %@", [error localizedDescription]);
         }];
@@ -138,11 +135,13 @@
             if (indexPath.item == 0) {
                 routeInfo[@"from"] = [route[@"from"] uppercaseString];
                 routeInfo[@"to"] = [route[@"to"] uppercaseString];
-                routeInfo[@"imageURL"] = [route localizedObjectForKey:@"fromImageURL"];
+                routeInfo[@"fromImageURL"] = [route localizedObjectForKey:@"fromImageURL"];
+                routeInfo[@"toImageURL"] = [route localizedObjectForKey:@"toImageURL"];
             } else {
                 routeInfo[@"from"] = [route[@"to"] uppercaseString];
                 routeInfo[@"to"] = [route[@"from"] uppercaseString];
-                routeInfo[@"imageURL"] = [route localizedObjectForKey:@"toImageURL"];
+                routeInfo[@"fromImageURL"] = [route localizedObjectForKey:@"toImageURL"];
+                routeInfo[@"toImageURL"] = [route localizedObjectForKey:@"fromImageURL"];
             }
             
             routeDetails.routeInfo = routeInfo;

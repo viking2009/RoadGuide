@@ -19,9 +19,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *bottomHeader;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
+@property (assign, nonatomic) BOOL reverseRoute;
+
+- (void)updateHeaders;
 - (void)loadMap;
 
 - (IBAction)goBack:(id)sender;
+- (IBAction)showReverseRoute:(id)sender;
 
 @end
 
@@ -48,18 +52,7 @@
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     self.activityIndicator.color = configuration.routeDetailsActivityIndicatorColor;
     
-    UIColor *cityHeaderBackgroundColor = configuration.cityHeaderBackgroundColor;
-    NSDictionary *cityHeaderAttributes = configuration.cityHeaderAttributes;
-    
-    NSAttributedString *topHeaderTitle = [[NSAttributedString alloc] initWithString:self.routeInfo[@"to"] attributes:cityHeaderAttributes];
-    NSAttributedString *bottomHeaderTitle = [[NSAttributedString alloc] initWithString:self.routeInfo[@"from"] attributes:cityHeaderAttributes];
-
-    self.topHeader.backgroundColor = cityHeaderBackgroundColor;
-    self.bottomHeader.backgroundColor = cityHeaderBackgroundColor;
-
-    [self.topHeader setAttributedTitle:topHeaderTitle forState:UIControlStateNormal];
-    [self.bottomHeader setAttributedTitle:bottomHeaderTitle forState:UIControlStateNormal];
-    
+    [self updateHeaders];
     [self loadMap];
 }
 
@@ -69,10 +62,38 @@
 
 #pragma mark - Private
 
+- (void)setReverseRoute:(BOOL)reverseRoute {
+    if (_reverseRoute != reverseRoute) {
+        _reverseRoute = reverseRoute;
+        
+        [self updateHeaders];
+        [self loadMap];
+    }
+}
+
+- (void)updateHeaders {
+    RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
+
+    UIColor *cityHeaderBackgroundColor = configuration.cityHeaderBackgroundColor;
+    NSDictionary *cityHeaderAttributes = configuration.cityHeaderAttributes;
+    
+    NSString *fromKey = self.reverseRoute ? @"to" : @"from";
+    NSString *toKey = self.reverseRoute ? @"from" : @"to";
+
+    NSAttributedString *topHeaderTitle = [[NSAttributedString alloc] initWithString:self.routeInfo[toKey] attributes:cityHeaderAttributes];
+    NSAttributedString *bottomHeaderTitle = [[NSAttributedString alloc] initWithString:self.routeInfo[fromKey] attributes:cityHeaderAttributes];
+    
+    self.topHeader.backgroundColor = cityHeaderBackgroundColor;
+    self.bottomHeader.backgroundColor = cityHeaderBackgroundColor;
+
+    [self.topHeader setAttributedTitle:topHeaderTitle forState:UIControlStateNormal];
+    [self.bottomHeader setAttributedTitle:bottomHeaderTitle forState:UIControlStateNormal];
+}
+
 - (void)loadMap {
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
 
-    NSString *imageURL = self.routeInfo[@"imageURL"];
+    NSString *imageURL = self.reverseRoute ? self.routeInfo[@"toImageURL"] : self.routeInfo[@"fromImageURL"];
     
     if (imageURL) {
         __weak __typeof(self)weakSelf = self;
@@ -121,7 +142,12 @@
 #pragma mark - IBActions
 
 - (IBAction)goBack:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:NULL];
+//    [self dismissViewControllerAnimated:YES completion:NULL];
+    [self showReverseRoute:sender];
+}
+
+- (IBAction)showReverseRoute:(id)sender {
+    self.reverseRoute = !self.reverseRoute;
 }
 
 #pragma mark - UIScrollViewDelegate
