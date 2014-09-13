@@ -106,6 +106,8 @@
     if (imageURL) {
         __weak __typeof(self)weakSelf = self;
         
+        self.routeView.image = nil;
+
         [self.activityIndicator startAnimating];
         self.reverseRouteButton.enabled = NO;
 
