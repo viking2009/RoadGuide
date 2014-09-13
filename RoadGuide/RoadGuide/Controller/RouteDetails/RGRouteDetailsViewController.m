@@ -9,6 +9,7 @@
 #import "RGRouteDetailsViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "RGConfiguration.h"
+#import "Flurry.h"
 
 @interface RGRouteDetailsViewController () <UIScrollViewDelegate>
 
@@ -125,6 +126,16 @@
                                     
                                     // Bug #95 End of route displayed
                                     strongSelf.scrollView.contentOffset = CGPointMake(0, strongSelf.scrollView.contentSize.height - strongSelf.scrollView.frame.size.height);
+                                    
+                                    NSString *fromKey = strongSelf.reverseRoute ? @"to" : @"from";
+                                    NSString *toKey = strongSelf.reverseRoute ? @"from" : @"to";
+                                    
+                                    NSMutableDictionary *routeInfo = [[NSMutableDictionary alloc] init];
+                                    routeInfo[@"from"] = strongSelf.routeInfo[fromKey];
+                                    routeInfo[@"to"] = strongSelf.routeInfo[toKey];
+                                    routeInfo[@"imageURL"] = imageURL;
+
+                                    [Flurry logEvent:@"RouteShown" withParameters:routeInfo];
                                 }];
             }
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
