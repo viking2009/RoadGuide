@@ -3,6 +3,7 @@ h2. 20140913
 h3. New:
 
 Task #100: About program
+Task #101: Information
 Task #102: Reverse route
 
 h3. Improvements:
@@ -18,4 +19,5 @@ Task #93: Flurry
 
 h4. Fixes:
 
-*
+Feature #97: Support for iOS6
+* no support for iOS6 (minimum required version is 7.1)
