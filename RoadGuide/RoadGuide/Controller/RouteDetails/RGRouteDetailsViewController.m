@@ -9,6 +9,7 @@
 #import "RGRouteDetailsViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "RGConfiguration.h"
+#import "UIImage+Localized.h"
 #import "Flurry.h"
 
 @interface RGRouteDetailsViewController () <UIScrollViewDelegate>
@@ -16,8 +17,15 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
 @property (weak, nonatomic) IBOutlet UIImageView *routeView;
-@property (weak, nonatomic) IBOutlet UIButton *topHeader;
-@property (weak, nonatomic) IBOutlet UIButton *bottomHeader;
+@property (weak, nonatomic) IBOutlet UIView *topHeader;
+@property (weak, nonatomic) IBOutlet UILabel *topLabel;
+@property (weak, nonatomic) IBOutlet UIButton *aboutButton;
+@property (weak, nonatomic) IBOutlet UIButton *infoButton;
+@property (weak, nonatomic) IBOutlet UIView *bottomHeader;
+@property (weak, nonatomic) IBOutlet UILabel *bottomLabel;
+@property (weak, nonatomic) IBOutlet UIButton *routeSelectButton;
+@property (weak, nonatomic) IBOutlet UIButton *reverseRouteButton;
+
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @property (assign, nonatomic) BOOL reverseRoute;
@@ -25,8 +33,8 @@
 - (void)updateHeaders;
 - (void)loadMap;
 
-- (IBAction)goBack:(id)sender;
-- (IBAction)showReverseRoute:(id)sender;
+- (IBAction)routeSelectButtonAction:(id)sender;
+- (IBAction)reverseRouteButtonAction:(id)sender;
 
 @end
 
@@ -48,11 +56,14 @@
     backgroundViewFrame.size = self.backgroundView.image.size;
     self.backgroundView.frame = backgroundViewFrame;
     
-//    self.scrollView.contentSize = self.backgroundView.image.size;
-
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     self.activityIndicator.color = configuration.routeDetailsActivityIndicatorColor;
     
+    [self.aboutButton setImage:[UIImage localizedImageNamed:@"routeDetails_button_about"] forState:UIControlStateNormal];
+    [self.infoButton setImage:[UIImage localizedImageNamed:@"routeDetails_button_info"] forState:UIControlStateNormal];
+    [self.routeSelectButton setImage:[UIImage localizedImageNamed:@"routeDetails_button_routeSelect"] forState:UIControlStateNormal];
+    [self.reverseRouteButton setImage:[UIImage localizedImageNamed:@"routeDetails_button_reverseRoute"] forState:UIControlStateNormal];
+
     [self updateHeaders];
     [self loadMap];
 }
@@ -76,19 +87,15 @@
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
 
     UIColor *cityHeaderBackgroundColor = configuration.cityHeaderBackgroundColor;
-    NSDictionary *cityHeaderAttributes = configuration.cityHeaderAttributes;
-    
-    NSString *fromKey = self.reverseRoute ? @"to" : @"from";
-    NSString *toKey = self.reverseRoute ? @"from" : @"to";
-
-    NSAttributedString *topHeaderTitle = [[NSAttributedString alloc] initWithString:self.routeInfo[toKey] attributes:cityHeaderAttributes];
-    NSAttributedString *bottomHeaderTitle = [[NSAttributedString alloc] initWithString:self.routeInfo[fromKey] attributes:cityHeaderAttributes];
-    
     self.topHeader.backgroundColor = cityHeaderBackgroundColor;
     self.bottomHeader.backgroundColor = cityHeaderBackgroundColor;
 
-    [self.topHeader setAttributedTitle:topHeaderTitle forState:UIControlStateNormal];
-    [self.bottomHeader setAttributedTitle:bottomHeaderTitle forState:UIControlStateNormal];
+    NSString *fromKey = self.reverseRoute ? @"to" : @"from";
+    NSString *toKey = self.reverseRoute ? @"from" : @"to";
+    NSDictionary *cityHeaderAttributes = configuration.cityHeaderAttributes;
+    
+    self.topLabel.attributedText = [[NSAttributedString alloc] initWithString:self.routeInfo[toKey] attributes:cityHeaderAttributes];
+    self.bottomLabel.attributedText = [[NSAttributedString alloc] initWithString:self.routeInfo[fromKey] attributes:cityHeaderAttributes];
 }
 
 - (void)loadMap {
@@ -152,12 +159,11 @@
 
 #pragma mark - IBActions
 
-- (IBAction)goBack:(id)sender {
-//    [self dismissViewControllerAnimated:YES completion:NULL];
-    [self showReverseRoute:sender];
+- (IBAction)routeSelectButtonAction:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
-- (IBAction)showReverseRoute:(id)sender {
+- (IBAction)reverseRouteButtonAction:(id)sender {
     self.reverseRoute = !self.reverseRoute;
 }
 

@@ -15,6 +15,9 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
 @property (weak, nonatomic) IBOutlet UIImageView *infoView;
+@property (weak, nonatomic) IBOutlet UIButton *routeSelectButton;
+
+- (IBAction)routeSelectButtonAction:(id)sender;
 
 @end
 
@@ -25,6 +28,7 @@
 
     self.backgroundView.image = [UIImage imageNamed:@"routeList_background"];
     self.infoView.image = [UIImage localizedImageNamed:@"about_background"];
+    [self.routeSelectButton setImage:[UIImage localizedImageNamed:@"routeDetails_button_routeSelect"] forState:UIControlStateNormal];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -35,6 +39,12 @@
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
+}
+
+#pragma mark - IBActions
+
+- (IBAction)routeSelectButtonAction:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end
