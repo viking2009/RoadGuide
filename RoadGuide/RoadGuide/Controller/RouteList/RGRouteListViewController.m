@@ -146,7 +146,11 @@
             
             routeDetails.routeInfo = routeInfo;
             
-            [Flurry logEvent:@"RouteSelected" withParameters:routeInfo];
+            NSMutableDictionary *routeInfoFlurry = [[NSMutableDictionary alloc] init];
+            routeInfoFlurry[@"from"] = routeInfo[@"from"];
+            routeInfoFlurry[@"to"] = routeInfo[@"to"];
+
+            [Flurry logEvent:@"RouteSelected" withParameters:routeInfoFlurry];
         }
     }
 }

@@ -140,7 +140,6 @@
                                     NSMutableDictionary *routeInfo = [[NSMutableDictionary alloc] init];
                                     routeInfo[@"from"] = strongSelf.routeInfo[fromKey];
                                     routeInfo[@"to"] = strongSelf.routeInfo[toKey];
-                                    routeInfo[@"imageURL"] = imageURL;
 
                                     [Flurry logEvent:@"RouteShown" withParameters:routeInfo];
                                 }];
