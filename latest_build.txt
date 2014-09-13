@@ -8,6 +8,8 @@ Task #102: Reverse route
 
 h3. Improvements:
 
+Task #84: Resources
+* optimize images with ImageOptim
 Task #88: Slash screen
 * launch images updated
 Task #90: Route display
@@ -20,5 +22,7 @@ Task #93: Flurry
 
 h4. Fixes:
 
+Task #93: Flurry
+*  don’t log image url for RouteSelected, RouteShown
 Feature #97: Support for iOS6
 * no support for iOS6 (minimum required version is 7.1)
