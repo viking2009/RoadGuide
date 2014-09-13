@@ -107,12 +107,15 @@
         __weak __typeof(self)weakSelf = self;
         
         [self.activityIndicator startAnimating];
+        self.reverseRouteButton.enabled = NO;
+
         NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:imageURL]];
         [self.routeView setImageWithURLRequest:urlRequest placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
             __strong __typeof(weakSelf)strongSelf = weakSelf;
             
             if (strongSelf) {
                 [strongSelf.activityIndicator stopAnimating];
+                strongSelf.reverseRouteButton.enabled = YES;
                 
                 [UIView transitionWithView:strongSelf.routeView
                                   duration:configuration.fullscreenBannerFadeDuration
@@ -151,6 +154,7 @@
                 DLog(@"ERROR: %@", [error localizedDescription]);
                 
                 [strongSelf.activityIndicator stopAnimating];
+                strongSelf.reverseRouteButton.enabled = YES;
             }
         }];
     }
