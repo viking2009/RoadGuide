@@ -97,7 +97,7 @@
                                         strongSelf.bannerView.frame = bannerViewFrame;
                                     } completion:^(BOOL finished) {
                                         [Flurry logEvent:@"SmallBannerShown" withParameters:@{@"imageURL": configuration.smallBannerImageURL}];
-                                        //[self performSegueWithIdentifier:@"showAbout" sender:self];
+                                        [self performSegueWithIdentifier:@"showInfo" sender:self];
                                     }];
                 }
         } failure:^(NSError *error) {
