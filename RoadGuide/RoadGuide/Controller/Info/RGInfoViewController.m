@@ -8,6 +8,8 @@
 
 #import "RGInfoViewController.h"
 #import "UIImage+Localized.h"
+#import "Flurry.h"
+#import "RGLanguage.h"
 
 @interface RGInfoViewController ()
 
@@ -23,6 +25,12 @@
     
     self.backgroundView.image = [UIImage imageNamed:@"routeList_background"];
     self.infoView.image = [UIImage localizedImageNamed:@"info_background"];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [Flurry logEvent:@"InfoShown" withParameters:@{RGSettingsLanguageKey: [RGLanguage currentLanguage]}];
 }
 
 - (BOOL)prefersStatusBarHidden {
