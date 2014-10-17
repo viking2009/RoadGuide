@@ -1,10 +1,21 @@
-h2. 20141015
+h2. 20141017
+
+h3. Note:
+
+* KIEV-ODESSA, ODESSA-KIEV, KIEV-VARSHAVA and VARSHAVA-KIEV routes for all supported languages available
 
 h3. New:
 
 Task #106: iPhone6 and iPhone 6 Plus support
 
+h3. Improvements:
+
+Task #85: Config file
+* added route maps for Kiev-Odessa, Kiev-Varshava and reverse routes
+
 h3. Fixes:
 
+Task #85: Config file
+* changed english translation for cities according to route maps
 Task #90: Route display
 * fixed bottom header position for 3,5” display

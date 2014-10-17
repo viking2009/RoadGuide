@@ -70,16 +70,16 @@
 			<string>M06</string>
 			<key>route_eu</key>
 			<string>E40</string>
-			<key>fromImageURL_ru</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6YTNZbHB4WFBXUkU</string>
 			<key>fromImageURL_en</key>
 			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6SGMybXoxWUFZYUk</string>
+			<key>fromImageURL_ru</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6YTNZbHB4WFBXUkU</string>
 			<key>fromImageURL_uk</key>
 			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6eTNKWGprd3dsX3c</string>
-			<key>toImageURL_ru</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRVXFXZTZTenZSSTQ</string>
 			<key>toImageURL_en</key>
 			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRWU9ZQmJoX0tXSlU</string>
+			<key>toImageURL_ru</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRVXFXZTZTenZSSTQ</string>
 			<key>toImageURL_uk</key>
 			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRbTBmX280N1JBdkU</string>
 		</dict>
@@ -101,10 +101,18 @@
 			<string>M05</string>
 			<key>route_eu</key>
 			<string>E95</string>
-			<key>fromImageURL</key>
-			<string></string>
-			<key>toImageURL</key>
-			<string></string>
+			<key>fromImageURL_en</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6QmoyeDAtX0sySFk</string>
+			<key>fromImageURL_ru</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6OHJJb2FJV2pxTEU</string>
+			<key>fromImageURL_uk</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6VFprbC1mSnItQkk</string>
+			<key>toImageURL_en</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6THpwdEFmTW1rQTg</string>
+			<key>toImageURL_ru</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6Vk5hTExuUVk0NXM</string>
+			<key>toImageURL_uk</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6eU1Sc3lqRzMtUDQ</string>
 		</dict>
 		<dict>
 			<key>from</key>
@@ -124,10 +132,18 @@
 			<string>M07</string>
 			<key>route_eu</key>
 			<string>E373</string>
-			<key>fromImageURL</key>
-			<string></string>
-			<key>toImageURL</key>
-			<string></string>
+			<key>fromImageURL_en</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6SFE5d21ZQjgtb0U</string>
+			<key>fromImageURL_ru</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6dXB0OV94NE5jaXM</string>
+			<key>fromImageURL_uk</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6ZndESV9Sd3lJMUk</string>
+			<key>toImageURL_en</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6ZXVvOWhnVHR4NnM</string>
+			<key>toImageURL_ru</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6THFuS0tvRktDRVE</string>
+			<key>toImageURL_uk</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6Zld0M2VEcUZISFE</string>
 		</dict>
 		<dict>
 			<key>from</key>
@@ -157,146 +173,146 @@
 	<key>Cities</key>
 	<array>
 		<dict>
+			<key>title_en</key>
+			<string>Kiev</string>
 			<key>title_ru</key>
 			<string>Киев</string>
-			<key>title_en</key>
-			<string>Kyiv</string>
 			<key>title_uk</key>
 			<string>Київ</string>
 		</dict>
 		<dict>
-			<key>title_ru</key>
-			<string>Харьков</string>
 			<key>title_en</key>
 			<string>Kharkiv</string>
+			<key>title_ru</key>
+			<string>Харьков</string>
 			<key>title_uk</key>
 			<string>Харків</string>
 		</dict>
 		<dict>
+			<key>title_en</key>
+			<string>L&apos;viv</string>
 			<key>title_ru</key>
 			<string>Львов</string>
-			<key>title_en</key>
-			<string>Lviv</string>
 			<key>title_uk</key>
 			<string>Львів</string>
 		</dict>
 		<dict>
+			<key>title_en</key>
+			<string>Odessa</string>
 			<key>title_ru</key>
 			<string>Одесса</string>
-			<key>title_en</key>
-			<string>Odesa</string>
 			<key>title_uk</key>
 			<string>Одеса</string>
 		</dict>
 		<dict>
+			<key>title_en</key>
+			<string>Varshava</string>
 			<key>title_ru</key>
 			<string>Варшава</string>
-			<key>title_en</key>
-			<string>Warsaw</string>
 			<key>title_uk</key>
 			<string>Варшава</string>
 		</dict>
 		<dict>
-			<key>title_ru</key>
-			<string>Чоп</string>
 			<key>title_en</key>
 			<string>Chop</string>
+			<key>title_ru</key>
+			<string>Чоп</string>
 			<key>title_uk</key>
 			<string>Чоп</string>
 		</dict>
 		<dict>
-			<key>title_ru</key>
-			<string>Пирятин</string>
 			<key>title_en</key>
 			<string>Pyriatyn</string>
+			<key>title_ru</key>
+			<string>Пирятин</string>
 			<key>title_uk</key>
 			<string>Пирятин</string>
 		</dict>
 		<dict>
-			<key>title_ru</key>
-			<string>Полтава</string>
 			<key>title_en</key>
 			<string>Poltava</string>
+			<key>title_ru</key>
+			<string>Полтава</string>
 			<key>title_uk</key>
 			<string>Полтава</string>
 		</dict>
 		<dict>
-			<key>title_ru</key>
-			<string>Житомир</string>
 			<key>title_en</key>
 			<string>Zhytomyr</string>
+			<key>title_ru</key>
+			<string>Житомир</string>
 			<key>title_uk</key>
 			<string>Житомир</string>
 		</dict>
 		<dict>
-			<key>title_ru</key>
-			<string>Ровно</string>
 			<key>title_en</key>
 			<string>Rivne</string>
+			<key>title_ru</key>
+			<string>Ровно</string>
 			<key>title_uk</key>
 			<string>Рівне</string>
 		</dict>
 		<dict>
-			<key>title_ru</key>
-			<string>Белая Церковь</string>
 			<key>title_en</key>
 			<string>Bila Tserkva</string>
+			<key>title_ru</key>
+			<string>Белая Церковь</string>
 			<key>title_uk</key>
 			<string>Біла Церква</string>
 		</dict>
 		<dict>
-			<key>title_ru</key>
-			<string>Умань</string>
 			<key>title_en</key>
 			<string>Uman</string>
+			<key>title_ru</key>
+			<string>Умань</string>
 			<key>title_uk</key>
 			<string>Умань</string>
 		</dict>
 		<dict>
-			<key>title_ru</key>
-			<string>Коростень</string>
 			<key>title_en</key>
 			<string>Korosten</string>
+			<key>title_ru</key>
+			<string>Коростень</string>
 			<key>title_uk</key>
 			<string>Коростень</string>
 		</dict>
 		<dict>
-			<key>title_ru</key>
-			<string>Сарны</string>
 			<key>title_en</key>
 			<string>Sarny</string>
+			<key>title_ru</key>
+			<string>Сарны</string>
 			<key>title_uk</key>
 			<string>Сарни</string>
 		</dict>
 		<dict>
-			<key>title_ru</key>
-			<string>Ковель</string>
 			<key>title_en</key>
 			<string>Kovel</string>
+			<key>title_ru</key>
+			<string>Ковель</string>
 			<key>title_uk</key>
 			<string>Ковель</string>
 		</dict>
 		<dict>
-			<key>title_ru</key>
-			<string>Стрый</string>
 			<key>title_en</key>
 			<string>Stryi</string>
+			<key>title_ru</key>
+			<string>Стрый</string>
 			<key>title_uk</key>
 			<string>Стрий</string>
 		</dict>
 		<dict>
-			<key>title_ru</key>
-			<string>Мукачево</string>
 			<key>title_en</key>
 			<string>Mukacheve</string>
+			<key>title_ru</key>
+			<string>Мукачево</string>
 			<key>title_uk</key>
 			<string>Мукачеве</string>
 		</dict>
 		<dict>
-			<key>title_ru</key>
-			<string>Ужгород</string>
 			<key>title_en</key>
 			<string>Uzhhorod</string>
+			<key>title_ru</key>
+			<string>Ужгород</string>
 			<key>title_uk</key>
 			<string>Ужгород</string>
 		</dict>
