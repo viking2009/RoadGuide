@@ -118,6 +118,12 @@
             if (strongSelf) {
                 [strongSelf.activityIndicator stopAnimating];
                 strongSelf.reverseRouteButton.enabled = YES;
+
+                // MARK: resize route view
+                CGRect routeViewFrame = strongSelf.routeView.frame;
+                routeViewFrame.origin.y = strongSelf.scrollView.scrollIndicatorInsets.top;
+                routeViewFrame.size.height = image.size.height;
+                strongSelf.routeView.frame = routeViewFrame;
                 
                 [UIView transitionWithView:strongSelf.routeView
                                   duration:configuration.fullscreenBannerFadeDuration
@@ -125,12 +131,6 @@
                                 animations:^{
                                     strongSelf.routeView.image = image;
                                 } completion:^(BOOL finished) {
-                                    // MARK: resize route view
-                                    CGRect routeViewFrame = strongSelf.routeView.frame;
-                                    routeViewFrame.origin.y = strongSelf.scrollView.scrollIndicatorInsets.top;
-                                    routeViewFrame.size = image.size;
-                                    strongSelf.routeView.frame = routeViewFrame;
-                                    
                                     // MARK: adjust content size
                                     CGSize contentSize = routeViewFrame.size;
                                     contentSize.height += strongSelf.scrollView.scrollIndicatorInsets.top + strongSelf.scrollView.scrollIndicatorInsets.bottom;
