@@ -45,7 +45,7 @@
 		905CD21819C4495A00179496 /* info_background_uk-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 905CD21219C4495A00179496 /* info_background_uk-568h@2x.png */; };
 		905CD21919C4495A00179496 /* info_background_uk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 905CD21319C4495A00179496 /* info_background_uk@2x.png */; };
 		905CD21D19C449DA00179496 /* RGInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905CD21C19C449DA00179496 /* RGInfoViewController.m */; };
-		906C9F8919B7BC6E006D0C8B /* libFlurry_5.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 906C9F8819B7BC6E006D0C8B /* libFlurry_5.3.0.a */; };
+		906C9F8919B7BC6E006D0C8B /* libFlurry_5.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 906C9F8819B7BC6E006D0C8B /* libFlurry_5.4.0.a */; };
 		906C9F9119B7C1B6006D0C8B /* about_background_en-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 906C9F8B19B7C1B6006D0C8B /* about_background_en-568h@2x.png */; };
 		906C9F9219B7C1B6006D0C8B /* about_background_en@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 906C9F8C19B7C1B6006D0C8B /* about_background_en@2x.png */; };
 		906C9F9319B7C1B6006D0C8B /* about_background_ru-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 906C9F8D19B7C1B6006D0C8B /* about_background_ru-568h@2x.png */; };
@@ -157,7 +157,7 @@
 		905CD21319C4495A00179496 /* info_background_uk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info_background_uk@2x.png"; sourceTree = "<group>"; };
 		905CD21B19C449DA00179496 /* RGInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGInfoViewController.h; sourceTree = "<group>"; };
 		905CD21C19C449DA00179496 /* RGInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGInfoViewController.m; sourceTree = "<group>"; };
-		906C9F8819B7BC6E006D0C8B /* libFlurry_5.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.3.0.a; sourceTree = "<group>"; };
+		906C9F8819B7BC6E006D0C8B /* libFlurry_5.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.4.0.a; sourceTree = "<group>"; };
 		906C9F8B19B7C1B6006D0C8B /* about_background_en-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_background_en-568h@2x.png"; sourceTree = "<group>"; };
 		906C9F8C19B7C1B6006D0C8B /* about_background_en@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_background_en@2x.png"; sourceTree = "<group>"; };
 		906C9F8D19B7C1B6006D0C8B /* about_background_ru-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_background_ru-568h@2x.png"; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9007541A1999629400AA6C74 /* CoreGraphics.framework in Frameworks */,
-				906C9F8919B7BC6E006D0C8B /* libFlurry_5.3.0.a in Frameworks */,
+				906C9F8919B7BC6E006D0C8B /* libFlurry_5.4.0.a in Frameworks */,
 				9007541C1999629400AA6C74 /* UIKit.framework in Frameworks */,
 				900754181999629400AA6C74 /* Foundation.framework in Frameworks */,
 			);
@@ -691,7 +691,7 @@
 			isa = PBXGroup;
 			children = (
 				90C7E358199E9DD30005D063 /* Flurry.h */,
-				906C9F8819B7BC6E006D0C8B /* libFlurry_5.3.0.a */,
+				906C9F8819B7BC6E006D0C8B /* libFlurry_5.4.0.a */,
 			);
 			path = Flurry;
 			sourceTree = "<group>";
