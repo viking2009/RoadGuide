@@ -10,6 +10,8 @@ Task #106: iPhone6 and iPhone 6 Plus support
 
 h3. Improvements:
 
+Task #86 Ads support
+* support for iPhone6 and iPhone 6 Plus
 Task #85: Config file
 * added route maps for Kiev-Odessa, Kiev-Varshava and reverse routes
 
