@@ -51,10 +51,18 @@
 			<string>M03</string>
 			<key>route_eu</key>
 			<string>E40</string>
-			<key>fromImageURL</key>
-			<string></string>
-			<key>toImageURL</key>
-			<string></string>
+			<key>fromImageURL_en</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6azVxbWFXWEhaeUU</string>
+			<key>fromImageURL_ru</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6MDZmc0s4NWRqS1U</string>
+			<key>fromImageURL_uk</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6MFBzMmt5ejhDRkk</string>
+			<key>toImageURL_en</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6TWc1WWQxcWdJeEE</string>
+			<key>toImageURL_ru</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6Nk5NNFJIbFB3TXc</string>
+			<key>toImageURL_uk</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6UFYwM21MeFpoZms</string>
 		</dict>
 		<dict>
 			<key>from</key>
@@ -168,10 +176,18 @@
 			<string>M03</string>
 			<key>route_eu</key>
 			<string>E40</string>
-			<key>fromImageURL</key>
-			<string></string>
-			<key>toImageURL</key>
-			<string></string>
+			<key>fromImageURL_en</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6d0JrUEVITEx1akE</string>
+			<key>fromImageURL_ru</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6eU1fT3JkNG5WY28</string>
+			<key>fromImageURL_uk</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6dDVvaTlfSmJTVTg</string>
+			<key>toImageURL_en</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6djUwbndlM2xfTkE</string>
+			<key>toImageURL_ru</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6Y2wwWEhkYkRRRUk</string>
+			<key>toImageURL_uk</key>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6bG16ZmtXLUZja3c</string>
 		</dict>
 	</array>
 	<key>Cities</key>
@@ -226,7 +242,7 @@
 		</dict>
 		<dict>
 			<key>title_en</key>
-			<string>Pyriatyn</string>
+			<string>Piryatin</string>
 			<key>title_ru</key>
 			<string>Пирятин</string>
 			<key>title_uk</key>
@@ -298,7 +314,7 @@
 		</dict>
 		<dict>
 			<key>title_en</key>
-			<string>Stryi</string>
+			<string>Striy</string>
 			<key>title_ru</key>
 			<string>Стрый</string>
 			<key>title_uk</key>
@@ -306,7 +322,7 @@
 		</dict>
 		<dict>
 			<key>title_en</key>
-			<string>Mukacheve</string>
+			<string>Mukachevo</string>
 			<key>title_ru</key>
 			<string>Мукачево</string>
 			<key>title_uk</key>
@@ -314,7 +330,7 @@
 		</dict>
 		<dict>
 			<key>title_en</key>
-			<string>Uzhhorod</string>
+			<string>Uzhorod</string>
 			<key>title_ru</key>
 			<string>Ужгород</string>
 			<key>title_uk</key>

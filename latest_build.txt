@@ -1,8 +1,8 @@
-h2. 20141017
+h2. 20141103
 
 h3. Note:
 
-* KIEV-ODESSA, ODESSA-KIEV, KIEV-VARSHAVA and VARSHAVA-KIEV routes for all supported languages available
+* KIEV-ODESSA, ODESSA-KIEV, KIEV-VARSHAVA, VARSHAVA-KIEV, KIEV-KHARKIV, KHARKIV-KIEV, L’VIV-CHOP and CHOP-L’VIV routes for all supported languages available
 
 h3. New:
 
@@ -13,7 +13,7 @@ h3. Improvements:
 Task #86 Ads support
 * support for iPhone6 and iPhone 6 Plus
 Task #85: Config file
-* added route maps for Kiev-Odessa, Kiev-Varshava and reverse routes
+* added route maps for Kiev-Odessa, Kiev-Varshava, Kiev-Kharkiv, L’viv-Chop and reverse routes
 
 h3. Fixes:
 
