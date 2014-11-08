@@ -11,8 +11,8 @@
 #import "StandardPaths.h"
 
 static inline NSString * RGImageCachePathFromURLRequest(NSURLRequest *request) {
-    NSString *file = [[[[[[request URL] absoluteString] MD5] stringByAppendingDeviceHeightSuffix] stringByAppendingDeviceScaleSuffix] stringByAppendingPathExtension:@"png"];
-    
+    NSString *file = [[[[[request URL] absoluteString] MD5] stringByAppendingRetinaSuffix] stringByAppendingPathExtension:@"png"];
+
     return [[NSFileManager defaultManager] pathForOfflineFile:file];
 }
 
