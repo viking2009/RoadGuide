@@ -1,4 +1,4 @@
-h2. 20141103
+h2. 20141108
 
 h3. Note:
 
@@ -8,6 +8,7 @@ h3. Improvements:
 
 Task #85: Config file
 * added route maps for Kiev-Odessa, Kiev-Varshava, Kiev-Kharkiv, L’viv-Chop and reverse routes
+* fixed links for all resources
 
 h3. Fixes:
 
@@ -15,3 +16,7 @@ Task #85: Config file
 * changed english translation for cities according to route maps
 Task #90: Route display
 * fixed bottom header position for 3,5” display
+* fixed route view frame
+* fixed content offset issue
+Feature #109: Make flag images bigger
+* increased sizes for flag images
