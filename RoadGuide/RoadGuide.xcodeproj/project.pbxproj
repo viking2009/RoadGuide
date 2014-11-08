@@ -94,7 +94,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		900754141999629400AA6C74 /* RoadGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		900754141999629400AA6C74 /* roadguide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = roadguide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		900754171999629400AA6C74 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		900754191999629400AA6C74 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9007541B1999629400AA6C74 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -255,7 +255,7 @@
 		900754151999629400AA6C74 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				900754141999629400AA6C74 /* RoadGuide.app */,
+				900754141999629400AA6C74 /* roadguide.app */,
 				900754351999629400AA6C74 /* RoadGuideTests.xctest */,
 			);
 			name = Products;
@@ -637,7 +637,7 @@
 			);
 			name = RoadGuide;
 			productName = RoadGuide;
-			productReference = 900754141999629400AA6C74 /* RoadGuide.app */;
+			productReference = 900754141999629400AA6C74 /* roadguide.app */;
 			productType = "com.apple.product-type.application";
 		};
 		900754341999629400AA6C74 /* RoadGuideTests */ = {
@@ -927,7 +927,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/RoadGuide/Vendor/Flurry",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = roadguide;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -942,7 +942,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/RoadGuide/Vendor/Flurry",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = roadguide;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};

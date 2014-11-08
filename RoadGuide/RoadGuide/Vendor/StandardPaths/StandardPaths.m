@@ -484,32 +484,11 @@ extern NSString *const NSURLIsExcludedFromBackupKey __attribute__((weak_import))
 
 - (NSString *)stringByAppendingSuffixForInterfaceIdiom:(UIUserInterfaceIdiom)idiom
 {
-    NSString *suffix = SPDesktopSuffix;
-    switch (idiom)
-    {
-        case UIUserInterfaceIdiomPhone:
-        {
-            suffix = SPPhoneSuffix;
-            break;
-        }
-        case UIUserInterfaceIdiomPad:
-        {
-            suffix = SPPadSuffix;
-            break;
-        }
-            
-#if !TARGET_OS_IPHONE
-            
-        case (UIUserInterfaceIdiom)UIUserInterfaceIdiomDesktop:
-        {
-            suffix = SPDesktopSuffix;
-            break;
-        }
-            
-#endif
-            
-    }
-    return [self stringByAppendingPathSuffix:suffix];
+    NSDictionary *suffixes = @{@(UIUserInterfaceIdiomPhone): SPPhoneSuffix,
+                               @(UIUserInterfaceIdiomPad): SPPadSuffix,
+                               @(UIUserInterfaceIdiomDesktop): SPDesktopSuffix};
+    
+    return [self stringByAppendingPathSuffix:suffixes[@(idiom)] ?: @""];
 }
 
 - (NSString *)stringByAppendingInterfaceIdiomSuffix

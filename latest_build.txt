@@ -3,6 +3,8 @@ h2. 20141108
 h3. Note:
 
 * KIEV-ODESSA, ODESSA-KIEV, KIEV-VARSHAVA, VARSHAVA-KIEV, KIEV-KHARKIV, KHARKIV-KIEV, L’VIV-CHOP and CHOP-L’VIV routes for all supported languages available
+* fixed product name and bundle display name (now app display name is «Roads of UA»)
+* no support for native iPhone 6 and iPhone 6 Plus screen sizes (interface adopted by system)
 
 h3. New:
 
