@@ -173,17 +173,17 @@
 			<key>route_eu</key>
 			<string>E40</string>
 			<key>fromImageURL_en</key>
-			<string>http://docs.google.com/uc?export=download&amp;0B4pWLbcPaUi6MjFaUEtISUk1cGc</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6MjFaUEtISUk1cGc</string>
 			<key>fromImageURL_ru</key>
-			<string>http://docs.google.com/uc?export=download&amp;0B4pWLbcPaUi6VGxHSk91SmpjZWM</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6VGxHSk91SmpjZWM</string>
 			<key>fromImageURL_uk</key>
-			<string>http://docs.google.com/uc?export=download&amp;0B4pWLbcPaUi6U0ZfUzdwOU9maW8</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6U0ZfUzdwOU9maW8</string>
 			<key>toImageURL_en</key>
-			<string>http://docs.google.com/uc?export=download&amp;0B4pWLbcPaUi6R2hYdmRZdHp4UWs</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6R2hYdmRZdHp4UWs</string>
 			<key>toImageURL_ru</key>
-			<string>http://docs.google.com/uc?export=download&amp;0B4pWLbcPaUi6QjZUSkhSZUsxUnc</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6QjZUSkhSZUsxUnc</string>
 			<key>toImageURL_uk</key>
-			<string>http://docs.google.com/uc?export=download&amp;0B4pWLbcPaUi6NGJNdHFHZGJ0OXM</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6NGJNdHFHZGJ0OXM</string>
 		</dict>
 	</array>
 	<key>Cities</key>
