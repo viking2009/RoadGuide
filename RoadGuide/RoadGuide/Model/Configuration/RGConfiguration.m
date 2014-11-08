@@ -13,7 +13,7 @@
 #import "NSDictionary+Localized.h"
 #import "ColorUtils.h"
 
-static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export=download&id=0Bx0hFmhr9oPRQVpmdjZfNEpHcUE";
+static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export=download&id=0B4pWLbcPaUi6WjN1LXlBUkRQcEU";
 
 #define kLaunchCount @"LaunchCount"
 
