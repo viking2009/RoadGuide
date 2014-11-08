@@ -122,8 +122,16 @@
                 // MARK: resize route view
                 CGRect routeViewFrame = strongSelf.routeView.frame;
                 routeViewFrame.origin.y = strongSelf.scrollView.scrollIndicatorInsets.top;
-                routeViewFrame.size.height = image.size.height;
+                routeViewFrame.size = image.size;
                 strongSelf.routeView.frame = routeViewFrame;
+                
+                // MARK: adjust content size
+                CGSize contentSize = routeViewFrame.size;
+                contentSize.height += strongSelf.scrollView.scrollIndicatorInsets.top + strongSelf.scrollView.scrollIndicatorInsets.bottom;
+                strongSelf.scrollView.contentSize = contentSize;
+                
+                // Bug #95 End of route displayed
+                strongSelf.scrollView.contentOffset = CGPointMake(0, strongSelf.scrollView.contentSize.height - strongSelf.scrollView.frame.size.height);
                 
                 [UIView transitionWithView:strongSelf.routeView
                                   duration:configuration.fullscreenBannerFadeDuration
@@ -131,14 +139,6 @@
                                 animations:^{
                                     strongSelf.routeView.image = image;
                                 } completion:^(BOOL finished) {
-                                    // MARK: adjust content size
-                                    CGSize contentSize = routeViewFrame.size;
-                                    contentSize.height += strongSelf.scrollView.scrollIndicatorInsets.top + strongSelf.scrollView.scrollIndicatorInsets.bottom;
-                                    strongSelf.scrollView.contentSize = contentSize;
-                                    
-                                    // Bug #95 End of route displayed
-                                    strongSelf.scrollView.contentOffset = CGPointMake(0, strongSelf.scrollView.contentSize.height - strongSelf.scrollView.frame.size.height);
-                                    
                                     NSString *fromKey = strongSelf.reverseRoute ? @"to" : @"from";
                                     NSString *toKey = strongSelf.reverseRoute ? @"from" : @"to";
                                     
