@@ -14,7 +14,7 @@
 #import "ColorUtils.h"
 #import "StandardPaths.h"
 
-static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export=download&id=0Bx0hFmhr9oPRQVpmdjZfNEpHcUE";
+static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export=download&id=0B4pWLbcPaUi6WjN1LXlBUkRQcEU";
 
 #define kLaunchCount @"LaunchCount"
 #define RG_SCREEN_HEIGHT() MAX([UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width)
