@@ -14,12 +14,8 @@
 			<integer>2</integer>
 			<key>imageURL</key>
 			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRRF9rampWaUtqWHM</string>
-			<key>imageURL-568h</key>
+			<key>tallImageURL</key>
 			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRQ0FnYlhQZUZ1U00</string>
-			<key>imageURL-667h</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRQ1IyS3cteENfbmc</string>
-			<key>imageURL-736h</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRejByUFVrYzFVNm8</string>
 		</dict>
 		<key>smallBanner</key>
 		<dict>
