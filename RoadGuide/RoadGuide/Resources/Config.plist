@@ -408,5 +408,35 @@
 			<string>6K9KZYZYV4559XMZM4D2</string>
 		</dict>
 	</dict>
+	<key>About</key>
+	<dict>
+		<key>imageURL_en</key>
+		<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6X1Z6YW9ycmd0OVU</string>
+		<key>imageURL_ru</key>
+		<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6NUlvWWtyUmk3cUk</string>
+		<key>imageURL_uk</key>
+		<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6Q3FMTXBIb3FSSDg</string>
+		<key>tallImageURL_en</key>
+		<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6Nm5ibVI1TTBvMUk</string>
+		<key>tallImageURL_ru</key>
+		<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6MFMwaWc3WTYzUGs</string>
+		<key>tallImageURL_uk</key>
+		<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6aDI3aVY1TDkzSnM</string>
+	</dict>
+	<key>Info</key>
+	<dict>
+		<key>imageURL_en</key>
+		<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6OVRGOENCVmEybUk</string>
+		<key>imageURL_ru</key>
+		<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6Z1VadmFaYkdhdVU</string>
+		<key>imageURL_uk</key>
+		<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6aFBoTl85UXRXZ0U</string>
+		<key>tallImageURL_en</key>
+		<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6cUx0ZzBoamZ2TDQ</string>
+		<key>tallImageURL_ru</key>
+		<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6OEZOaEtVTE1sRkk</string>
+		<key>tallImageURL_uk</key>
+		<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6ZzYzeUprd0cyb0U</string>
+	</dict>
 </dict>
 </plist>

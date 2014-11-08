@@ -45,6 +45,12 @@
 // MARK: Stats
 @property (nonatomic, readonly) NSString *flurryApiKey;
 
+// MARK: About helper
+@property (nonatomic, readonly) NSString *aboutImageURL;
+
+// MARK: Info helper
+@property (nonatomic, readonly) NSString *infoImageURL;
+
 + (instancetype)sharedConfiguration;
 
 - (id)objectForKeyedSubscript:(id)key NS_AVAILABLE(10_8, 6_0);

@@ -16,6 +16,7 @@
 static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export=download&id=0B4pWLbcPaUi6WjN1LXlBUkRQcEU";
 
 #define kLaunchCount @"LaunchCount"
+#define RG_SCREEN_HEIGHT() MAX([UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width)
 
 @interface RGConfiguration ()
 
@@ -59,7 +60,7 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
 }
 
 - (NSString *)fullscreenBannerImageURL {
-    if ([UIScreen mainScreen].bounds.size.height == 568.0) {
+    if (RG_SCREEN_HEIGHT() >= 568.0) {
         return self[@"Ads.fullscreenBanner.tallImageURL"];
     } else {
         return self[@"Ads.fullscreenBanner.imageURL"];
@@ -278,6 +279,22 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
 
 - (NSString *)flurryApiKey {
     return self[@"Stats.Flurry.apiKey"];
+}
+
+- (NSString *)aboutImageURL {
+    if (RG_SCREEN_HEIGHT() >= 568.0) {
+        return [self[@"About"] localizedObjectForKey:@"tallImageURL"];
+    } else {
+        return [self[@"About"] localizedObjectForKey:@"imageURL"];
+    }
+}
+
+- (NSString *)infoImageURL {
+    if (RG_SCREEN_HEIGHT() >= 568.0) {
+        return [self[@"Info"] localizedObjectForKey:@"tallImageURL"];
+    } else {
+        return [self[@"Info"] localizedObjectForKey:@"imageURL"];
+    }
 }
 
 #pragma mark - Public
