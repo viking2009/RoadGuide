@@ -1,7 +1,7 @@
 //
 //  StandardPaths.h
 //
-//  Version 1.6.3
+//  Version 1.5.6
 //
 //  Created by Nick Lockwood on 10/11/2011.
 //  Copyright (C) 2012 Charcoal Design
@@ -46,31 +46,27 @@
 #ifndef UI_USER_INTERFACE_IDIOM
 #define UI_USER_INTERFACE_IDIOM() UIUserInterfaceIdiomDesktop
 
-typedef NS_ENUM(NSInteger, UIUserInterfaceIdiom)
+typedef enum
 {
-    UIUserInterfaceIdiomUnspecified = -1,
     UIUserInterfaceIdiomPhone,
     UIUserInterfaceIdiomPad,
     UIUserInterfaceIdiomDesktop
-};
+}
+UIUserInterfaceIdiom;
 
-#elif TARGET_OS_IPHONE
+#elif defined(__IPHONE_OS_VERSION_MAX_ALLOWED)
 
 #define UIUserInterfaceIdiomDesktop (UIUserInterfaceIdiomPad + 1)
 
 #endif
 
 
-#ifndef SP_CONSTANTS_DEFINED
-#define SP_CONSTANTS_DEFINED
-
 static NSString *const SPPhoneSuffix = @"~iphone";
 static NSString *const SPPadSuffix = @"~ipad";
 static NSString *const SPDesktopSuffix = @"~mac";
 static NSString *const SPRetinaSuffix = @"@2x";
 static NSString *const SPHDSuffix = @"-hd";
-
-#endif
+static NSString *const SPRetina4Suffix = @"-568h";
 
 
 @interface NSFileManager (StandardPaths)
@@ -105,7 +101,7 @@ static NSString *const SPHDSuffix = @"-hd";
 - (BOOL)hasPathSuffix:(NSString *)suffix;
 
 - (NSString *)stringByAppendingSuffixForInterfaceIdiom:(UIUserInterfaceIdiom)idiom;
-- (NSString *)stringByAppendingDeviceInterfaceIdiomSuffix;
+- (NSString *)stringByAppendingInterfaceIdiomSuffix;
 - (NSString *)stringByDeletingInterfaceIdiomSuffix;
 - (NSString *)interfaceIdiomSuffix;
 - (BOOL)hasInterfaceIdiomSuffix;
@@ -118,6 +114,11 @@ static NSString *const SPHDSuffix = @"-hd";
 - (NSString *)scaleSuffix;
 - (BOOL)hasScaleSuffix;
 
+- (NSString *)stringByAppendingRetinaSuffix;
+- (NSString *)stringByAppendingRetinaSuffixIfDeviceIsRetina;
+- (NSString *)stringByDeletingRetinaSuffix;
+- (BOOL)hasRetinaSuffix;
+
 - (NSString *)stringByAppendingHDSuffix;
 - (NSString *)stringByAppendingHDSuffixIfDeviceIsHD;
 - (NSString *)stringByDeletingHDSuffix;
@@ -125,27 +126,9 @@ static NSString *const SPHDSuffix = @"-hd";
 
 - (CGFloat)scaleFromSuffix;
 
-- (NSString *)stringByAppendingSuffixForHeight:(CGFloat)height;
-- (NSString *)stringByAppendingDeviceHeightSuffix;
-- (NSString *)stringByDeletingHeightSuffix;
-- (NSString *)heightSuffix;
-- (BOOL)hasHeightSuffix;
-
-- (CGFloat)heightFromSuffix;
-
-@end
-
-
-@interface NSString (StandardPaths_Deprecated)
-
-- (NSString *)stringByAppendingRetinaSuffix __deprecated;
-- (NSString *)stringByAppendingRetinaSuffixIfDeviceIsRetina __deprecated;
-- (NSString *)stringByDeletingRetinaSuffix __deprecated;
-- (BOOL)hasRetinaSuffix __deprecated;
-
-- (NSString *)stringByAppendingRetina4Suffix __deprecated;
-- (NSString *)stringByAppendingRetina4SuffixIfDeviceIsRetina4 __deprecated;
-- (NSString *)stringByDeletingRetina4Suffix __deprecated;
-- (BOOL)hasRetina4Suffix __deprecated;
+- (NSString *)stringByAppendingRetina4Suffix;
+- (NSString *)stringByAppendingRetina4SuffixIfDeviceIsRetina4;
+- (NSString *)stringByDeletingRetina4Suffix;
+- (BOOL)hasRetina4Suffix;
 
 @end
