@@ -4,11 +4,19 @@ h3. Note:
 
 * KIEV-ODESSA, ODESSA-KIEV, KIEV-VARSHAVA, VARSHAVA-KIEV, KIEV-KHARKIV, KHARKIV-KIEV, L’VIV-CHOP and CHOP-L’VIV routes for all supported languages available
 
+h3. New:
+
+Task #107: Downloadable content
+* image downloading for About and Info pages
+Feature #109: Make flag images bigger
+* increased sizes for flag images
+
 h3. Improvements:
 
 Task #85: Config file
 * added route maps for Kiev-Odessa, Kiev-Varshava, Kiev-Kharkiv, L’viv-Chop and reverse routes
 * fixed links for all resources
+* added support for image downloading for About and Info pages
 
 h3. Fixes:
 
@@ -18,5 +26,3 @@ Task #90: Route display
 * fixed bottom header position for 3,5” display
 * fixed route view frame
 * fixed content offset issue
-Feature #109: Make flag images bigger
-* increased sizes for flag images

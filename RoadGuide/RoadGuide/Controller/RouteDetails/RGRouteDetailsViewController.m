@@ -25,7 +25,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *bottomLabel;
 @property (weak, nonatomic) IBOutlet UIButton *routeSelectButton;
 @property (weak, nonatomic) IBOutlet UIButton *reverseRouteButton;
-
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @property (assign, nonatomic) BOOL reverseRoute;

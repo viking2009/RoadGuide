@@ -177,6 +177,10 @@
                                 <rect key="frame" x="46" y="38" width="264" height="514"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" id="44O-a4-e0j">
+                                <rect key="frame" x="168" y="285" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mco-2N-5vg">
                                 <rect key="frame" x="46" y="2" width="50" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -192,6 +196,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="44O-a4-e0j" id="RUf-m9-ZBL"/>
                         <outlet property="backgroundView" destination="Vaf-j2-7fP" id="g9B-Pi-mrk"/>
                         <outlet property="infoView" destination="8uh-40-5GX" id="whQ-Bj-Baq"/>
                         <outlet property="routeSelectButton" destination="Mco-2N-5vg" id="ifj-aV-hhW"/>
@@ -344,6 +349,10 @@
                                 <rect key="frame" x="46" y="38" width="264" height="514"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" id="Iwt-SU-Dpd">
+                                <rect key="frame" x="168" y="285" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1ol-Xw-k3u">
                                 <rect key="frame" x="46" y="2" width="50" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -360,6 +369,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Iwt-SU-Dpd" id="zeE-D4-iH3"/>
                         <outlet property="backgroundView" destination="5Uv-FF-t0T" id="S7e-7g-Mb3"/>
                         <outlet property="infoView" destination="0ct-16-xKg" id="ZN5-mR-16G"/>
                         <outlet property="routeSelectButton" destination="1ol-Xw-k3u" id="xdP-Yy-KmN"/>
