@@ -13,16 +13,16 @@
 			<key>showTime</key>
 			<integer>2</integer>
 			<key>imageURL</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRRF9rampWaUtqWHM</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6LVZzWEYyaU5BYlk</string>
 			<key>tallImageURL</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRQ0FnYlhQZUZ1U00</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6WFFRaEQ5bEgxV0k</string>
 		</dict>
 		<key>smallBanner</key>
 		<dict>
 			<key>enabled</key>
 			<true/>
 			<key>imageURL</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRS2pQYWFrSFQ5MHc</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6amhLUlV2YWVNYlU</string>
 			<key>linkURL</key>
 			<string>http://google.com/</string>
 		</dict>
@@ -48,17 +48,17 @@
 			<key>route_eu</key>
 			<string>E40</string>
 			<key>fromImageURL_en</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6azVxbWFXWEhaeUU</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6ZXlobkxoNktOWFk</string>
 			<key>fromImageURL_ru</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6MDZmc0s4NWRqS1U</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6d3pISGxkdjFpdW8</string>
 			<key>fromImageURL_uk</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6MFBzMmt5ejhDRkk</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6emZrQjFDajdPM1U</string>
 			<key>toImageURL_en</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6TWc1WWQxcWdJeEE</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6OEhtc1VRclcyelk</string>
 			<key>toImageURL_ru</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6Nk5NNFJIbFB3TXc</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6QlI5dV8wT28wM0k</string>
 			<key>toImageURL_uk</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6UFYwM21MeFpoZms</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6WU11akcwNC1RazQ</string>
 		</dict>
 		<dict>
 			<key>from</key>
@@ -79,17 +79,17 @@
 			<key>route_eu</key>
 			<string>E40</string>
 			<key>fromImageURL_en</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6SGMybXoxWUFZYUk</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6UDN5ZGxKREhLOFk</string>
 			<key>fromImageURL_ru</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6YTNZbHB4WFBXUkU</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6bzdtTGFSemtRVVk</string>
 			<key>fromImageURL_uk</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6eTNKWGprd3dsX3c</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6LU5VX2JpNHhfMXM</string>
 			<key>toImageURL_en</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRWU9ZQmJoX0tXSlU</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6QVFadENSUENvbHc</string>
 			<key>toImageURL_ru</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRVXFXZTZTenZSSTQ</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6WHQ5X2tsb1Z3STQ</string>
 			<key>toImageURL_uk</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0Bx0hFmhr9oPRbTBmX280N1JBdkU</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6Z0JWQjhMNmZnR2c</string>
 		</dict>
 		<dict>
 			<key>from</key>
@@ -110,17 +110,17 @@
 			<key>route_eu</key>
 			<string>E95</string>
 			<key>fromImageURL_en</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6QmoyeDAtX0sySFk</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6c1d5RFJPV1BxaG8</string>
 			<key>fromImageURL_ru</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6OHJJb2FJV2pxTEU</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6V01vcEJVMGZNRXM</string>
 			<key>fromImageURL_uk</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6VFprbC1mSnItQkk</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6N3hZUFRMbzRoUEU</string>
 			<key>toImageURL_en</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6THpwdEFmTW1rQTg</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6N3dMSEpRR18xcEk</string>
 			<key>toImageURL_ru</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6Vk5hTExuUVk0NXM</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6R04taklSR0x4QW8</string>
 			<key>toImageURL_uk</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6eU1Sc3lqRzMtUDQ</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6WHJKVllXMDBtWTg</string>
 		</dict>
 		<dict>
 			<key>from</key>
@@ -141,17 +141,17 @@
 			<key>route_eu</key>
 			<string>E373</string>
 			<key>fromImageURL_en</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6SFE5d21ZQjgtb0U</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6blF1OVA3QVp5elE</string>
 			<key>fromImageURL_ru</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6dXB0OV94NE5jaXM</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6X1BWQnlzNkw4YkE</string>
 			<key>fromImageURL_uk</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6ZndESV9Sd3lJMUk</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6VTNHaU1Ub1pua00</string>
 			<key>toImageURL_en</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6ZXVvOWhnVHR4NnM</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6MG9UNmpLbExsdjQ</string>
 			<key>toImageURL_ru</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6THFuS0tvRktDRVE</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6ZnRtbTBqcVJyS1U</string>
 			<key>toImageURL_uk</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6Zld0M2VEcUZISFE</string>
+			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6OXJDOHZBVzZQdnc</string>
 		</dict>
 		<dict>
 			<key>from</key>
@@ -173,17 +173,17 @@
 			<key>route_eu</key>
 			<string>E40</string>
 			<key>fromImageURL_en</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6d0JrUEVITEx1akE</string>
+			<string>http://docs.google.com/uc?export=download&amp;0B4pWLbcPaUi6MjFaUEtISUk1cGc</string>
 			<key>fromImageURL_ru</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6eU1fT3JkNG5WY28</string>
+			<string>http://docs.google.com/uc?export=download&amp;0B4pWLbcPaUi6VGxHSk91SmpjZWM</string>
 			<key>fromImageURL_uk</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6dDVvaTlfSmJTVTg</string>
+			<string>http://docs.google.com/uc?export=download&amp;0B4pWLbcPaUi6U0ZfUzdwOU9maW8</string>
 			<key>toImageURL_en</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6djUwbndlM2xfTkE</string>
+			<string>http://docs.google.com/uc?export=download&amp;0B4pWLbcPaUi6R2hYdmRZdHp4UWs</string>
 			<key>toImageURL_ru</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6Y2wwWEhkYkRRRUk</string>
+			<string>http://docs.google.com/uc?export=download&amp;0B4pWLbcPaUi6QjZUSkhSZUsxUnc</string>
 			<key>toImageURL_uk</key>
-			<string>http://docs.google.com/uc?export=download&amp;id=0B4pWLbcPaUi6bG16ZmtXLUZja3c</string>
+			<string>http://docs.google.com/uc?export=download&amp;0B4pWLbcPaUi6NGJNdHFHZGJ0OXM</string>
 		</dict>
 	</array>
 	<key>Cities</key>
