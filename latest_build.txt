@@ -1,5 +1,7 @@
-h2. 20141108#2
+h2. 20141124
 
-h3. Note:
+h3. New:
 
-* added new device: iPad mini retina Wi-Fi (Mykola Vyshynskyi)
+Feature #113: Scroll to city
+* scroll to top if top city title clicked
+* scroll to bottom if bottom city title clicked

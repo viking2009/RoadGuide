@@ -18,11 +18,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
 @property (weak, nonatomic) IBOutlet UIImageView *routeView;
 @property (weak, nonatomic) IBOutlet UIView *topHeader;
-@property (weak, nonatomic) IBOutlet UILabel *topLabel;
+@property (weak, nonatomic) IBOutlet UIButton *topCityButton;
 @property (weak, nonatomic) IBOutlet UIButton *aboutButton;
 @property (weak, nonatomic) IBOutlet UIButton *infoButton;
 @property (weak, nonatomic) IBOutlet UIView *bottomHeader;
-@property (weak, nonatomic) IBOutlet UILabel *bottomLabel;
+@property (weak, nonatomic) IBOutlet UIButton *bottomCityButton;
 @property (weak, nonatomic) IBOutlet UIButton *routeSelectButton;
 @property (weak, nonatomic) IBOutlet UIButton *reverseRouteButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
@@ -34,6 +34,8 @@
 
 - (IBAction)routeSelectButtonAction:(id)sender;
 - (IBAction)reverseRouteButtonAction:(id)sender;
+- (IBAction)topCityButtonAction:(id)sender;
+- (IBAction)bottomCityButtonAction:(id)sender;
 
 @end
 
@@ -93,8 +95,11 @@
     NSString *toKey = self.reverseRoute ? @"from" : @"to";
     NSDictionary *cityHeaderAttributes = configuration.cityHeaderAttributes;
     
-    self.topLabel.attributedText = [[NSAttributedString alloc] initWithString:self.routeInfo[toKey] attributes:cityHeaderAttributes];
-    self.bottomLabel.attributedText = [[NSAttributedString alloc] initWithString:self.routeInfo[fromKey] attributes:cityHeaderAttributes];
+    NSAttributedString *topCityTitle = [[NSAttributedString alloc] initWithString:self.routeInfo[toKey] attributes:cityHeaderAttributes];
+    NSAttributedString *bottomCityTitle = [[NSAttributedString alloc] initWithString:self.routeInfo[fromKey] attributes:cityHeaderAttributes];
+    
+    [self.topCityButton setAttributedTitle:topCityTitle forState:UIControlStateNormal];
+    [self.bottomCityButton setAttributedTitle:bottomCityTitle forState:UIControlStateNormal];
 }
 
 - (void)loadMap {
@@ -169,6 +174,15 @@
 
 - (IBAction)reverseRouteButtonAction:(id)sender {
     self.reverseRoute = !self.reverseRoute;
+}
+
+- (IBAction)topCityButtonAction:(id)sender {
+    [self.scrollView setContentOffset:CGPointZero animated:YES];
+}
+
+- (IBAction)bottomCityButtonAction:(id)sender {
+    CGPoint contentOffset = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.frame.size.height);
+    [self.scrollView setContentOffset:contentOffset animated:YES];
 }
 
 #pragma mark - UIScrollViewDelegate
