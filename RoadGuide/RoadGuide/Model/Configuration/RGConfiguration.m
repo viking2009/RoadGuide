@@ -221,6 +221,10 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
     return [UIColor colorWithString:self[@"Design.RouteList.RouteCell.backgroundColor"]];
 }
 
+- (UIColor *)routeCellBlurColor {
+    return [UIColor colorWithString:self[@"Design.RouteList.RouteCell.blurColor"]];
+}
+
 - (NSDictionary *)routeAttributes {
     NSDictionary *routeLabel = self[@"Design.RouteList.RouteCell.routeLabel"];
     

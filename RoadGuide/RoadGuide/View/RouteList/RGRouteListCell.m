@@ -26,6 +26,7 @@
     
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     self.contentView.backgroundColor = configuration.routeCellBackgroundColor;
+    self.blurView.backgroundColor = configuration.routeCellBlurColor;
 }
 
 - (void)setHighlighted:(BOOL)highlighted {

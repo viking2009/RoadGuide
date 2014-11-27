@@ -119,10 +119,16 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" id="wLZ-MJ-bMR" customClass="SVBlurView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
+                                            <outlet property="blurView" destination="wLZ-MJ-bMR" id="vNt-WK-DLh"/>
                                             <outlet property="routeEuLabel" destination="6FX-fe-xwp" id="Yhg-99-JNu"/>
                                             <outlet property="routeUaLabel" destination="Vs8-wO-tEX" id="wv8-4e-I6V"/>
                                             <outlet property="textLabel" destination="PCn-Ak-bc0" id="mci-iD-dYT"/>

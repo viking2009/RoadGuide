@@ -39,6 +39,8 @@
 		9016E2D519C489BD000AE110 /* routeDetails_button_routeSelect_ru@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9016E2C919C489BD000AE110 /* routeDetails_button_routeSelect_ru@2x.png */; };
 		9016E2D619C489BD000AE110 /* routeDetails_button_routeSelect_uk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9016E2CA19C489BD000AE110 /* routeDetails_button_routeSelect_uk@2x.png */; };
 		9047B1E11A273DD700EF9076 /* PreinstalledMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9047B1E01A273DD700EF9076 /* PreinstalledMaps.bundle */; };
+		9047B1EB1A2751E400EF9076 /* SVBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9047B1E81A2751E400EF9076 /* SVBlurView.m */; };
+		9047B1EC1A2751E400EF9076 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9047B1EA1A2751E400EF9076 /* UIImage+ImageEffects.m */; };
 		905CD21D19C449DA00179496 /* RGInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905CD21C19C449DA00179496 /* RGInfoViewController.m */; };
 		906C9F8919B7BC6E006D0C8B /* libFlurry_5.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 906C9F8819B7BC6E006D0C8B /* libFlurry_5.4.0.a */; };
 		906C9F9A19B7C2C3006D0C8B /* RGAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 906C9F9919B7C2C2006D0C8B /* RGAboutViewController.m */; };
@@ -131,6 +133,10 @@
 		9016E2C919C489BD000AE110 /* routeDetails_button_routeSelect_ru@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "routeDetails_button_routeSelect_ru@2x.png"; sourceTree = "<group>"; };
 		9016E2CA19C489BD000AE110 /* routeDetails_button_routeSelect_uk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "routeDetails_button_routeSelect_uk@2x.png"; sourceTree = "<group>"; };
 		9047B1E01A273DD700EF9076 /* PreinstalledMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PreinstalledMaps.bundle; sourceTree = "<group>"; };
+		9047B1E71A2751E400EF9076 /* SVBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVBlurView.h; sourceTree = "<group>"; };
+		9047B1E81A2751E400EF9076 /* SVBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVBlurView.m; sourceTree = "<group>"; };
+		9047B1E91A2751E400EF9076 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		9047B1EA1A2751E400EF9076 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		905CD21B19C449DA00179496 /* RGInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGInfoViewController.h; sourceTree = "<group>"; };
 		905CD21C19C449DA00179496 /* RGInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGInfoViewController.m; sourceTree = "<group>"; };
 		906C9F8819B7BC6E006D0C8B /* libFlurry_5.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.4.0.a; sourceTree = "<group>"; };
@@ -355,6 +361,17 @@
 			path = app;
 			sourceTree = "<group>";
 		};
+		9047B1E61A2751E400EF9076 /* SVBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				9047B1E71A2751E400EF9076 /* SVBlurView.h */,
+				9047B1E81A2751E400EF9076 /* SVBlurView.m */,
+				9047B1E91A2751E400EF9076 /* UIImage+ImageEffects.h */,
+				9047B1EA1A2751E400EF9076 /* UIImage+ImageEffects.m */,
+			);
+			path = SVBlurView;
+			sourceTree = "<group>";
+		};
 		905CD21A19C4498A00179496 /* Info */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,6 +538,7 @@
 				908CF70E199B958900B2CD54 /* StandardPaths */,
 				908CF722199BC25E00B2CD54 /* ColorUtils */,
 				90C7E357199E9DD30005D063 /* Flurry */,
+				9047B1E61A2751E400EF9076 /* SVBlurView */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -752,6 +770,7 @@
 			files = (
 				908CF705199B851200B2CD54 /* RGLanguage.m in Sources */,
 				90A2487D1999B82E0015D6BD /* AFHTTPRequestOperation.m in Sources */,
+				9047B1EC1A2751E400EF9076 /* UIImage+ImageEffects.m in Sources */,
 				90A2488A1999B82E0015D6BD /* UIImageView+AFNetworking.m in Sources */,
 				900754241999629400AA6C74 /* main.m in Sources */,
 				90A2487E1999B82E0015D6BD /* AFHTTPRequestOperationManager.m in Sources */,
@@ -782,6 +801,7 @@
 				908CF747199C3B4C00B2CD54 /* RGImageCache.m in Sources */,
 				90A248911999B86B0015D6BD /* NSUserDefaults+GroundControl.m in Sources */,
 				90A248831999B82E0015D6BD /* AFURLRequestSerialization.m in Sources */,
+				9047B1EB1A2751E400EF9076 /* SVBlurView.m in Sources */,
 				908CF70D199B91F900B2CD54 /* RGRouteListViewController.m in Sources */,
 				90A248861999B82E0015D6BD /* AFNetworkActivityIndicatorManager.m in Sources */,
 				90A248851999B82E0015D6BD /* AFURLSessionManager.m in Sources */,

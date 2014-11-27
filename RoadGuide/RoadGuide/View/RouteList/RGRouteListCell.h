@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SVBlurView.h"
 
 #define RGRouteListCellIdentifier @"RGRouteListCell"
 
@@ -15,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
 @property (weak, nonatomic) IBOutlet UILabel *routeEuLabel;
 @property (weak, nonatomic) IBOutlet UILabel *routeUaLabel;
+@property (weak, nonatomic) IBOutlet SVBlurView *blurView;
 
 @end

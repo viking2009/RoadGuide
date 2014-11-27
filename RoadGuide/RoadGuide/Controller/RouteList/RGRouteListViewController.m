@@ -8,7 +8,7 @@
 
 #import "RGRouteListViewController.h"
 #import "RGConfiguration.h"
-//#import "UIImageView+AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
 #import "UIButton+AFNetworking.h"
 #import "RGRouteListCell.h"
 #import "RGLanguage.h"
@@ -220,11 +220,10 @@
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     NSDictionary *route = configuration.routes[indexPath.section];
 
-    // TODO: implement blur?
-//    NSString *routeImageKey = (indexPath.item == 0 ? @"fromImageURL" : @"toImageURL");
-//    NSURL *imageURL = [NSURL URLWithString:[route localizedObjectForKey:routeImageKey]];
-//    NSURLRequest *imageRequest = [NSURLRequest requestWithURL:imageURL];
-//    [cell enableBlur:![[UIImageView sharedImageCache] cachedImageForRequest:imageRequest]];
+    NSString *routeImageKey = (indexPath.item == 0 ? @"fromImageURL" : @"toImageURL");
+    NSURL *imageURL = [NSURL URLWithString:[route localizedObjectForKey:routeImageKey]];
+    NSURLRequest *imageRequest = [NSURLRequest requestWithURL:imageURL];
+    cell.blurView.hidden = !![[UIImageView sharedImageCache] cachedImageForRequest:imageRequest];
     
     cell.textLabel.attributedText = configuration.routesStrings[indexPath.section][indexPath.item];
     
