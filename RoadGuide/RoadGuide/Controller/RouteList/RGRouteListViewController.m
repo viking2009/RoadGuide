@@ -8,6 +8,7 @@
 
 #import "RGRouteListViewController.h"
 #import "RGConfiguration.h"
+//#import "UIImageView+AFNetworking.h"
 #import "UIButton+AFNetworking.h"
 #import "RGRouteListCell.h"
 #import "RGLanguage.h"
@@ -104,6 +105,13 @@
         }];
     }
     
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // update state for downloaded maps
+    [self.collectionView reloadData];
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
@@ -212,6 +220,12 @@
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     NSDictionary *route = configuration.routes[indexPath.section];
 
+    // TODO: implement blur?
+//    NSString *routeImageKey = (indexPath.item == 0 ? @"fromImageURL" : @"toImageURL");
+//    NSURL *imageURL = [NSURL URLWithString:[route localizedObjectForKey:routeImageKey]];
+//    NSURLRequest *imageRequest = [NSURLRequest requestWithURL:imageURL];
+//    [cell enableBlur:![[UIImageView sharedImageCache] cachedImageForRequest:imageRequest]];
+    
     cell.textLabel.attributedText = configuration.routesStrings[indexPath.section][indexPath.item];
     
     if ([route[@"route_eu"] length]) {

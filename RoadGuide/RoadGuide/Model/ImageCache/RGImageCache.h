@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "UIImageView+AFNetworking.h"
 
-@interface RGImageCache : NSObject <AFImageCache>
+@interface RGImageCache : NSCache <AFImageCache>
 
 @end

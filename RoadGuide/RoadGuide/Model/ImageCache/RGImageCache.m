@@ -18,6 +18,19 @@ static inline NSString * RGImageCachePathFromURLRequest(NSURLRequest *request) {
 
 @implementation RGImageCache
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeAllObjects) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+    }
+    
+    return self;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (UIImage *)cachedImageForRequest:(NSURLRequest *)request {
     switch ([request cachePolicy]) {
         case NSURLRequestReloadIgnoringCacheData:
@@ -27,14 +40,41 @@ static inline NSString * RGImageCachePathFromURLRequest(NSURLRequest *request) {
             break;
     }
     
-    return [UIImage imageWithContentsOfFile:RGImageCachePathFromURLRequest(request)];
+    NSString *cacheImagePath = RGImageCachePathFromURLRequest(request);
+    
+    // check cache first
+    UIImage *cachedImage = [self objectForKey:cacheImagePath];
+    if (!cachedImage) {
+        // check preinstalled maps
+        NSString *preinstalledFilePath = [@"PreinstalledMaps.bundle" stringByAppendingPathComponent:[cacheImagePath lastPathComponent]];
+        preinstalledFilePath = [[NSFileManager defaultManager] pathForResource:preinstalledFilePath];
+
+        if ([[NSFileManager defaultManager] fileExistsAtPath:preinstalledFilePath]) {
+            // load preinstalled map
+            cachedImage = [UIImage imageWithContentsOfFile:preinstalledFilePath];
+        } else {
+            // load Offline data map
+            cachedImage = [UIImage imageWithContentsOfFile:cacheImagePath];
+        }
+        
+        if (cachedImage && request) {
+            [self setObject:cachedImage forKey:cacheImagePath];
+        }
+    }
+    
+    return cachedImage;
 }
 
 - (void)cacheImage:(UIImage *)image forRequest:(NSURLRequest *)request {
     if (image && request) {
-        NSData *cacheImageData = UIImagePNGRepresentation(image);
+        NSString *cachedImagePath = RGImageCachePathFromURLRequest(request);
+        NSData *cachedImageData = UIImagePNGRepresentation(image);
         
-        [cacheImageData writeToFile:RGImageCachePathFromURLRequest(request) atomically:YES];
+        [self setObject:image forKey:cachedImagePath];
+        
+        if (![[NSFileManager defaultManager] fileExistsAtPath:cachedImagePath]) {
+            [cachedImageData writeToFile:cachedImagePath atomically:YES];
+        }
     }
 }
 
