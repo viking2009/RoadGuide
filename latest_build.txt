@@ -1,7 +1,13 @@
-h2. 20141124
+h2. 20141127
+
+h3. Note:
+
+* preinstalled Kyiv maps used
 
 h3. New:
 
 Feature #113: Scroll to city
 * scroll to top if top city title clicked
 * scroll to bottom if bottom city title clicked
+Task #114: Preinstalled maps
+* cache all Kyiv maps and put to bundle

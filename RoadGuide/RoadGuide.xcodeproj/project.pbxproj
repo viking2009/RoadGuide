@@ -38,6 +38,7 @@
 		9016E2D419C489BD000AE110 /* routeDetails_button_routeSelect_en@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9016E2C819C489BD000AE110 /* routeDetails_button_routeSelect_en@2x.png */; };
 		9016E2D519C489BD000AE110 /* routeDetails_button_routeSelect_ru@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9016E2C919C489BD000AE110 /* routeDetails_button_routeSelect_ru@2x.png */; };
 		9016E2D619C489BD000AE110 /* routeDetails_button_routeSelect_uk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9016E2CA19C489BD000AE110 /* routeDetails_button_routeSelect_uk@2x.png */; };
+		9047B1E11A273DD700EF9076 /* PreinstalledMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9047B1E01A273DD700EF9076 /* PreinstalledMaps.bundle */; };
 		905CD21D19C449DA00179496 /* RGInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905CD21C19C449DA00179496 /* RGInfoViewController.m */; };
 		906C9F8919B7BC6E006D0C8B /* libFlurry_5.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 906C9F8819B7BC6E006D0C8B /* libFlurry_5.4.0.a */; };
 		906C9F9A19B7C2C3006D0C8B /* RGAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 906C9F9919B7C2C2006D0C8B /* RGAboutViewController.m */; };
@@ -129,6 +130,7 @@
 		9016E2C819C489BD000AE110 /* routeDetails_button_routeSelect_en@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "routeDetails_button_routeSelect_en@2x.png"; sourceTree = "<group>"; };
 		9016E2C919C489BD000AE110 /* routeDetails_button_routeSelect_ru@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "routeDetails_button_routeSelect_ru@2x.png"; sourceTree = "<group>"; };
 		9016E2CA19C489BD000AE110 /* routeDetails_button_routeSelect_uk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "routeDetails_button_routeSelect_uk@2x.png"; sourceTree = "<group>"; };
+		9047B1E01A273DD700EF9076 /* PreinstalledMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PreinstalledMaps.bundle; sourceTree = "<group>"; };
 		905CD21B19C449DA00179496 /* RGInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGInfoViewController.h; sourceTree = "<group>"; };
 		905CD21C19C449DA00179496 /* RGInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGInfoViewController.m; sourceTree = "<group>"; };
 		906C9F8819B7BC6E006D0C8B /* libFlurry_5.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.4.0.a; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				90A248531999B4FF0015D6BD /* Config.plist */,
 				908CF72A199BC5BE00B2CD54 /* Localizable.strings */,
 				9007544D199964FF00AA6C74 /* images */,
+				9047B1E01A273DD700EF9076 /* PreinstalledMaps.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 				908CF71C199B98A600B2CD54 /* routeList_flag_ua@2x.png in Resources */,
 				9016E2D219C489BD000AE110 /* routeDetails_button_reverseRoute_ru@2x.png in Resources */,
 				9016E2D019C489BD000AE110 /* routeDetails_button_info_uk@2x.png in Resources */,
+				9047B1E11A273DD700EF9076 /* PreinstalledMaps.bundle in Resources */,
 				900754511999656A00AA6C74 /* Default-568h@2x.png in Resources */,
 				9016E2CE19C489BD000AE110 /* routeDetails_button_info_en@2x.png in Resources */,
 				908CF728199BC5BE00B2CD54 /* Localizable.strings in Resources */,
