@@ -107,6 +107,12 @@
     
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    
+    DLog();
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
@@ -120,7 +126,7 @@
         if (indexPath) {
             RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
             NSDictionary *route = configuration.routes[indexPath.section];
-            NSString *imageURLKey = indexPath.item == 0 ? @"fromImageURL" : @"toImageURL";
+            NSString *imageURLKey = (indexPath.item == 0 ? @"fromImageURL" : @"toImageURL");
             
             return ([[route localizedObjectForKey:imageURLKey] length] > 0);
         }
@@ -203,15 +209,15 @@
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    RGConfiguration *configutation = [RGConfiguration sharedConfiguration];
+    RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
 
-    return [configutation.routesStrings count];
+    return [configuration.routesStrings count];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    RGConfiguration *configutation = [RGConfiguration sharedConfiguration];
+    RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
 
-    return [configutation.routesStrings[section] count];
+    return [configuration.routesStrings[section] count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -220,8 +226,8 @@
     RGConfiguration *configuration = [RGConfiguration sharedConfiguration];
     NSDictionary *route = configuration.routes[indexPath.section];
 
-    NSString *routeImageKey = (indexPath.item == 0 ? @"fromImageURL" : @"toImageURL");
-    NSURL *imageURL = [NSURL URLWithString:[route localizedObjectForKey:routeImageKey]];
+    NSString *imageURLKey = (indexPath.item == 0 ? @"fromImageURL" : @"toImageURL");
+    NSURL *imageURL = [NSURL URLWithString:[route localizedObjectForKey:imageURLKey]];
     NSURLRequest *imageRequest = [NSURLRequest requestWithURL:imageURL];
     cell.blurView.hidden = !![[UIImageView sharedImageCache] cachedImageForRequest:imageRequest];
     
