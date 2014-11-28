@@ -959,6 +959,7 @@
 		900754481999629400AA6C74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RoadGuide/RoadGuide-Prefix.pch";
 				INFOPLIST_FILE = "RoadGuide/RoadGuide-Info.plist";
