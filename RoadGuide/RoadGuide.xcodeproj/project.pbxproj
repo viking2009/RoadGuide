@@ -41,6 +41,9 @@
 		9047B1E11A273DD700EF9076 /* PreinstalledMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9047B1E01A273DD700EF9076 /* PreinstalledMaps.bundle */; };
 		9047B1EB1A2751E400EF9076 /* SVBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9047B1E81A2751E400EF9076 /* SVBlurView.m */; };
 		9047B1EC1A2751E400EF9076 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9047B1EA1A2751E400EF9076 /* UIImage+ImageEffects.m */; };
+		9058018A1A4774E000000B46 /* SIAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 905801851A4774E000000B46 /* SIAlertView.bundle */; };
+		9058018B1A4774E000000B46 /* SIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 905801871A4774E000000B46 /* SIAlertView.m */; };
+		9058018C1A4774E000000B46 /* UIWindow+SIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 905801891A4774E000000B46 /* UIWindow+SIUtils.m */; };
 		905CD21D19C449DA00179496 /* RGInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905CD21C19C449DA00179496 /* RGInfoViewController.m */; };
 		906C9F8919B7BC6E006D0C8B /* libFlurry_5.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 906C9F8819B7BC6E006D0C8B /* libFlurry_5.4.0.a */; };
 		906C9F9A19B7C2C3006D0C8B /* RGAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 906C9F9919B7C2C2006D0C8B /* RGAboutViewController.m */; };
@@ -137,6 +140,11 @@
 		9047B1E81A2751E400EF9076 /* SVBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVBlurView.m; sourceTree = "<group>"; };
 		9047B1E91A2751E400EF9076 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		9047B1EA1A2751E400EF9076 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		905801851A4774E000000B46 /* SIAlertView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SIAlertView.bundle; sourceTree = "<group>"; };
+		905801861A4774E000000B46 /* SIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAlertView.h; sourceTree = "<group>"; };
+		905801871A4774E000000B46 /* SIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAlertView.m; sourceTree = "<group>"; };
+		905801881A4774E000000B46 /* UIWindow+SIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+SIUtils.h"; sourceTree = "<group>"; };
+		905801891A4774E000000B46 /* UIWindow+SIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+SIUtils.m"; sourceTree = "<group>"; };
 		905CD21B19C449DA00179496 /* RGInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGInfoViewController.h; sourceTree = "<group>"; };
 		905CD21C19C449DA00179496 /* RGInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGInfoViewController.m; sourceTree = "<group>"; };
 		906C9F8819B7BC6E006D0C8B /* libFlurry_5.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.4.0.a; sourceTree = "<group>"; };
@@ -372,6 +380,18 @@
 			path = SVBlurView;
 			sourceTree = "<group>";
 		};
+		905801841A4774E000000B46 /* SIAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				905801851A4774E000000B46 /* SIAlertView.bundle */,
+				905801861A4774E000000B46 /* SIAlertView.h */,
+				905801871A4774E000000B46 /* SIAlertView.m */,
+				905801881A4774E000000B46 /* UIWindow+SIUtils.h */,
+				905801891A4774E000000B46 /* UIWindow+SIUtils.m */,
+			);
+			path = SIAlertView;
+			sourceTree = "<group>";
+		};
 		905CD21A19C4498A00179496 /* Info */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +559,7 @@
 				908CF722199BC25E00B2CD54 /* ColorUtils */,
 				90C7E357199E9DD30005D063 /* Flurry */,
 				9047B1E61A2751E400EF9076 /* SVBlurView */,
+				905801841A4774E000000B46 /* SIAlertView */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -720,6 +741,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9058018A1A4774E000000B46 /* SIAlertView.bundle in Resources */,
 				9016E2CC19C489BD000AE110 /* routeDetails_button_about_ru@2x.png in Resources */,
 				9016E2D419C489BD000AE110 /* routeDetails_button_routeSelect_en@2x.png in Resources */,
 				900754521999656A00AA6C74 /* Default@2x.png in Resources */,
@@ -787,11 +809,13 @@
 				908CF74A199C3E1400B2CD54 /* NSString+MD5.m in Sources */,
 				908CF711199B958900B2CD54 /* StandardPaths.m in Sources */,
 				90A248891999B82E0015D6BD /* UIButton+AFNetworking.m in Sources */,
+				9058018C1A4774E000000B46 /* UIWindow+SIUtils.m in Sources */,
 				90A248871999B82E0015D6BD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				906C9F9A19B7C2C3006D0C8B /* RGAboutViewController.m in Sources */,
 				90A248811999B82E0015D6BD /* AFSecurityPolicy.m in Sources */,
 				905CD21D19C449DA00179496 /* RGInfoViewController.m in Sources */,
 				908CF709199B8B9600B2CD54 /* NSDictionary+Localized.m in Sources */,
+				9058018B1A4774E000000B46 /* SIAlertView.m in Sources */,
 				908CF725199BC25E00B2CD54 /* ColorUtils.m in Sources */,
 				90A2488C1999B82E0015D6BD /* UIRefreshControl+AFNetworking.m in Sources */,
 				90A2488D1999B82E0015D6BD /* UIWebView+AFNetworking.m in Sources */,

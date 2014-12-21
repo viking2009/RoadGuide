@@ -20,3 +20,6 @@ extern NSString *const RGSettingsLanguageKey;
 + (NSString *)localizedStringForKey:(NSString *)key;
 
 @end
+
+#define RGLocalizedString(key) [RGLanguage localizedStringForKey:(key)]
+

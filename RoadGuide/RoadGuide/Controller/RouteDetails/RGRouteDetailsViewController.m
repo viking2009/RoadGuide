@@ -11,6 +11,8 @@
 #import "RGConfiguration.h"
 #import "UIImage+Localized.h"
 #import "Flurry.h"
+#import "SIAlertView.h"
+#import "RGLanguage.h"
 
 @interface RGRouteDetailsViewController () <UIScrollViewDelegate>
 
@@ -31,6 +33,7 @@
 
 - (void)updateHeaders;
 - (void)loadMap;
+- (void)showError;
 
 - (IBAction)routeSelectButtonAction:(id)sender;
 - (IBAction)reverseRouteButtonAction:(id)sender;
@@ -161,9 +164,21 @@
                 
                 [strongSelf.activityIndicator stopAnimating];
                 strongSelf.reverseRouteButton.enabled = YES;
+                [strongSelf showError];
             }
         }];
     }
+}
+
+- (void)showError {
+    SIAlertView *alertView = [[SIAlertView alloc] initWithTitle:nil andMessage:RGLocalizedString(@"Unable to load data")];
+    alertView.transitionStyle = SIAlertViewTransitionStyleFade;
+    [alertView addButtonWithTitle:@"OK"
+                             type:SIAlertViewButtonTypeDefault
+                          handler:^(SIAlertView *alertView) {
+                              DLog(@"OK Clicked");
+                          }];
+    [alertView show];
 }
 
 #pragma mark - IBActions

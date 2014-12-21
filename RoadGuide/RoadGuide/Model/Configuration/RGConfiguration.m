@@ -130,7 +130,7 @@ static NSString * const RGConfigurationURL = @"https://docs.google.com/uc?export
             NSString *from = [route[@"from"] uppercaseString];
             NSString *to = [route[@"to"] uppercaseString];
             
-            NSString *lengthFrom = [NSString stringWithFormat:@"%@ %@\n", route[@"length"], [RGLanguage localizedStringForKey:@"km"]];
+            NSString *lengthFrom = [NSString stringWithFormat:@"%@ %@\n", route[@"length"], RGLocalizedString(@"km")];
             NSAttributedString *lengthFromA = [[NSAttributedString alloc] initWithString:lengthFrom attributes:lengthAttributes];
 
             // MARK: first route

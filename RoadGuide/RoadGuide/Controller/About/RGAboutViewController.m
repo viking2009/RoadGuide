@@ -12,6 +12,7 @@
 #import "RGLanguage.h"
 #import "RGConfiguration.h"
 #import "UIImageView+AFNetworking.h"
+#import "SIAlertView.h"
 
 @interface RGAboutViewController ()
 
@@ -21,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (void)loadImage;
+- (void)showError;
 
 - (IBAction)routeSelectButtonAction:(id)sender;
 
@@ -76,9 +78,24 @@
                 DLog(@"ERROR: %@", [error localizedDescription]);
                 
                 [strongSelf.activityIndicator stopAnimating];
+                [strongSelf showError];
             }
         }];
     }
+}
+
+- (void)showError {
+    __weak __typeof(self)weakSelf = self;
+
+    SIAlertView *alertView = [[SIAlertView alloc] initWithTitle:nil andMessage:RGLocalizedString(@"Unable to load data")];
+    alertView.transitionStyle = SIAlertViewTransitionStyleFade;
+    [alertView addButtonWithTitle:@"OK"
+                             type:SIAlertViewButtonTypeDefault
+                          handler:^(SIAlertView *alertView) {
+                              DLog(@"OK Clicked");
+                              [weakSelf dismissViewControllerAnimated:YES completion:NULL];
+                          }];
+    [alertView show];
 }
 
 #pragma mark - IBActions
