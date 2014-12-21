@@ -1,15 +1,6 @@
-h2. 20141128
-
-h3. Note:
-
-* preinstalled Kyiv maps used
+h2. 20141222
 
 h3. New:
 
-Feature #113: Scroll to city
-* scroll to top if top city title clicked
-* scroll to bottom if bottom city title clicked
-Task #114: Preinstalled maps
-* cache all Kyiv maps and put to bundle
-Task #115: Blur not loaded routes
-* use blur for cells with not loaded routes
+Feature #131: Show alert dialog when no internet connection
+* show error alert when unable load info, about or map image
